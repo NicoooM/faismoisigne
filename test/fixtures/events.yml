@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nom: MyString
+  date: 2019-02-22
+  heure: 2019-02-22 11:07:29
+  user_id: 
+  lieu: MyString
+
+two:
+  nom: MyString
+  date: 2019-02-22
+  heure: 2019-02-22 11:07:29
+  user_id: 
+  lieu: MyString
