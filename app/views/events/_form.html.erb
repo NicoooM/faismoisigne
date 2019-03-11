@@ -11,28 +11,28 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :nom %>
-    <%= form.text_field :nom %>
+    <%= form.text_field :nom, :class => "form-control", :placeholder => "Nom" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :date %>
-    <%= form.date_select :date %>
+    <%= form.date_select :date, :class => "form-control", :placeholder => "Date" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :heure %>
-    <%= form.time_select :heure %>
+    <%= form.time_select :heure, :class => "form-control", :placeholder => "Heure" %>
   </div>
 
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :lieu %>
-    <%= form.text_field :lieu %>
+    <%= form.text_field :lieu, :class => "form-control", :placeholder => "Lieu" %>
   </div>
 
-  <div class="actions">
-    <%= form.submit %>
+  <div class="button-login">
+    <%= form.submit :class => "btn btn-primary"%>
   </div>
 <% end %>

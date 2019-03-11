@@ -10,6 +10,62 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
- *= require_tree .
- *= require_self
  */
+
+
+@import "bootstrap";
+@import "custom";
+
+
+ .img-fluid{
+  	width: 4%;
+  	padding: 3px;
+  }
+
+.events {
+	max-width: 80%;
+	margin: auto;
+}
+
+.lien{
+	margin : 20px 0;
+}
+
+.title{
+	text-align: center;
+	margin: 50px;
+}
+
+//Navbar
+
+.navbar-nav{
+	padding: 7px 240px;
+}
+
+.nav-item{
+	padding: 20px;
+}
+
+
+
+//Login/out
+
+.form-group{
+	margin: 15px 400px;
+}
+
+.button-login{
+	text-align:center;
+}
+
+.links{
+	margin: 15px 400px;
+}
+
+
+
+
+
+
+
+
