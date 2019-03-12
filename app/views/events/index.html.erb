@@ -1,8 +1,4 @@
 <p id="notice"><%= notice %></p>
-
-
-
-
   
  <div class="events">
     <h1 class="title">Rencontres</h1>
@@ -14,18 +10,15 @@
   <div class="card-body">
     <h5 class="card-title"><%= event.nom %></h5>
     <p class="card-text">
+      <%= event.user_id %> <br>
       <%= event.date %> <br>
       <%= event.heure %> <br>
-      <%= event.user_id %> <br>
       <%= event.lieu %> <br>
     </p> 
         <%= link_to 'Afficher', event, :class => "btn btn-outline-primary"%>
         <% if user_signed_in? && event.user_id == current_user.id %>
         <%= link_to 'Edit', edit_event_path(event), :class => "btn btn-outline-secondary" %>
-        <%= link_to 'Destroy', event, :class => "btn btn-outline-danger", method: :delete, data: { confirm: 'Are you sure?' } %>
-
-        
-    
+        <%= link_to 'Destroy', event, :class => "btn btn-outline-danger", method: :delete, data: { confirm: 'Are you sure?' } %>      
   </div>
 </div>
     <% end %>
