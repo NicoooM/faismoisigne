@@ -74,9 +74,19 @@ body {
 .navbar ul{
     margin: auto;
     display: flex;
-} 
+}
 
-	
+#navbarNav {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+
+	}
+
+#navbarNav2 {
+	position: absolute;
+	right: 10%
+}
 
 //Login/out
 
