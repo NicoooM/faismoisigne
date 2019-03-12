@@ -1,3 +1,16 @@
+<div class="containt">
+     <div class="centrer">
+        <h2 class="darkblue">Créer une rencontre</h2>
+      </div>
+      <div>
+        <!--
+      <div class="img">     
+    <%= image_tag 'gauche.png', class: "img-g" %>
+    </div>
+  -->
+
+
+   
 <%= form_with(model: event, local: true) do |form| %>
   <% if event.errors.any? %>
     <div id="error_explanation">
@@ -11,9 +24,22 @@
     </div>
   <% end %>
 
-  <div class="form-group">
+
+<div class="cont">
+
+
+  
+  
+
+ <div class="form-group">
+
     <%= form.label :nom %>
     <%= form.text_field :nom, :class => "form-control", :placeholder => "Nom" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :description %>
+    <%= form.text_field :description, :class => "form-control", :placeholder => "Description de votre évènement, nombre de places..." %>
   </div>
 
   <div class="form-group">
@@ -29,10 +55,28 @@
 
   <div class="form-group">
     <%= form.label :lieu %>
-    <%= form.text_field :lieu, :class => "form-control", :placeholder => "Lieu" %>
+    <%= form.text_field :adresse, :class => "form-control", :placeholder => "Adresse" %>
+    <%= form.number_field :code_postal, :class => "form-control", :placeholder => "Code Postal" %>
+    <%= form.text_field :ville, :class => "form-control", :placeholder => "Ville" %>
   </div>
 
-  <div class="button-login">
-    <%= form.submit :class => "btn btn-primary"%>
+  <div class="form-group">
+    <%= form.label :sujet_clé %>
+    <%= form.text_field :sujet_clé, :class => "form-control", :placeholder => "Sujet clé" %>
   </div>
-<% end %>
+</div>
+</div>
+
+  <div class="centrer">
+    <%= form.submit :class => "btn btn-primary buttoncreate"%>
+  </div>
+  <% end %>
+  </div>
+</div>
+
+
+<!--
+  <div class="img1">     
+    <%= image_tag 'droite2.png', class: "img-j" %>
+  </div>
+-->

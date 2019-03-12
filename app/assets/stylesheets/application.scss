@@ -112,6 +112,68 @@ body {
 	margin: 40px;
 }
 
+/*PARTIE CREER UN NOUVEL EVENEMENT*/
+
+label {
+	color: #E32C20;
+}
+
+.container {
+	margin-top: 90px;
+}
+
+.cont {
+	padding: 0 40px;
+}
+
+.padbas {
+	padding-bottom: 5vh;
+}
+
+.buttoncreate {
+	background-color: #14024F !important;
+	color: white;
+	border: white;
+}
+
+.centrer {
+	text-align: center;
+}
+
+.darkblue {
+	color : #14024F;
+	text-align: center;
+	padding: 20px;
+
+}
+
+.form-control{
+	border-color: #D1D1D1;
+	opacity: 20%;
+
+}
+
+.img-g{
+	width: 800px;
+	display: block;
+}
+
+.img{
+	display: block;
+	background-color: red;
 
 
+}
+
+.img-j{
+	width: 300px;
+}
+
+.img1{
+	width: 0;
+	float: right;
+	transform: translateY(-180%);
+	padding: 0 400px;
+	margin-bottom: 50px;
+}
 
