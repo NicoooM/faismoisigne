@@ -12,10 +12,10 @@
  *
  */
 
-
+@import "pages";
+@import "events";
 @import "bootstrap";
 @import url('https://fonts.googleapis.com/css?family=Lato:300,400,700');
-
 
 body {
 
@@ -48,19 +48,6 @@ body {
 
   }
 
-.events {
-	max-width: 80%;
-	margin: auto;
-}
-
-.lien{
-	margin : 20px 0;
-}
-
-.title{
-	text-align: center;
-	margin: 50px;
-}
 
 // HEADER
 
@@ -88,6 +75,16 @@ body {
 	right: 10%
 }
 
+.logo_title{
+	color: black;
+	text-decoration: none;
+}
+
+.logo_title:hover{
+	color: black;
+	text-decoration: none;
+}
+
 //Login/out
 
 .form-group{
@@ -104,7 +101,16 @@ body {
 
 
 
+// EVENTS
 
+.card{
+	margin: 10px auto !important;
+}
+
+.title{
+	text-align: center;
+	margin: 40px;
+}
 
 
 
