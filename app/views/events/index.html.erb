@@ -9,14 +9,13 @@
     <div class="lien"><%= link_to 'Créer une rencontre', new_event_path, :class => "btn btn-outline-primary" %></div>
     <div class="row">
       <% @events.each do |event| %>
-  <div class="card col-sm" style="width: 38rem; margin: auto;"> 
-  <%= image_tag 'test2.png', class: "card-img-top" %> 
+  <div class="card" style="width: 60%; margin: auto;"> 
   <div class="card-body">
     <h5 class="card-title"><%= event.nom %></h5>
+    <p class="user"><%= mail_to event.user_contact, event.user_contact %> <br></p>
     <p class="card-text">
-      <%= event.date %> <br>
-      <%= event.heure %> <br>
-      <%= event.user_id %> <br>
+      <%= event.date.strftime('%d/%m/%Y')%> <br>
+      <%= event.heure.strftime('%H:%M') %> <br>
       <%= event.lieu %> <br>
     </p> 
         <%= link_to 'Afficher', event, :class => "btn btn-outline-primary"%>
