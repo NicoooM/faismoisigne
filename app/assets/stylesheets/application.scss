@@ -14,11 +14,38 @@
 
 
 @import "bootstrap";
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700');
+
+
+body {
+
+	 // FONTS
+  $font1: 'Lato', sans-serif;
+  $font2: 'playlistscript';
+  $light: 300;
+  $regular: 400;
+  $bold: 700;
+
+ 	 // COLORS
+  $white: #FFFFFF;
+  $rouge: #E32C20;
+  $bleu: #14024F;
+  $bleufonce: #240388;
+  $black: #000000;
+  $gris: #D1D1D1;
+  //
+
+	background-color: $white;
+	font-family: 'Lato', sans serif;
+}
+
 
 
  .img-fluid{
-  	width: 4%;
-  	padding: 3px;
+  	width: 60px;
+  	padding: 5px;
+  	margin-left: 30px;
+
   }
 
 .events {
@@ -35,14 +62,28 @@
 	margin: 50px;
 }
 
-//Navbar
+// HEADER
+
+.navbar{
+	 background-color: white !important;
+	 box-shadow: 0px 1px 8px #999;
+	 font-size: 17px;
+	 position: relative;
+} 
 
 .navbar-nav{
-	padding: 7px 240px;
+	padding-left: 220px;
+
 }
 
 .nav-item{
-	padding: 20px;
+	 padding: 2px 15px;
+	
+}
+
+.nav-item2{
+	padding: 2px 85px;
+	font-size: 17px;
 }
 
 
