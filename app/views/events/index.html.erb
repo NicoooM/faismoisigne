@@ -2,8 +2,12 @@
 <link href="//stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 </head>  
  <div class="events">
+
     <h1 class="title">Rencontres</h1>
     <div class="container">
+      <div class="banniere">     
+        <%= image_tag 'banlong.png', class: "", :width => "100%"; %>
+      </div> 
     <div class="row">
       <% @events.each do |event| %>
       <div class="col-sm-4"> 
