@@ -10,27 +10,14 @@
             <div class="card-body">
               <h3 class="card-title"><%= event.nom %></h3>
               <p class="card-text">
-<<<<<<< HEAD
-              <p class="user"><strong>Organisateur : </strong><p><%= mail_to event.user_contact, event.user_contact %></p></p>
-              <p class="date"><strong>Date :</strong><%= event.date.strftime('%d/%m/%Y')%></p> 
-              <p class="heure"><strong>Heure :</strong><%= event.heure.strftime('%H:%M') %></p> 
-              <p class="lieu"><strong>Lieu :</strong><%= event.lieu %></p> 
-              <p class="ville"><strong>Ville :</strong><%= event.ville %></p> 
-=======
-              <p class="user">Organisé(e) par : <%= mail_to event.user_contact, event.user_contact %></p>
-              <%= event.date.strftime('%d/%m/%Y')%> <br>
-              <%= event.heure.strftime('%H:%M') %> <br>
-              <%= link_to event.lieu, 'https://www.google.fr/maps/search/' +  event.lieu + '+' + event.num_rue.to_s + '+' + event.rue + '+' + event.code_postal.to_s + '+' +  event.ville , target: "_blank", :class => ""%> <br>
-              <%= event.num_rue %> <%= event.rue %>  <br>
-              <%= event.code_postal %> <%= event.ville %> <br>
-              <%= event.description %> 
->>>>>>> ca0426790e37b882f5e7e50051cc6d6c479cb824
-              </p> 
+              <p class="user"><strong>Organisateur </strong><p><%= mail_to event.user_contact, event.user_contact, :class => "link"%></p>
+              <p class="date">Le <%= event.date.strftime('%d/%m/%Y')%> à <%= event.heure.strftime('%H:%M') %></p> 
+              <p class="lieu"><%= link_to event.lieu, 'https://www.google.fr/maps/search/' +  event.lieu + '+' + event.num_rue.to_s + '+' + event.rue + '+' + event.code_postal.to_s + '+' +  event.ville , target: "_blank", :class => ""%> à <%= event.ville %></p> 
               <div class="bottom">
               <%= link_to 'Afficher', event, :class => "btn btn-outline-primary btn-sm"%>
               <% if user_signed_in? && event.user_id == current_user.id %>
               <%= link_to 'Modifier', edit_event_path(event), :class => "btn btn-outline-secondary btn-sm" %>
-              <%= link_to 'Supprimer', event, :class => "btn btn-outline-danger btn-sm", method: :delete, data: { confirm: 'Are you sure?' } %> 
+              <i class="far fa-trash-alt"></i><%= link_to 'Supprimer', event, :class => "btn btn-outline-danger btn-sm", method: :delete, data: { confirm: 'Are you sure?' } %> 
               <% end %> 
             </div> 
             </div>  
