@@ -11,14 +11,14 @@
 
   <body>
 
-
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<navbar class="page-navbar ">
+<nav class="navbar navbar-expand-lg navbar-light bg-light ">
       <%= image_tag 'logo.png', class: "img-fluid" %>
       <%= link_to "Fais-moi signe", root_path, class: "logo_title" %></%>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
+  <div class="collapse navbar-collapse " id="navbarNav">
     <ul class="navbar-nav " >
       <li class="nav-item">
         <%= link_to "Accueil",events_path, class: "nav-link" %></%>
@@ -47,6 +47,7 @@
     </ul>
   </div>
 </nav>
+</navbar>
 
 
 <p id="notice"><%= notice %></p>
