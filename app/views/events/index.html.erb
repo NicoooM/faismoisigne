@@ -12,8 +12,9 @@
               <p class="user">Organiser par : <%= mail_to event.user_contact, event.user_contact %></p>
               <%= event.date.strftime('%d/%m/%Y')%> <br>
               <%= event.heure.strftime('%H:%M') %> <br>
+              <%= link_to event.lieu, 'https://www.google.fr/maps/search/' +  event.lieu + '+' + event.num_rue.to_s + '+' + event.rue + '+' + event.code_postal.to_s + '+' +  event.ville , target: "_blank", :class => ""%> <br>
+              <%= event.num_rue %> <%= event.rue %>  <br>
               <%= event.code_postal %> <%= event.ville %> <br>
-              <% event_adress = event.num_rue%>
               </p> 
               <%= link_to 'Afficher', event, :class => "btn btn-outline-primary"%>
               <% if user_signed_in? && event.user_id == current_user.id %>
