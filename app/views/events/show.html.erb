@@ -1,43 +1,48 @@
 <p id="notice"><%= notice %></p>
 
-<div class="card" style="width: 18rem;">
-  <div class="card-header">
-    Featured
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="card"> 
+
+          <p class="card-title">
+            <%= @event.nom %>
+          </p>
+
+          <p class="user">
+            <strong>Organisateur : </strong>
+            <%= mail_to @event.user_contact, @event.user_contact, :class => "link"%>
+          </p>
+
+          <p class="date">
+            <strong>Date : </strong>
+            <%= @event.date.strftime('%d/%m/%Y')%> à <%= @event.heure.strftime('%H:%M') %>
+          </p>
+
+          <div class="description">
+            <strong>Description : </strong>
+             <%= @event.description %>
+         </div>
+
+          <p class="lieu">
+            <strong>Lieu : </strong>
+            <%= link_to @event.lieu, 'https://www.google.fr/maps/search/' +  @event.lieu + '+' + @event.num_rue.to_s + '+' + @event.rue + '+' + @event.code_postal.to_s + '+' +  @event.ville , target: "_blank", :class => "link"%> à <%= @event.ville %>
+          </p>
+
+          <p class="adresse">
+            <strong>Adresse : </strong>
+            <%= @event.num_rue %> <%= @event.rue %> <%= @event.code_postal %> <%= @event.ville %> 
+          </p>
+
+        
+
+          <%= link_to 'Modifier', edit_event_path(@event) %> |
+          <%= link_to 'Retour', events_path %>
+
+      </div>
+    </div>
   </div>
-  <ul class="list-group list-group-flush">
-    <li class="list-group-item">Cras justo odio</li>
-    <li class="list-group-item">Dapibus ac facilisis in</li>
-    <li class="list-group-item">Vestibulum at eros</li>
-  </ul>
 </div>
 
-<p>
-  <strong>Nom:</strong>
-  <%= @event.nom %>
-</p>
-
-<p>
-  <strong>Date:</strong>
-  <%= @event.date %>
-</p>
-
-<p>
-  <strong>Heure:</strong>
-  <%= @event.heure %>
-</p>
-
-<p>
-  <strong>User:</strong>
-  <%= @event.user_id %>
-</p>
-
-<p>
-  <strong>Lieu:</strong>
-  <%= @event.lieu %>
-</p>
 
 
-
-
-<%= link_to 'Modifier', edit_event_path(@event) %> |
-<%= link_to 'Retour', events_path %>
