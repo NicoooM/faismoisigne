@@ -87,9 +87,9 @@ body {
 
 //Login/out
 
-.form-group{
+/*.form-group{
 	margin: 15px 400px;
-}
+}*/
 
 .button-login{
 	text-align:center;
@@ -118,13 +118,12 @@ label {
 	color: #E32C20;
 }
 
-.container {
-	margin-top: 90px;
+
+form{
+	max-width: 40%;
+	margin: auto;
 }
 
-.cont {
-	padding: 0 40px;
-}
 
 .padbas {
 	padding-bottom: 5vh;
@@ -153,27 +152,18 @@ label {
 
 }
 
-.img-g{
-	width: 800px;
-	display: block;
-}
 
 .img{
-	display: block;
-	background-color: red;
-
+	transform: translateY(-100%);
+	margin: 50px;
+	float: left;
 
 }
 
-.img-j{
-	width: 300px;
-}
 
 .img1{
-	width: 0;
 	float: right;
-	transform: translateY(-180%);
-	padding: 0 400px;
-	margin-bottom: 50px;
+	transform: translateY(-170%);
+	margin: 50px;
 }
 

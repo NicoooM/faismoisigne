@@ -1,14 +1,12 @@
-<div class="containt">
+ 
+
      <div class="centrer">
         <h2 class="darkblue">Créer une rencontre</h2>
       </div>
       <div>
-        <!--
-      <div class="img">     
-    <%= image_tag 'gauche.png', class: "img-g" %>
-    </div>
-  -->
-
+     
+     
+ 
 
    
 <%= form_with(model: event, local: true) do |form| %>
@@ -23,14 +21,8 @@
       </ul>
     </div>
   <% end %>
-
-
-<div class="cont">
-
-
   
-  
-
+  <form>   
  <div class="form-group">
 
     <%= form.label :nom %>
@@ -39,7 +31,7 @@
 
   <div class="form-group">
     <%= form.label :description %>
-    <%= form.text_field :description, :class => "form-control", :placeholder => "Description de votre évènement, nombre de places..." %>
+    <%= form.text_area :description, :class => "form-control", :placeholder => "Description de votre évènement, nombre de places, interprète présent..." %>
   </div>
 
   <div class="form-group">
@@ -53,30 +45,41 @@
   </div>
 
 
-  <div class="form-group">
-    <%= form.label :lieu %>
-    <%= form.text_field :adresse, :class => "form-control", :placeholder => "Adresse" %>
-    <%= form.number_field :code_postal, :class => "form-control", :placeholder => "Code Postal" %>
-    <%= form.text_field :ville, :class => "form-control", :placeholder => "Ville" %>
+  <div class="form-row"> 
+  <div class="form-group col-md-2">
+    <%= form.label :numéro %>
+    <%= form.text_field :num_rue, :class => "form-control", :placeholder => "N°" %>
   </div>
 
-  <div class="form-group">
-    <%= form.label :sujet_clé %>
-    <%= form.text_field :sujet_clé, :class => "form-control", :placeholder => "Sujet clé" %>
+  <div class="form-group col-md-10">
+    <%= form.label :rue %>
+    <%= form.text_field :rue, :class => "form-control", :placeholder => "Rue" %>
   </div>
 </div>
+
+
+<div class="form-row">
+  <div class="form-group col-md-3">
+    <%= form.label :code_postal %>
+    <%= form.text_field :code_postal, :class => "form-control", :placeholder => "Code postal" %>
+  </div>
+
+  <div class="form-group col-md-9">
+    <%= form.label :ville %>
+    <%= form.text_field :ville, :class => "form-control  ", :placeholder => "Ville" %>
+  </div>
 </div>
+
 
   <div class="centrer">
     <%= form.submit :class => "btn btn-primary buttoncreate"%>
   </div>
+  </form>
+
+
   <% end %>
   </div>
-</div>
 
 
-<!--
-  <div class="img1">     
-    <%= image_tag 'droite2.png', class: "img-j" %>
-  </div>
--->
+  
+
