@@ -1,46 +1,64 @@
 <p id="notice"><%= notice %></p>
 
-<div class="container">
-  <div class="row">
-    <div class="col-sm-4">
-      <div class="card"> 
 
-          <p class="card-title">
+    <div class="content">
+      <div class=" colonne">
+
+
+          <div class="">     
+          <%= image_tag 'meet.png', class: "img2", :width => "23%"; %>
+
+          </div>
+
+          <div class="">     
+          <%= image_tag 'LSFMOT.png', class: "img3", :width => "18%"; %>
+
+          </div>
+
+          <h1 class="aff-title">
             <%= @event.nom %>
-          </p>
+            <hr/>
+          </h1>
 
-          <p class="user">
-            <strong>Organisateur : </strong>
+          <div class="elements">
+
+          <div class="user">
+            <p><strong>Organisateur : </strong></p>
             <%= mail_to @event.user_contact, @event.user_contact, :class => "link"%>
-          </p>
+          </div>
 
-          <p class="date">
-            <strong>Date : </strong>
+          <div class="date">
+            <p><strong>Date : </strong></p>
             <%= @event.date.strftime('%d/%m/%Y')%> à <%= @event.heure.strftime('%H:%M') %>
-          </p>
+          </div>
 
           <div class="description">
-            <strong>Description : </strong>
+            <p><strong>Description : </strong></p>
              <%= @event.description %>
          </div>
 
-          <p class="lieu">
-            <strong>Lieu : </strong>
+         
+          <div class="lieu">
+            <p><strong>Lieu : </strong></p>
             <%= link_to @event.lieu, 'https://www.google.fr/maps/search/' +  @event.lieu + '+' + @event.num_rue.to_s + '+' + @event.rue + '+' + @event.code_postal.to_s + '+' +  @event.ville , target: "_blank", :class => "link"%> à <%= @event.ville %>
-          </p>
+          </div>
+          
 
-          <p class="adresse">
-            <strong>Adresse : </strong>
+          <div class="adresse">
+            <p><strong>Adresse : </strong></p>
             <%= @event.num_rue %> <%= @event.rue %> <%= @event.code_postal %> <%= @event.ville %> 
-          </p>
+          </div>
 
-        
+          <div class="button-cards">
 
-          <%= link_to 'Modifier', edit_event_path(@event) %> |
-          <%= link_to 'Retour', events_path %>
+          <%= link_to 'Modifier', edit_event_path(@event), class: 'btn btn-outline-secondary' %>
+          <%= link_to 'Retour', events_path, class: 'btn btn-outline-primary' %>
+          </div>
 
-      </div>
+             </div>
+          </div>
+        </div>
     </div>
-  </div>
-</div>
+ 
+ 
 

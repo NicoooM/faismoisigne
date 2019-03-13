@@ -117,7 +117,7 @@ form{
 
 .title{
 	text-align: center;
-	margin: 40px;
+	margin: 30px;
 	color: #14024F;
 	font-weight: bold;
 }
@@ -267,14 +267,76 @@ footer .row{
 }
 
 
+// AFFICHER 
 
+.content {
+    max-width: 40%;
+	margin: auto;
 
+}
 
+.elements{
+	top: 0;
+}
 
+.colonne{
+	margin: 0 auto;
+}
+.content h1 {
+  font-weight: 700;
+}
 
+.content div{
+	padding-bottom: 15px;
+}
 
+.content p {
+  color: #4305FF;
+  font-size: 18px;
+}
 
+.aff-title{
+	text-align: center;
+	color: #14024F;
+}
 
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 3px solid #FF8F4F;
+    margin: 1em 0;
+    padding: 0;
+}
+
+.description{
+	margin-top: .7em;
+}
+
+.button-cards{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 30px;
+  .btn {
+    margin-top: 1em;
+    width: 200px;
+    padding: .4em 2.6em;
+    font-size: 1.1em;
+  }
+}
+
+.img2{
+	position : absolute;
+	top : 240px;
+	right: 40px;
+}
+
+.img3{
+	position : absolute;
+	bottom : 0px;
+	left: 60px;
+}
 
 
 
