@@ -28,11 +28,11 @@ body {
 
  	 // COLORS
   $white: #FFFFFF;
-  $rouge: #E32C20;
-  $bleu: #14024F;
-  $bleufonce: #240388;
+  $orange: #F78A5E;
+  $bleufonce: #14024F;
+  $bleu: #240388;
   $black: #000000;
-  $gris: #D1D1D1;
+  $gris: #A9A9A9;
   //
 
 	background-color: $white;
@@ -112,6 +112,8 @@ form{
 .title{
 	text-align: center;
 	margin: 40px;
+	color: #14024F;
+	font-weight: bold;
 }
 
 /*PARTIE CREER UN NOUVEL EVENEMENT*/
@@ -169,3 +171,60 @@ form{
 	right: 0;
 }
 
+// Rencontres
+
+
+.row{
+	margin: auto;
+	padding: 50px;
+}
+
+.card-title{
+	color: #F78A5E;
+	text-align:center;
+}
+
+.bottom{
+	text-align: center;
+}
+
+.card{
+	border-color: #14024F;
+	box-shadow: 1px 1px 3px #A9A9A9; 
+}
+
+
+.btn-outline-primary:hover{
+	background-color: #240388 !important;
+	opacity: 30%;
+	color: white !important;
+}
+
+.btn-outline-secondary:hover{
+	background-color: #A9A9A9 !important;
+	opacity: 30%;
+	color: white !important;
+}
+.btn-outline-danger:hover{
+	background-color: #F78A5E !important;
+	opacity: 30%;
+	color: white !important;
+}
+
+.btn-outline-primary{
+	border-color: #240388 !important;
+	color: #240388 !important;
+}
+
+.btn-outline-secondary{
+	border-color: #A9A9A9 !important;
+	color: #A9A9A9 !important;
+}
+.btn-outline-danger{
+	border-color: #F78A5E !important;
+	color: #F78A5E !important;
+}
+
+.color{
+	color: red;
+}
