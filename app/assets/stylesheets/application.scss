@@ -59,25 +59,19 @@ body {
 	 background-color: white !important;
 	 box-shadow: 0px 1px 8px #999;
 	 font-size: 17px;
+	 width: auto;
 	 
 } 
 
-.navbar ul{
-    margin: auto;
-    display: flex;
+.collapse{
+	justify-content: flex-end;
 }
 
-#navbarNav {
-	position: absolute;
-	left: 50%;
-	transform: translateX(-50%);
-
-	}
-
-#navbarNav2 {
-	position: absolute;
-	right: 10%;
+.navbar li{
+  text-align: center !important;
+  width:100%;
 }
+
 
 .logo_title{
 	color: black;
