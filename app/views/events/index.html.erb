@@ -19,18 +19,10 @@
               </p> 
               <%= link_to 'Afficher', event, :class => "btn btn-outline-primary"%>
               <% if user_signed_in? && event.user_id == current_user.id %>
-<<<<<<< HEAD
-              <%= link_to 'Modifier', edit_event_path(event), :class => "btn btn-outline-secondary" %>
-              <%= link_to 'Supprimer', event, :class => "btn btn-outline-danger", method: :delete, data: { confirm: 'Are you sure?' } %>  
-          <% end %>
-         </div>
-
-=======
               <%= link_to 'Edit', edit_event_path(event), :class => "btn btn-outline-secondary" %>
               <%= link_to 'Destroy', event, :class => "btn btn-outline-danger", method: :delete, data: { confirm: 'Are you sure?' } %> 
               <% end %> 
             </div>   
->>>>>>> 75f57e09ef9cd446d8f66058806e2ab9d7b2a848
         </div>
       <% end %>
     </div>

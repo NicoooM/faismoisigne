@@ -72,7 +72,7 @@ body {
 
 #navbarNav2 {
 	position: absolute;
-	right: 10%
+	right: 10%;
 }
 
 .logo_title{
@@ -87,16 +87,10 @@ body {
 
 //Login/out
 
-<<<<<<< HEAD
-/*.form-group{
-	margin: 15px 400px;
-}*/
-=======
 form{
 	max-width: 60%;
 	margin: auto;
 }
->>>>>>> 75f57e09ef9cd446d8f66058806e2ab9d7b2a848
 
 
 .button-login{
@@ -162,16 +156,16 @@ form{
 
 
 .img{
-	transform: translateY(-100%);
-	margin: 50px;
+	position : absolute;
+	bottom : 0px;
 	float: left;
 
 }
 
 
 .img1{
-	float: right;
-	transform: translateY(-170%);
-	margin: 50px;
+	position : absolute;
+	top : 150px;
+	right: 0;
 }
 
