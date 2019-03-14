@@ -1,0 +1,21 @@
+
+
+
+
+
+    <div class="content">
+      <div class=" colonne">
+
+          <h1 class="aff-title">
+            <%= full_name_profile %>
+          </h1>
+          <%= @user.description %>
+          <hr/>
+
+          <div class="elements">
+          <%= mail_to @user.email, @user.email%> <br>
+          <%= @user.lieu %> <br>
+          <%= @user.bio %> <br>     
+          </div>
+        </div>
+    </div>

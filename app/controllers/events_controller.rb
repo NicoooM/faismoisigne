@@ -32,7 +32,7 @@ class EventsController < ApplicationController
   def create
     @event = Event.new(event_params)
     @event.user_id = current_user.id
-    @event.user_contact = current_user.email
+    @event.user_contact = current_user.prenom+" "+current_user.nom
 
     respond_to do |format|
       if @event.save
