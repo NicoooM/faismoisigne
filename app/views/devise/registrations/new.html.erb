@@ -47,10 +47,14 @@
   </div>
 
   <div class="button-login">
-    <%= f.submit "S'inscrire", :class => "btn btn-primary"%>
+    <%= f.submit "S'inscrire", :class => "btn btn-outline-danger"%>
   </div>
+  
 <% end %>
-
-<div class="links">
-    <%= render "devise/shared/links"%>
+<div class="insc1">
+    <%- if controller_name != 'sessions' %>
+    <p>Vous avez déjà un compte? <%= link_to "Se connecter", new_session_path(resource_name), :class =>"linklog" %></p><br />
+<% end %>
 </div>
+
+
