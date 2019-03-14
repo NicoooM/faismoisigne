@@ -34,7 +34,7 @@ body {
   $bleufonce: #14024F;
   $bleu: #4305FF;
   $black: #0F1814;
-  $gris: #A9A9A9;
+  $gris: #676767;
   //
 
 	background-color: white;
@@ -238,39 +238,37 @@ form{
 
 
 .btn-outline-primary:hover{
-	background-color: #4305FF !important;
+	background-color: #14024F !important;
 	opacity: 30%;
 	color: white !important;
 }
 
 .btn-outline-secondary:hover{
-	background-color: #A9A9A9 !important;
+	background-color: #676767 !important;
 	opacity: 30%;
 	color: white !important;
 }
 .btn-outline-danger:hover{
-	background-color: #F15F24 !important;
+	background-color: white !important;
 	opacity: 30%;
-	color: white !important;
-}
-
-.btn-outline-primary{
-	border-color: #4305FF !important;
-	color: #4305FF !important;
-}
-
-.btn-outline-secondary{
-	border-color: #A9A9A9 !important;
-	color: #A9A9A9 !important;
-}
-.btn-outline-danger{
-	border-color: #F15F24 !important;
 	color: #F15F24 !important;
 }
 
-.color{
-	color: red;
+.btn-outline-primary{
+	border-color: #14024F !important;
+	color: #14024F !important;
 }
+
+.btn-outline-secondary{
+	border-color: #676767 !important;
+	color: #676767 !important;
+}
+.btn-outline-danger{
+	background-color: #F15F24;
+	border-color: #F15F24 !important;
+	color: white !important;
+}
+
 
 .link{
 	color: #F15F24;

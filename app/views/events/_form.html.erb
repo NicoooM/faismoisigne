@@ -67,8 +67,9 @@
   </div>
 </div>
 
-  <div class="button-login ">
-    <%= form.submit :Créer, :class => "btn btn-primary  buttoncreate"%>
+  <div class="button-cards ">
+    <%= form.submit :Créer, :class => "btn btn-outline-danger"%>
+    <%= link_to 'Retour', events_path, :class => "btn btn-outline-secondary"%>
   </div>
   </form>
 <% end %>
