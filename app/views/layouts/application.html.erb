@@ -7,7 +7,7 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
 
   <body>
@@ -16,10 +16,10 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light ">
       <%= image_tag 'logo.png', class: "img-fluid" %>
       <%= link_to "Fais-moi signe", root_path, class: "logo_title" %></%>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <div class="collapse navbar-collapse " id="navbarNav">
+  <div id="navbarNavDropdown" class="collapse navbar-collapse" >
     <ul class="navbar-nav " >
       <li class="nav-item">
         <%= link_to "Accueil",root_path, class: "nav-link" %></%>
@@ -49,57 +49,28 @@
   </div>
 </nav>
 </navbar>
+  </body>
+
+
 
 
 <p id="notice"><%= notice %></p>
     <%= yield %>
 
-    <!-- Footer -->
-<footer class="page-footer">
+ 
+<!-- Footer -->
+<footer class="page-footer font-small blue">
 
-    <!-- Footer Elements -->
-    <div class="container">
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">© 2018 :
+    <a href="http://www.faismoisigne.org"> faismoisigne.org</a>
+    <%= link_to 'https://www.facebook.com/faismoisigne.org/', :class => 'lien' do %> <%= fa_icon "facebook" %> <% end %>
+    <%= link_to 'https://twitter.com/Faismoisigneorg', :class => 'lien' do %> <%= fa_icon "twitter" %><% end %>
+    <%= link_to 'https://www.instagram.com/faismoisigneorg', :class => 'lien' do %> <%= fa_icon "instagram" %><% end %>
+  </div>
+  <!-- Copyright -->
 
-      <!-- Grid row-->
-      <div class="row">
+</footer>
+<!-- Footer -->
 
-        <!-- Grid column -->
-        <div class="col-lg-4"></div>
-
-          <div class="col-lg-4 text-center">
-            <!-- Facebook -->
-            <a class="fb-ic">
-            <%= link_to 'https://www.facebook.com/faismoisigne.org/', :class => 'lien' do %> <%= fa_icon "facebook" %> <% end %>  
-            </a>
-            <!-- Twitfa_icon "camera-retro"-->
-            <a class="tw-ic">
-             <%= link_to 'https://twitter.com/Faismoisigneorg', :class => 'lien' do %> <%= fa_icon "twitter" %><% end %>  
-            </a>
-            <!--Instagram-->
-            <a class="ins-ic">
-             <%= link_to 'https://www.instagram.com/faismoisigneorg', :class => 'lien' do %> <%= fa_icon "instagram" %><% end %>  
-            </a>
-
-            <div class="footer-copyright">© 2019 Copyright : Fais-moi signe
-
-
-          </div>
-
-
-      </div>
-      <!-- Grid row-->
-
-    </div>
-    <!-- Footer Elements -->
-
-    <!-- Copyright -->
-
-    </div>
-    <!-- Copyright -->
-
-  </footer>
-  <!-- Footer -->
-
-
-  </body>
 </html>

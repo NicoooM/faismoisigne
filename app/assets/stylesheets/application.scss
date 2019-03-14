@@ -18,9 +18,7 @@
 @import "font-awesome";
 @import url('https://fonts.googleapis.com/css?family=Lato:300,400,700');
 
-html{
-	height: 100vh;
-}
+
 body {
 
 	 // FONTS
@@ -32,7 +30,7 @@ body {
 
  	 // COLORS
   $white: #f6F6F6;
-  $orange: #FF8F4F;
+  $orange: #F15F24;
   $bleufonce: #14024F;
   $bleu: #4305FF;
   $black: #0F1814;
@@ -41,6 +39,7 @@ body {
 
 	background-color: white;
 	font-family: 'Lato', sans serif;
+	position: relative;
 }
 
 
@@ -58,7 +57,6 @@ body {
 
 .navbar{
 	 background-color: white !important;
-	 box-shadow: 0px 1px 8px #999;
 	 font-size: 17px;
 	 width: auto;
 	 z-index: 1;
@@ -90,24 +88,37 @@ body {
 
 .title-accueil{
 	font-size: 35px;
-	margin-top: 30px;
+	margin-top: -5vh;
 }
 
 .banniere1{
 	position : absolute;
-	bottom : 0px;
+	width: 90%;
+	margin-left: 80px;
+}
+
+.baseline{
+	margin-top: -5vh;
 }
 
 .btn-danger{
-	background-color: #FF8F4F !important;
-	border: #FF8F4F !important;
+	background-color: #F15F24 !important;
+	border: #F15F24 !important;
 	color: white !important;
-	margin-top: 10px;
+	margin-top: 30px;
+	
+}
+
+.home{
+	height: 100vh;
 }
 
 
+// profil
 
-
+.profil{
+	height: 100vh;
+}
 
 
 
@@ -145,16 +156,17 @@ form{
 	font-weight: bold;
 }
 
-/*PARTIE CREER UN NOUVEL EVENEMENT*/
+// CREER UN NOUVEL EVENEMENT
 
 label {
-	color: #FF8F4F;
+	color: #F15F24;
 }
 
 
 form{
 	max-width: 40%;
 	margin: auto;
+	height: 100vh
 }
 
 
@@ -188,6 +200,7 @@ form{
 
 .img{
 	position : absolute;
+	margin-bottom: 20vh;
 	bottom : 0px;
 	float: left;
 
@@ -205,7 +218,8 @@ form{
 
 .row{
 	margin: auto;
-	padding: 50px;
+	padding-bottom: 80px;
+	padding-top: 80px;
 }
 
 .card-title{
@@ -235,7 +249,7 @@ form{
 	color: white !important;
 }
 .btn-outline-danger:hover{
-	background-color: #FF8F4F !important;
+	background-color: #F15F24 !important;
 	opacity: 30%;
 	color: white !important;
 }
@@ -250,8 +264,8 @@ form{
 	color: #A9A9A9 !important;
 }
 .btn-outline-danger{
-	border-color: #FF8F4F !important;
-	color: #FF8F4F !important;
+	border-color: #F15F24 !important;
+	color: #F15F24 !important;
 }
 
 .color{
@@ -259,36 +273,23 @@ form{
 }
 
 .link{
-	color: #FF8F4F;
+	color: #F15F24;
 }
 
 // FOOTER
 
-footer {
-	position: relative;
-	bottom: 0;
- 	background-color: #FF8F4F;
- 	margin: auto;
- 	padding: auto;
- 	bottom: 0;
-
- }
+footer{
+	position: absolute;
+    width: 100%;
+    bottom: 0;
+    color: #14024F;
+}
 
 .lien{
-	font-size: 30px;
-	padding: 30px;
-	margin-bottom: 30px;
-	 }
-
-.footer-copyright{
-	margin: 10px;
+	padding: 5px;
+	padding-left:10px;
+	color: #14024F;
 }
-
-
-footer .row{
-	padding: 20px 0 ;
-}
-
 
 // AFFICHER 
 
@@ -328,7 +329,7 @@ hr {
     display: block;
     height: 1px;
     border: 0;
-    border-top: 3px solid #FF8F4F;
+    border-top: 3px solid #F15F24;
     margin: 1em 0;
     padding: 0;
 }
