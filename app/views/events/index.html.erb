@@ -1,7 +1,4 @@
-<head>
-<link href="//stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-</head>  
- <div class="events">
+  <div class="events">
 
     <h2 class="title">Rencontres</h2>
     <div class="container">
@@ -14,9 +11,9 @@
         <div class="card"> 
             <div class="card-body">
               <h3 class="card-title"><%= event.nom %></h3>
+              <hr>
               <p class="card-text">
-              <p class="user"><strong>Organisateur </strong><p><%= link_to event.user_contact, profile_path(event.user_id), :class => "link"%></p>
-                
+              <p class="user"><strong>Organisateur </strong><p><%= link_to event.user_contact, profile_path(event.user_id), :class => "link"%></p> 
               <p class="date">Le <%= event.date.strftime('%d/%m/%Y')%> à <%= event.heure.strftime('%H:%M') %></p> 
               <p class="lieu"><%= link_to event.lieu, 'https://www.google.fr/maps/search/' +  event.lieu + '+' + event.num_rue.to_s + '+' + event.rue + '+' + event.code_postal.to_s + '+' +  event.ville , target: "_blank", :class => "link"%> à <%= event.ville %></p> 
               <div class="bottom">
