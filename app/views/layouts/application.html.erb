@@ -29,6 +29,9 @@
       <li class="nav-item">
         <%= link_to "Participer",events_path, class: "nav-link" %></%>
       </li>
+      <li class="nav-item">
+        <%= link_to "Découvrir",pages_discover_path, class: "nav-link" %></%>
+      </li>
      <%unless user_signed_in?%>
        <li class="nav-item">
           <%= link_to "Inscription",new_user_registration_path, class: "nav-link" %></%>
