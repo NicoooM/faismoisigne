@@ -415,15 +415,7 @@ hr {
 	padding-top: 100px;
 }
 
-//USERS
-
-.users {
-	max-width: 80%;
-	margin: auto;
-}
-
-.users .row{
-	padding: 0;}
+	
 .text2{
 	padding-top: 90px;
 }
@@ -442,7 +434,20 @@ hr {
 
 
 
+//USERS
 
+.users {
+	max-width: 80%;
+	margin: auto;
+}
+
+.users .row{
+	padding: 0;
+}
+
+.users .card{
+	margin: 10px 10px;
+}
 
 
 
