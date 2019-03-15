@@ -5,11 +5,11 @@
    <%- if controller_name != 'sessions' %>
     <p style="text-align : center;">Vous avez déjà un compte? <%= link_to "Se connecter", new_session_path(resource_name), :class =>"linklog" %></p>
 <% end %>
- <form>
+ 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
 
-
+<form>
   <div class="form-group">
     <%= f.label :nom %><br />
     <%= f.text_field :nom, autocomplete: "nom", :class => "form-control", :placeholder => "Votre nom" %>
@@ -55,9 +55,9 @@
   <div class="insc1">
    <%= f.submit "S'inscrire", :class => "btn btn-outline-danger button-login"%>
   </div>
-  
+  </form>
 <% end %>
-   </form>
+   
 </div>
 
 
