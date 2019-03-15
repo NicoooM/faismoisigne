@@ -21,32 +21,32 @@
 
           <div class="elements">
 
-          <div class="user">
-            <p><strong>Organisateur : </strong></p>
-            <%= mail_to @event.user_contact, @event.user_contact, :class => "link"%>
-          </div>
+     
+            <p><strong>Organisateur </strong> <br>
+            <%= mail_to @event.user_contact, @event.user_contact, :class => "link"%></p>
+        
 
-          <div class="date">
-            <p><strong>Date : </strong></p>
-            <%= @event.date.strftime('%d/%m/%Y')%> à <%= @event.heure.strftime('%H:%M') %>
-          </div>
-
-          <div class="description">
-            <p><strong>Description : </strong></p>
-             <%= @event.description %>
-         </div>
-
-         
-          <div class="lieu">
-            <p><strong>Lieu : </strong></p>
-            <%= link_to @event.lieu, 'https://www.google.fr/maps/search/' +  @event.lieu + '+' + @event.num_rue.to_s + '+' + @event.rue + '+' + @event.code_postal.to_s + '+' +  @event.ville , target: "_blank", :class => "link"%> à <%= @event.ville %>
-          </div>
+       
+            <p><strong>Date  </strong> <br>
+            <%= @event.date.strftime('%d/%m/%Y')%> à <%= @event.heure.strftime('%H:%M') %></p>
           
 
-          <div class="adresse">
-            <p><strong>Adresse : </strong></p>
-            <%= @event.num_rue %> <%= @event.rue %> <%= @event.code_postal %> <%= @event.ville %> 
-          </div>
+      
+            <p><strong>Description </strong> <br>
+            <%= @event.description %></p>
+        
+
+         
+     
+            <p><strong>Lieu  </strong> <br>
+            <%= link_to @event.lieu, 'https://www.google.fr/maps/search/' +  @event.lieu + '+' + @event.num_rue.to_s + '+' + @event.rue + '+' + @event.code_postal.to_s + '+' +  @event.ville , target: "_blank", :class => "link"%> à <%= @event.ville %></p>    
+          
+
+          
+            <p><strong>Adresse  </strong> <br>
+            <%= @event.num_rue %> <%= @event.rue %> <br>
+            <%= @event.code_postal %> <%= @event.ville %> </p>
+        
 
           <div class="button-cards">
           <% if user_signed_in? && @event.user_id == current_user.id %>

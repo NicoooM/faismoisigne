@@ -185,6 +185,10 @@ label {
 	color: #F15F24;
 }
 
+.add_event form{
+	height: auto;
+	padding-bottom: 60px;
+}
 
 form{
 	max-width: 40%;
@@ -333,6 +337,7 @@ footer{
 .content {
     max-width: 40%;
 	margin: auto;
+	height: 100vh;
 
 }
 
@@ -351,7 +356,7 @@ footer{
 	padding-bottom: 15px;
 }
 
-.content p {
+strong {
   color: #4305FF;
   font-size: 18px;
 }
@@ -376,7 +381,7 @@ hr {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  margin: 30px;
+	margin: 30px;
   .btn {
     margin-top: 1em;
     width: 200px;
@@ -482,6 +487,7 @@ hr {
 		margin-top: 20px;
     max-width: 80%;
 }
+
 }
 
 
