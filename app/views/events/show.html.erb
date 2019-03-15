@@ -1,6 +1,6 @@
 
-
-    <div class="content add_event">
+<div class="add_event">
+    <div class="content">
       <div class=" colonne">
 
 
@@ -11,7 +11,6 @@
 
           <div class="">     
           <%= image_tag 'LSFMOT.png', class: "img3", :width => "18%"; %>
-
           </div>
 
           <h1 class="aff-title">
@@ -21,33 +20,22 @@
 
           <div class="elements">
 
-     
             <p><strong>Organisateur </strong> <br>
             <%= mail_to @event.user_contact, @event.user_contact, :class => "link"%></p>
-        
-
-       
+              
             <p><strong>Date  </strong> <br>
             <%= @event.date.strftime('%d/%m/%Y')%> à <%= @event.heure.strftime('%H:%M') %></p>
-          
-
-      
+              
             <p><strong>Description </strong> <br>
             <%= @event.description %></p>
-        
-
-         
-     
+                  
             <p><strong>Lieu  </strong> <br>
             <%= link_to @event.lieu, 'https://www.google.fr/maps/search/' +  @event.lieu + '+' + @event.num_rue.to_s + '+' + @event.rue + '+' + @event.code_postal.to_s + '+' +  @event.ville , target: "_blank", :class => "link"%> à <%= @event.ville %></p>    
-          
-
-          
+                
             <p><strong>Adresse  </strong> <br>
             <%= @event.num_rue %> <%= @event.rue %> <br>
             <%= @event.code_postal %> <%= @event.ville %> </p>
         
-
           <div class="button-cards">
           <% if user_signed_in? && @event.user_id == current_user.id %>
           <%= link_to 'Modifier', edit_event_path(@event), class: 'btn btn-outline-danger' %>
@@ -59,6 +47,7 @@
           </div>
         </div>
     </div>
- 
+    </div>
+ </div>
  
 
