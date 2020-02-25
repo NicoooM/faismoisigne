@@ -21,21 +21,21 @@
 
 body {
 
-	 // FONTS
+// FONTS
   $font1: 'Lato', sans-serif;
   $font2: 'playlistscript';
   $light: 300;
   $regular: 400;
   $bold: 700;
 
- 	 // COLORS
-  $white: #f6F6F6;
-  $orange: #F15F24;
-  $bleufonce: #14024F;
-  $bleu: #4305FF;
-  $black: #0F1814;
-  $gris: #676767;
-  //
+// COLORS
+	$white: #FAFAFA;
+	$orange: #F15F24;
+	$black: #151515;
+	$gris: #676767;
+	$bleu : #243c83;
+	$rose : #FFCAE7;
+ //
 
 	background-color: white;
 	font-family: 'Lato', sans serif;
@@ -43,24 +43,27 @@ body {
 }
 
 
- .img-fluid{
-  	width: 60px;
-  	padding: 5px;
-  	margin-left: 30px;
-
-  }
-
-
 // NAVBAR
 
+.img-fluid{
+	width: 35px;
+	margin: 0 0 0 50px;
+}
 
 .navbar{
-	 background-color: white !important;
-	 font-size: 17px;
-	 width: auto;
-	 z-index: 1;
-	 
+	background-color: white !important;
+	width: auto;
+	z-index: 1;
+	align-items: center;
+	margin-top: 20px;
 } 
+
+.nav-link, .navlink:visited{
+	width: 150px;
+	color: #291F71;
+	text-transform: uppercase;
+	text-decoration: none;
+}
 
 .collapse{
 	justify-content: flex-end;
