@@ -33,7 +33,6 @@ body {
 	$pink: #FFCAE7;
 	$black: #151515;
 	$bleu : #243c83;
-	$rose : #FFCAE7;
  //
 
 	background-color: white;
@@ -318,20 +317,28 @@ form{
 // FOOTER
 
 footer{
+	display: flex;
+	background-color: #243c83;
 	position: absolute;
     width: 100%;
-    bottom: 0;
-    color: #243c83;
+	color: #FAFAFA;
+	justify-content: space-between;
+	padding: 20px;
 }
 
 .lien{
 	padding: 5px;
 	padding-left:10px;
-	color: #243c83;
+	color: #FAFAFA;
 }
 
+
 .site{
-	color: #243c83;
+	color: #FAFAFA;
+}
+
+.copyright{
+	text-align: left;
 }
 
 .site:hover{
@@ -436,6 +443,7 @@ hr {
 }
 
 .rs {
+	text-align: right;
 	color: #243c83;
 }
 
