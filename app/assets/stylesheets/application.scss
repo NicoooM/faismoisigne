@@ -14,6 +14,7 @@
 
 @import "pages";
 @import "events";
+@import "profile";
 @import "bootstrap";
 @import "font-awesome";
 @import url('https://fonts.googleapis.com/css?family=Lato:300,400,700');
@@ -159,13 +160,13 @@ nav {
 
 .bg {
 	background-image: url("logo.png");
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  background-position: -1% 40%;
-  background-repeat: no-repeat;
-  background-size: 50%;
-  background-color: #291F71;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	background-position: -1% 40%;
+	background-repeat: no-repeat;
+	background-size: 50%;
+	background-color: #291F71;
 }
 
 .evenements {
@@ -250,11 +251,39 @@ nav {
 
 // profil
 
-.content{
-	height: 100vh;
+.container-fluid{
+	padding: 140px;
 }
 
+.profile-top-bg {
+	background-color: #291F71; 
+	height: 220px; 
+	width: 600px;
+	flex: 0 0 130%;
+	max-width: 130%;
+	border-radius: 6px;
+	margin-left: 22%;
+}
 
+.row.profile-content {
+	margin: -20% 0 0 0;
+}
+
+.row.near-events {
+	display: flex;
+    flex-direction: column;
+}
+
+.near-events h2 {
+	font-size: 1.5rem;
+}
+
+.near-events-cards {
+	display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
 
 
 //Login/out
@@ -302,8 +331,11 @@ form{
 // EVENTS
 
 .card{
-	margin: 10px auto !important;
+	margin: 10px auto;
 	background-color: white;
+	border-color: transparent;
+	padding: 5px;
+	min-width: 32%;
 }
 
 .title{
@@ -383,14 +415,16 @@ form{
 
 
 .row{
-	margin: auto;
-	padding-bottom: 80px;
-	padding-top: 80px;
+	margin: 0;
+	padding: 20px 0;
+}
+
+.card-body {
+	padding: 1.25rem 0 0.25rem 0;
 }
 
 .card-title{
-	color: #FFCAE7;
-	text-align:center;
+	color: #291F71;
 	font-size: 20px;
 }
 
@@ -402,8 +436,11 @@ form{
 	text-align: center;
 }
 
-.card{
-	border-color: #A1A1A1 ;
+.btn-primary {
+	width : 100%;
+	background-color: #291F71;
+    border-color: #291F71;
+    text-transform : uppercase;
 }
 
 
@@ -511,7 +548,7 @@ strong {
 .aff-title{
 	text-align: center;
 	color: #243c83;
-	font-size: 30px;
+	font-size: 1rem;
 }
 
 hr {

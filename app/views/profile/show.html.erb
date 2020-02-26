@@ -1,22 +1,79 @@
 
 
+    <div class="container">
 
+      <div class="row profile-bg">
+        <div class="col-2"></div>
+        <div class="col-10 profile-top-bg"></div>
+      </div>
 
+      <div class="row profile-content">
+          <div class="col-2">
 
-    <div class="content">
-      <div class=" colonne">
+            <h1 class="aff-title">
+              <%= full_name_profile %>
+            </h1>
 
-          <h1 class="aff-title">
-            <%= full_name_profile %>
-          </h1>
-        
-          <hr/>
+            <hr/>
 
-          <div class="elements">
-          <%= @user.description %><br>
-          <%= mail_to @user.email, @user.email%> <br>
-          <%= @user.lieu %> <br>
-          <%= @user.bio %> <br>     
+            <div class="elements">
+              <%= @user.lieu %> 
+              <%= mail_to @user.email, @user.email%>
+               
+              <%= @user.description %>
+              <%= @user.bio %>     
+            </div>
           </div>
+
+          <div class="col-1"></div>
+
+          <div class="col-9">
+            <div class="row" style="background-color: yellow">
+              <h1>Bonjour <%= full_name_profile %> !</h1>
+            </div>
+
+            <div class="row near-events" style="background-color: blue">
+
+              <h2>Evénements près de chez vous</h2>
+
+                <div class="near-events-cards">
+                  <div class="card col-3">
+                    <img src="https://asset.montecarlosbm.com/styles/hero_desktop_wide_responsive/s3/media/orphea/sbm_bb_bar_0003_1_id47390_rsz_2.jpg.jpeg?itok=CR10blvm" class="card-img-top">
+                    <div class="card-body">
+                      <p class="card-text">Type</p>
+                      <h5 class="card-title">Nom de l'event</h5>
+                      <p class="card-text">Date</p>
+                      <a href="#" class="btn btn-primary">participer</a>
+                    </div>
+                  </div>
+
+                  <div class="card col-3">
+                    <img src="https://asset.montecarlosbm.com/styles/hero_desktop_wide_responsive/s3/media/orphea/sbm_bb_bar_0003_1_id47390_rsz_2.jpg.jpeg?itok=CR10blvm" class="card-img-top">
+                    <div class="card-body">
+                      <p class="card-text">Type</p>
+                      <h5 class="card-title">Nom de l'event</h5>
+                      <p class="card-text">Date</p>
+                      <a href="#" class="btn btn-primary">participer</a>
+                    </div>
+                  </div>
+
+                  <div class="card col-3">
+                    <img src="https://asset.montecarlosbm.com/styles/hero_desktop_wide_responsive/s3/media/orphea/sbm_bb_bar_0003_1_id47390_rsz_2.jpg.jpeg?itok=CR10blvmg" class="card-img-top">
+                    <div class="card-body">
+                      <p class="card-text">Type</p>
+                      <h5 class="card-title">Nom de l'event</h5>
+                      <p class="card-text">Date</p>
+                      <a href="#" class="btn btn-primary">participer</a>
+                    </div>
+                  </div>
+
+                </div> 
+
+            </div>
+            <div class="row" style="background-color: red"></div>
+            <div class="row" style="background-color: purple"></div>
+            </div>
+          </div>
+
         </div>
     </div>
