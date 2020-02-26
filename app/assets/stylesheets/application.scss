@@ -73,6 +73,50 @@ body {
   width:100%;
 }
 
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  ul {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    list-style-type: none;
+  }
+  ul li {
+    padding: 6px 0;
+  }
+  ul li a {
+    position: relative;
+    display: block;
+    padding: 4px 0;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.5s;
+  }
+  ul li a::after {
+    position: absolute;
+    content: "";
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: #FFCAE7;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s;
+  }
+  ul li a:hover {
+    color: #FFCAE7;
+  }
+  ul li a:hover::after {
+    transform: scaleX(1);
+    transform-origin: right;
+  }
 
 .logo_title{
 	color: black;
