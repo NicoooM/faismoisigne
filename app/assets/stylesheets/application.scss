@@ -282,7 +282,7 @@ nav {
 .bg.profile-bg {
 	background-image: url(logoclair.png);
 	background-color: #F1F0F0;
-	margin-top: -75%;
+	margin-top: -1200px;
 	z-index: -20;
 }
 
@@ -305,6 +305,10 @@ nav {
 
 .near-events h2 {
 	color: #FAFAFA;
+}
+
+.passed-events h2, .your-events h2 {
+	color: #243c83;
 }
 
 .near-events-cards, .passed-events-cards, .your-events-cards {
@@ -371,7 +375,7 @@ form{
 }
 
 .card.col-4 {
-	min-width: 50%;
+	min-width: 48.5%;
 }
 
 .title{
@@ -480,7 +484,7 @@ form{
     text-transform : uppercase;
 }
 
-.btn-primary:hover {
+.btn-primary:hover, .btn-primary:not(:disabled):not(.disabled):active {
 	width : 100%;
 	color : #291F71;
 	background-color: transparent;
@@ -488,40 +492,6 @@ form{
     border: 0.5px solid;
     text-transform : uppercase;
 }
-
-
-.btn-outline-primary:hover{
-	background-color: #243c83 !important;
-	opacity: 30%;
-	color: white !important;
-}
-
-.btn-outline-secondary:hover{
-	background-color: #676767 !important;
-	opacity: 30%;
-	color: white !important;
-}
-.btn-outline-danger:hover{
-	background-color: white !important;
-	opacity: 30%;
-	color: #243c83 !important;
-}
-
-.btn-outline-primary{
-	border-color: #243c83 !important;
-	color: #243c83 !important;
-}
-
-.btn-outline-secondary{
-	border-color: #676767 !important;
-	color: #676767 !important;
-}
-.btn-outline-danger{
-	background-color: #243c83;
-	border-color: #243c83 !important;
-	color: white !important;
-}
-
 
 .link{
 	color: #243c83;
