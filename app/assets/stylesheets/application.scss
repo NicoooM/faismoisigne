@@ -54,7 +54,8 @@ body {
 	width: auto;
 	z-index: 1;
 	align-items: center;
-	margin-top: 20px;
+	margin-top: 10px;
+	margin-bottom: 10px;
 }
 
 .nav-link, .navlink:visited{
@@ -256,8 +257,8 @@ nav {
 }
 
 .profile-top-bg {
-	background-color: #291F71; 
-	height: 220px; 
+	background-color: #291F71;
+	height: 220px;
 	width: 600px;
 	flex: 0 0 130%;
 	max-width: 130%;
