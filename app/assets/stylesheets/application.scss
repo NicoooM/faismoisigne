@@ -189,6 +189,10 @@ nav {
 
 .contact-part {
 	width: 27vw;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
 }
 
 .contact-center {
@@ -213,13 +217,19 @@ nav {
 	margin-bottom: 30px;
 }
 
-.btn-primary {
+.btn-secondary {
 	background-color: #FAFAFA;
 	color: #291F71;
 	margin: 0 0 0 0;
 	width: 20vw;
 	border: none;
-	font-size: 25px;
+}
+
+.btn-secondary:hover {
+	background-color: #291F71;
+	color: #FAFAFA;
+	border-color: #FAFAFA;
+	border: 1px solid;
 }
 
 .text-accueil {
@@ -446,8 +456,18 @@ form{
 
 .btn-primary {
 	width : 100%;
+	color : #FAFAFA;
 	background-color: #291F71;
     border-color: #291F71;
+    text-transform : uppercase;
+}
+
+.btn-primary:hover {
+	width : 100%;
+	color : #291F71;
+	background-color: transparent;
+    border-color: #291F71;
+    border: solid;
     text-transform : uppercase;
 }
 
