@@ -54,7 +54,7 @@ body {
 	z-index: 1;
 	align-items: center;
 	margin-top: 20px;
-} 
+}
 
 .nav-link, .navlink:visited{
 	width: 150px;
@@ -87,7 +87,7 @@ body {
 // Accueil
 
 .title-accueil{
-	font-size: 35px;
+	font-size: 60px;
 	margin-top: -5vh;
 }
 
@@ -98,7 +98,7 @@ body {
 }
 
 .baseline{
-	margin-top: -5vh;
+	margin-top: 5vh;
 }
 
 .btn-danger{
@@ -106,11 +106,26 @@ body {
 	border: #243c83 !important;
 	color: white !important;
 	margin-top: 30px;
-	
+
 }
 
 .home{
 	height: 100vh;
+}
+
+.bg {
+	background-image: url("logo.png");
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-position: -1% 40%;
+  background-repeat: no-repeat;
+  background-size: 50%;
+  background-color: #291F71;
+}
+
+.text-accueil {
+	color: white;
 }
 
 
@@ -269,7 +284,7 @@ form{
 }
 
 .card{
-	border-color: #A1A1A1 ; 
+	border-color: #A1A1A1 ;
 }
 
 
@@ -345,7 +360,7 @@ footer{
 	color: #FFCAE7;
 }
 
-// AFFICHER 
+// AFFICHER
 
 .content {
     max-width: 40%;
@@ -433,7 +448,7 @@ hr {
 	padding-top: 100px;
 }
 
-	
+
 .text2{
 	padding-top: 90px;
 }
@@ -484,16 +499,16 @@ hr {
 	}
 
 	.img{
-		display: none;	
+		display: none;
 	}
-	
+
 	.img1{
-		display: none;	
+		display: none;
 	}
 	.img2{
 		display: none;
 	}
-	
+
 	.img3{
 		display: none;
 	}
