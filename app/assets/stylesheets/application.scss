@@ -183,7 +183,7 @@ nav {
 // profil
 
 .container-fluid{
-	padding: 140px;
+	padding: 5%;
 }
 
 .profile-top-bg {
@@ -209,7 +209,7 @@ nav {
 	font-size: 1.5rem;
 }
 
-.near-events-cards {
+.near-events-cards, .passed-events-cards, .your-events-cards {
 	display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -266,7 +266,14 @@ form{
 	background-color: white;
 	border-color: transparent;
 	padding: 5px;
+}
+
+.card.col-3 {
 	min-width: 32%;
+}
+
+.card.col-4 {
+	min-width: 50%;
 }
 
 .title{
