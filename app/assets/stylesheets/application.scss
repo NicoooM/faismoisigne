@@ -19,6 +19,9 @@
 @import "font-awesome";
 @import url('https://fonts.googleapis.com/css?family=Lato:300,400,700');
 
+html {
+	width: 100%;
+}
 
 body {
 
@@ -262,13 +265,13 @@ nav {
 
 // PROFIL
 
-.container-fluid{
-	padding: 5%;
+.container{
+	z-index: 20;
 }
 
 .profile-top-bg {
 	background-color: #291F71;
-	height: 220px;
+	height: 250px;
 	width: 600px;
 	flex: 0 0 130%;
 	max-width: 130%;
@@ -276,8 +279,19 @@ nav {
 	margin-left: 22%;
 }
 
+.bg.profile-bg {
+	background-image: url(logoclair.png);
+	background-color: #F1F0F0;
+	margin-top: -75%;
+	z-index: -20;
+}
+
 .row.profile-content {
-	margin: -20% 0 0 0;
+	margin: -26% 0 0 0;
+}
+
+.profile-content.row h1 {
+	color: #FAFAFA;
 }
 
 .row.near-events {
@@ -287,6 +301,10 @@ nav {
 
 .near-events h2, .passed-events h2, .your-events h2 {
 	font-size: 1.5rem;
+}
+
+.near-events h2 {
+	color: #FAFAFA;
 }
 
 .near-events-cards, .passed-events-cards, .your-events-cards {
