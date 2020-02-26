@@ -520,6 +520,15 @@ footer{
 	padding: 5px;
 	padding-left:10px;
 	color: #FAFAFA;
+	-webkit-transition:all .3s ease;
+			transition:all .3s ease;
+}
+
+
+.lien:hover{
+	color: #FFCAE7;
+	-webkit-transition:all .3s ease;
+			transition:all .3s ease;
 }
 
 
