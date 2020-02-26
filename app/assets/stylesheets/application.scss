@@ -19,6 +19,9 @@
 @import "font-awesome";
 @import url('https://fonts.googleapis.com/css?family=Lato:300,400,700');
 
+html {
+	width: 100%;
+}
 
 body {
 
@@ -152,7 +155,6 @@ nav {
 	border: #243c83 !important;
 	color: white !important;
 	margin-top: 30px;
-
 }
 
 .home{
@@ -176,6 +178,10 @@ nav {
 	height: 100%;
 }
 
+.card.col-3 {
+	max-width: 22%;
+}
+
 .contact {
 	display: flex;
 	flex-wrap: wrap;
@@ -189,6 +195,10 @@ nav {
 
 .contact-part {
 	width: 27vw;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
 }
 
 .contact-center {
@@ -213,13 +223,19 @@ nav {
 	margin-bottom: 30px;
 }
 
-.btn-primary {
+.btn-secondary {
 	background-color: #FAFAFA;
 	color: #291F71;
 	margin: 0 0 0 0;
 	width: 20vw;
 	border: none;
-	font-size: 25px;
+}
+
+.btn-secondary:hover {
+	background-color: #291F71;
+	color: #FAFAFA;
+	border-color: #FAFAFA;
+	border: 0.5px solid;
 }
 
 .text-accueil {
@@ -250,15 +266,15 @@ nav {
 	width: 85vw;
 }
 
-// profil
+// PROFIL
 
-.container-fluid{
-	padding: 5%;
+.container{
+	z-index: 20;
 }
 
 .profile-top-bg {
 	background-color: #291F71;
-	height: 220px;
+	height: 250px;
 	width: 600px;
 	flex: 0 0 130%;
 	max-width: 130%;
@@ -266,8 +282,19 @@ nav {
 	margin-left: 22%;
 }
 
+.bg.profile-bg {
+	background-image: url(logoclair.png);
+	background-color: #F1F0F0;
+	margin-top: -1200px;
+	z-index: -20;
+}
+
 .row.profile-content {
-	margin: -20% 0 0 0;
+	margin: -26% 0 0 0;
+}
+
+.profile-content.row h1 {
+	color: #FAFAFA;
 }
 
 .row.near-events {
@@ -275,8 +302,16 @@ nav {
     flex-direction: column;
 }
 
-.near-events h2 {
+.near-events h2, .passed-events h2, .your-events h2 {
 	font-size: 1.5rem;
+}
+
+.near-events h2 {
+	color: #FAFAFA;
+}
+
+.passed-events h2, .your-events h2 {
+	color: #243c83;
 }
 
 .near-events-cards, .passed-events-cards, .your-events-cards {
@@ -338,12 +373,12 @@ form{
 	padding: 5px;
 }
 
-.card.col-3 {
+.card.profile-card.col-3 {
 	min-width: 32%;
 }
 
 .card.col-4 {
-	min-width: 50%;
+	min-width: 48.5%;
 }
 
 .title{
@@ -446,44 +481,20 @@ form{
 
 .btn-primary {
 	width : 100%;
+	color : #FAFAFA;
 	background-color: #291F71;
     border-color: #291F71;
     text-transform : uppercase;
 }
 
-
-.btn-outline-primary:hover{
-	background-color: #243c83 !important;
-	opacity: 30%;
-	color: white !important;
+.btn-primary:hover, .btn-primary:not(:disabled):not(.disabled):active {
+	width : 100%;
+	color : #291F71;
+	background-color: transparent;
+    border-color: #291F71;
+    border: 0.5px solid;
+    text-transform : uppercase;
 }
-
-.btn-outline-secondary:hover{
-	background-color: #676767 !important;
-	opacity: 30%;
-	color: white !important;
-}
-.btn-outline-danger:hover{
-	background-color: white !important;
-	opacity: 30%;
-	color: #243c83 !important;
-}
-
-.btn-outline-primary{
-	border-color: #243c83 !important;
-	color: #243c83 !important;
-}
-
-.btn-outline-secondary{
-	border-color: #676767 !important;
-	color: #676767 !important;
-}
-.btn-outline-danger{
-	background-color: #243c83;
-	border-color: #243c83 !important;
-	color: white !important;
-}
-
 
 .link{
 	color: #243c83;

@@ -3,7 +3,7 @@
 	<div class="home">
 
 
-		<div class="bg"></div>
+		<div class="bg" style="height: 90%"></div>
 
 		<div class="row">
 			<div class="col-lg-2"></div>
@@ -15,7 +15,31 @@
 		</div>
 
 		<div class="row evenements">
-		
+			<div class="container">
+				<div class="row">
+
+				<div class="card col-3">
+	                <%= image_tag 'gauche.png', class: "card-img-top" %>
+	                <div class="card-body">
+	                  <h5 class="card-title">inscrivez vous</h5>
+	                </div>
+                </div>
+
+                <% @events.each do |event| %>
+	                <div class="card col-3">
+		                <%= image_tag 'gauche.png', class: "card-img-top" %>
+		                <div class="card-body">
+		                	<p class="card-text">Type</p>
+		                	<h5 class="card-title"><%= event.nom %></h5>
+		                	<p class="card-text">Le <%= event.date.strftime('%d/%m/%Y')%> à <%= event.heure.strftime('%H:%M') %></p>
+		                	<p class="card-text"><%= link_to event.lieu, 'https://www.google.fr/maps/search/' +  event.lieu + '+' + event.num_rue.to_s + '+' + event.rue + '+' + event.code_postal.to_s + '+' +  event.ville , target: "_blank", :class => "link"%> à <%= event.ville %></p> 
+		                	<%= link_to 'Participer', event, :class => "btn btn-primary btn-sm"%>
+		                </div>
+	                </div>
+      			<% end %>
+                
+				</div>
+			</div>
 		</div>
 
 		<div class="contact">
@@ -23,19 +47,19 @@
 				<h1 class="contact-titre">Qui sommes-nous ?</h1>
 				<div class="underlineText"></div>
 				<div class="font-italic font-weight-light contact-desc">Les petites mains de <b>Fais-Moi Signe</b> c’est une équipe de bénévoles. Nous avons créé cette plateforme pour multiplier les échanges autour de la Langue des Signes française.</div>
-				<button class="font-weight-bold btn btn-sm btn-primary">EN SAVOIR PLUS</button>
+				<button class="font-weight-bold btn btn-sm btn-secondary">EN SAVOIR PLUS</button>
 			</div>
 			<div class="contact-part contact-center">
 				<h1 class="contact-titre">Comment participer ?</h1>
 				<div class="underlineText"></div>
 				<div class="font-italic font-weight-light contact-desc">Pour participer à des événements, il suffit de se connecter à son compte <b>Fais-Moi Signe</b> ou de s’inscrire, de choisir un événement parmi ceux créés ou d’en créer un !</div>
-				<button class="font-weight-bold btn btn-sm btn-primary">LES ÉVÉNEMENTS</button>
+				<button class="font-weight-bold btn btn-sm btn-secondary">LES ÉVÉNEMENTS</button>
 			</div>
 			<div class="contact-part">
 				<h1 class="contact-titre">Comment s'inscrire ?</h1>
 				<div class="underlineText"></div>
 				<div class="font-italic font-weight-light contact-desc">Pour faire parti de la famille <b>Fais-Moi Signe</b>, il suffit de renseigner ses coordonnées dans le formulaire d’inscription.</div>
-				<button class="font-weight-bold btn btn-sm btn-primary">S'INSCRIRE</button>
+				<button class="font-weight-bold btn btn-sm btn-secondary">S'INSCRIRE</button>
 			</div>
 		</div>
 
