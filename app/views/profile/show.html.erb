@@ -1,22 +1,44 @@
 
 
+    <div class="container">
+      <div class="row">
+          <div class="col-2">
 
+            <h1 class="aff-title">
+              <%= full_name_profile %>
+            </h1>
 
+            <hr/>
 
-    <div class="content">
-      <div class=" colonne">
-
-          <h1 class="aff-title">
-            <%= full_name_profile %>
-          </h1>
-        
-          <hr/>
-
-          <div class="elements">
-          <%= @user.description %><br>
-          <%= mail_to @user.email, @user.email%> <br>
-          <%= @user.lieu %> <br>
-          <%= @user.bio %> <br>     
+            <div class="elements">
+              <%= @user.description %><br>
+              <%= mail_to @user.email, @user.email%> <br>
+              <%= @user.lieu %> <br>
+              <%= @user.bio %> <br>     
+            </div>
           </div>
+
+          <div class="col-1"></div>
+
+          <div class="col-9">
+            <div class="row" style="background-color: yellow"></div>
+            <div class="row" style="background-color: blue">
+
+              <div class="card" style="width: 18rem;">
+                <img src="https://www.planetesante.ch/var/ezdemo_site/storage/images/media/images/01_images-articles/cafe_jour_reduit_mortalite/791770-1-fre-CH/cafe_jour_reduit_mortalite_gallerylarge.jpg" class="card-img-top">
+                <div class="card-body">
+                  <p class="card-text">Type</p>
+                  <h5 class="card-title">Nom de l'event</h5>
+                  <p class="card-text">Date</p>
+                  <a href="#" class="btn btn-primary">participer</a>
+                </div>
+              </div>
+
+            </div>
+            <div class="row" style="background-color: red"></div>
+            <div class="row" style="background-color: purple"></div>
+            </div>
+          </div>
+
         </div>
     </div>
