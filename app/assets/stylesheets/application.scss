@@ -229,7 +229,7 @@ nav {
 	background-color: #291F71;
 	color: #FAFAFA;
 	border-color: #FAFAFA;
-	border: 1px solid;
+	border: 0.5px solid;
 }
 
 .text-accueil {
@@ -260,7 +260,7 @@ nav {
 	width: 85vw;
 }
 
-// profil
+// PROFIL
 
 .container-fluid{
 	padding: 5%;
@@ -285,7 +285,7 @@ nav {
     flex-direction: column;
 }
 
-.near-events h2 {
+.near-events h2, .passed-events h2, .your-events h2 {
 	font-size: 1.5rem;
 }
 
@@ -467,7 +467,7 @@ form{
 	color : #291F71;
 	background-color: transparent;
     border-color: #291F71;
-    border: solid;
+    border: 0.5px solid;
     text-transform : uppercase;
 }
 
