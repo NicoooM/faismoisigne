@@ -186,15 +186,16 @@ nav {
 	padding: 50px;
 }
 
-.card.col-3 {
-	flex: auto;
-	max-width: 32%;
-}
-
 .row.near-events {
 	display: flex;
+    flex-direction: column;
+}
+
+.near-events-cards {
+	display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-start;
+    flex-wrap: wrap;
 }
 
 
@@ -243,8 +244,11 @@ form{
 // EVENTS
 
 .card{
-	margin: 10px 0;
+	margin: 10px auto;
 	background-color: white;
+	border-color: transparent;
+	padding: 5px;
+	min-width: 32%;
 }
 
 .title{
@@ -329,7 +333,7 @@ form{
 }
 
 .card-body {
-	padding: 1.25rem 0;
+	padding: 1.25rem 0 0.25rem 0;
 }
 
 .card-title{
@@ -343,11 +347,6 @@ form{
 
 .bottom{
 	text-align: center;
-}
-
-.card{
-	border-color: transparent;
-	padding: 5px;
 }
 
 .btn-primary {
@@ -462,7 +461,7 @@ strong {
 .aff-title{
 	text-align: center;
 	color: #243c83;
-	font-size: 30px;
+	font-size: 1rem;
 }
 
 hr {
