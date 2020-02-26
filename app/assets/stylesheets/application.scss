@@ -169,15 +169,84 @@ nav {
 }
 
 .evenements {
-	background-color: white;
+	background-color: #FAFAFA;
 	width: 100%;
 	height: 100%;
 }
 
-.text-accueil {
-	color: white;
+.contact {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	background-color: #291F71;
+	width: 100%;
+	padding: 5%;
+	color: #FAFAFA;
 }
 
+.contact-part {
+	width: 27vw;
+}
+
+.contact-center {
+	margin: 0 50px;
+}
+
+.contact-titre {
+	font-size: 45px;
+	text-align: center;
+	margin-bottom: 15px;
+}
+
+.underlineText {
+	width: 17vw;
+	margin: 0 3vw 40px 10vw;
+	height: 5px;
+	background-color: pink;
+}
+
+.contact-desc {
+	font-size: 23px;
+	margin-bottom: 30px;
+}
+
+.btn-primary {
+	background-color: #FAFAFA;
+	color: #291F71;
+	margin: 0 0 0 5vw;
+	width: 20vw;
+	border: none;
+	font-size: 25px;
+}
+
+.text-accueil {
+	color: #FAFAFA;
+}
+
+.soutiens {
+	background-color: #FAFAFA;
+	width: 100%;
+	padding: 5%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	color: #291F71;
+}
+
+.soutiens-titre {
+	margin-bottom: 15px;
+	font-size: 40px;
+}
+
+.soutiens-logo {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 85vw;
+}
 
 // profil
 
