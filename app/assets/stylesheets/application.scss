@@ -605,29 +605,58 @@ hr {
 
 // Découvrir
 
-.discover .row{
-	right: 0;
-	width: 80%;
-	margin: auto;
-	padding-top: 30px;
-	color: #14024F;
+.discover {
+	width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
-.img7{
-
+.discover-title {
+  color: #243c83;
+  font-size: 47px;
+  font-weight: bold;
+  margin-top: 5vh;
 }
 
-.text{
-	padding-top: 100px;
+.cartes {
+  width: 90%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 5vh;
 }
 
-
-.text2{
-	padding-top: 90px;
+.carte {
+  width: 32%;
+  height: 27vh;
+  margin-top: 1vw;
+  background-color: #243c83;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  color: #FAFAFA;
+  padding: 20px 10px;
+  font-size: 1vw;
 }
 
-.img8{
+.carte img {
+  height: 8vh;
+}
 
+.quisommesnous {
+  width: 86%;
+  padding-top: 5vh;
+}
+
+.text2 {
+  color: #243c83;
+  font-size: 22px;
+  margin-bottom: 5vh;
 }
 
 .rs {
