@@ -193,6 +193,7 @@ nav {
 
 .card.col-3 {
 	max-width: 22%;
+	height: 350px;
 }
 
 .card.col-3.first-card {
@@ -206,10 +207,6 @@ nav {
 	text-transform: uppercase;
 	text-align: center;
 	font-weight: bold;
-}
-
-.card-body.first-card {
-	flex: 0;
 }
 
 .card-img-top.first-card {
@@ -330,6 +327,7 @@ nav {
 	background-color: white;
 	border-color: transparent;
 	padding: 5px;
+	justify-content: space-between;
 }
 
 .card.profile-card.col-3 {
@@ -422,6 +420,7 @@ form{
 
 .card-body {
 	padding: 1.25rem 0 0.25rem 0;
+	flex: 0;
 }
 
 .card-title{
