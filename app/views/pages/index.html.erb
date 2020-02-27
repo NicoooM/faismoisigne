@@ -25,7 +25,7 @@
 	                </div>
                 </div>
 
-	                <% @events.sort_by{ |t| t.date }.first(7).each do |event| %>
+	                <% @events.sort_by{ |t| t.date }.first(2).each do |event| %>
 		                <%if event.date > Date.today %>
 			               	<div class="card col-3">
 				                <%= image_tag 'imgv0.jpg', class: "card-img-top" %>
