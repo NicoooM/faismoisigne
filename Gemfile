@@ -42,6 +42,8 @@ gem 'bootstrap', '~> 4.3.1'
 gem 'sprockets-rails', :require => 'sprockets/railtie'
 gem 'bootstrap-sass'
 gem "font-awesome-rails"
+gem 'mail_form'
+gem 'dotenv-rails', groups: [:development, :test]
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
