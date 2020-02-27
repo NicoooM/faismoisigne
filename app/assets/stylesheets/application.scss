@@ -142,11 +142,8 @@ nav {
 
 // Accueil
 
-.lsf, .uni{
-	height: 8vw;
-}
-.logoHP{
-	height: 6vw;
+.lsf, .uni, .logoHP{
+	height: 4vw;
 }
 
 .title-accueil{
@@ -241,11 +238,10 @@ nav {
 .contact {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: center;
-	align-items: center;
+	justify-content: space-around;
 	background-color: #291F71;
 	width: 100%;
-	padding: 5%;
+	padding: 8%;
 	color: #FAFAFA;
 	position: relative;
 	height: 50%;
@@ -266,9 +262,8 @@ nav {
 }
 
 .contact-titre {
-	font-size: 2rem;
+	font-size: 30px;
 	text-align: center;
-	margin-bottom: 2vh;
 }
 
 .underlineText {
@@ -280,7 +275,7 @@ nav {
 
 .contact-desc {
 	font-size: 1rem;
-	margin-bottom: 2vh;
+	margin: 8%;
 }
 
 .btn-secondary {
@@ -316,15 +311,15 @@ nav {
 }
 
 .soutiens-titre {
-	margin-bottom: 15px;
-	font-size: 40px;
+	font-size: 30px;
 }
 
 .soutiens-logo {
 	display: flex;
-	justify-content: space-between;
+	justify-content: space-around;
 	align-items: center;
-	width: 85vw;
+	width: 90vw;
+	padding: 100px;
 }
 
 
