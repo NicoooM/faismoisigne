@@ -4,6 +4,7 @@
 
 
 		<div class="bg" style="height: 90%"></div>
+		<div class="bg-gris" style="height: 100%"></div>
 
 		<div class="row">
 			<div class="col-lg-2"></div>
@@ -25,18 +26,20 @@
 	                </div>
                 </div>
 
-                <% @events.each do |event| %>
-	                <div class="card col-3">
-		                <%= image_tag 'gauche.png', class: "card-img-top" %>
-		                <div class="card-body">
-		                	<p class="card-text">Type</p>
-		                	<h5 class="card-title"><%= event.nom %></h5>
-		                	<p class="card-text">Le <%= event.date.strftime('%d/%m/%Y')%> à <%= event.heure.strftime('%H:%M') %></p>
-		                	<p class="card-text"><%= link_to event.lieu, 'https://www.google.fr/maps/search/' +  event.lieu + '+' + event.num_rue.to_s + '+' + event.rue + '+' + event.code_postal.to_s + '+' +  event.ville , target: "_blank", :class => "link"%> à <%= event.ville %></p> 
-		                	<%= link_to 'Participer', event, :class => "btn btn-primary btn-sm"%>
+	                <% @events.sort_by{ |t| t.date }.first(7).each do |event| %>
+		                <%if event.date > Date.today %>
+			                <div class="card col-3">
+				                <%= image_tag 'theatre.png', class: "card-img-top" %>
+				                <div class="card-body acc">
+				                	<p class="card-text acc">Type</p>
+				                	<h5 class="card-title acc"><%= event.nom %></h5>
+				                	<p class="card-text acc">Le <%= event.date.strftime('%d/%m/%Y')%> à <%= event.heure.strftime('%H:%M') %></p>
+				                	<p class="card-text acc"><%= link_to event.lieu, 'https://www.google.fr/maps/search/' +  event.lieu + '+' + event.num_rue.to_s + '+' + event.rue + '+' + event.code_postal.to_s + '+' +  event.ville , target: "_blank", :class => "link"%> à <%= event.ville %></p> 
+				                	<%= link_to 'Participer', event, :class => "btn btn-primary btn-sm"%>
+				                </div>
 		                </div>
-	                </div>
-      			<% end %>
+		                <% end %> 
+	      			<% end %>
                 
 				</div>
 			</div>
