@@ -18,7 +18,7 @@
 @import "profile";
 @import "bootstrap";
 @import "font-awesome";
-@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700&display=swap');
 
 html {
 	width: 100%;
@@ -26,24 +26,30 @@ html {
 
 body {
 
-// FONTS
-  $font1: 'Lato', sans-serif;
-  $font2: 'playlistscript';
-  $light: 300;
-  $regular: 400;
-  $bold: 700;
-
 // COLORS
 	$white: #FAFAFA;
 	$pink: #FFCAE7;
 	$black: #151515;
 	$bleu : #243c83;
- //
+//
 
 	background-color: white;
-	font-family: 'Lato', sans serif;
+	font-family: 'Montserrat', ;
 	position: relative;
 }
+
+h1 {
+	font-weight: 600;
+}
+
+h2 {
+	font-weight: 500;
+}
+
+p {
+	font-weight: 400;
+}
+
 
 
 // NAVBAR
@@ -181,6 +187,8 @@ nav {
 	background-color: #291F71;
 }
 
+//CARDS EVENTS
+
 .evenements {
 	width: 100%;
 	height: 100%;
@@ -194,6 +202,7 @@ nav {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	align-items: center;
 }
 
 .card-title.first-card {
@@ -206,6 +215,17 @@ nav {
 	flex: 0;
 }
 
+.card-img-top.first-card {
+	width: 30%;
+}
+
+.link-first-card {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
 .card-body.acc {
 	padding: 0.5rem 0 0.25rem 0;
 }
@@ -213,6 +233,10 @@ nav {
 .card-text.acc, .card-title.acc {
 	margin-bottom: 0.3rem;
 }
+
+
+
+// CONTACT
 
 .contact {
 	display: flex;
@@ -502,9 +526,6 @@ footer{
 
 .colonne{
 	margin: 0 auto;
-}
-.content h1 {
-  font-weight: 700;
 }
 
 .content div{

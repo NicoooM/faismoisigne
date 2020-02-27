@@ -35,7 +35,7 @@ class EventsController < ApplicationController
     @event.user_contact = current_user.prenom+" "+current_user.nom
     respond_to do |format|
       if @event.save
-        format.html { redirect_to @event, notice: 'Event was successfully created.' }
+        format.html { redirect_to @event, notice: 'Votre événement a été créé avec succès.' }
         format.json { render :show, status: :created, location: @event }
       else
         format.html { render :new }
@@ -50,7 +50,7 @@ class EventsController < ApplicationController
     if current_user.id == @event.user_id
     respond_to do |format|
       if @event.update(event_params)
-        format.html { redirect_to @event, notice: 'Event was successfully updated.' }
+        format.html { redirect_to @event, notice: 'Votre événement a été modifié avec succès.' }
         format.json { render :show, status: :ok, location: @event }
       else
         format.html { render :edit }
@@ -65,7 +65,7 @@ class EventsController < ApplicationController
   def destroy
     @event.destroy
     respond_to do |format|
-      format.html { redirect_to events_url, notice: 'Event was successfully destroyed.' }
+      format.html { redirect_to events_url, notice: 'Votre événement a été supprimé avec succès.' }
       format.json { head :no_content }
     end
   end

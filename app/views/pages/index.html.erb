@@ -3,12 +3,12 @@
 	<div class="home">
 
 
-		<div class="bg" style="height: 80%"></div>
+		<div class="bg" style="height: 50%"></div>
 
 		<div class="row">
 			<div class="col-lg-2"></div>
 			<div class="col-lg-8 centrer text-accueil">
-				<h1 class="title-accueil font-weight-bold">Fais-Moi Signe</h1>
+				<h1 class="title-accueil">Fais-Moi Signe</h1>
 				<h4 class="font-italic font-weight-light">Un site, un signe, une rencontre.</h5>
 				<h3 class="baseline">Trouvez un évènement près de chez vous !</h2>
 			</div>
@@ -18,12 +18,12 @@
 			<div class="container">
 				<div class="row">
 
-				<div class="card col-3 first-card">
-	                <%= image_tag 'gauche.png', class: "card-img-top" %>
-	                <div class="card-body first-card">
-	                  <h5 class="card-title first-card">inscrivez vous</h5>
+					<div class="card col-3 first-card">
+		                <%= image_tag 'gauche.png', class: "card-img-top" %>
+		                <div class="card-body first-card">
+		                  <h5 class="card-title first-card">inscrivez vous</h5>
+		                </div>
 	                </div>
-                </div>
 
 	                <% @events.sort_by{ |t| t.date }.each do |event| %>
 		                <%if event.date > Date.today %>
@@ -39,11 +39,26 @@
 		                	</div>
 		                <% end %> 
 	      			<% end %>
-                
-				</div>
 
-				<div class="row">
-					<%= link_to 'Organiser un événement', new_event_path(@events), :class => "btn btn-primary btn-sm"%>
+		      		<div class="card col-3 first-card">
+		                <%= link_to events_path, class: "link-first-card" do %>
+				                <%= image_tag 'agenda.png', class: "card-img-top first-card" %>
+				                <div class="card-body first-card">
+		                  			<h5 class="card-title first-card">tout l'agenda</h5>
+				                </div>
+			                <% end %>
+	                </div>
+
+	                
+	                <div class="card col-3 first-card">
+	                	<%= link_to new_event_path(@events), class: "link-first-card" do %>
+			                <%= image_tag 'plus.png', class: "card-img-top first-card"%>
+			                <div class="card-body first-card">
+			                  <h5 class="card-title first-card">créez votre événement</h5>
+			                </div>
+		                <% end %>
+	                </div>
+                
 				</div>
 
 			</div>
