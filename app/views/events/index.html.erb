@@ -25,6 +25,10 @@
                 <%= link_to 'Participer', event, :class => "btn btn-primary-act btn-sm" %>
                 <%= link_to 'Modifier', edit_event_path(event), :class => "btn btn-primary-act btn-sm" %>
                 <% end %> 
+
+                <% if user_signed_in? && event.user_id != current_user.id %>
+                <%= link_to 'Participer', event, :class => "btn btn-primary btn-sm" %>
+                <% end %> 
               </div>
 
           </div>
@@ -42,7 +46,7 @@
             <p class="card-text acc">Type</p>
             <h5 class="card-title acc"><%= event.nom %></h5>
             <p class="card-text acc">Le <%= event.date.strftime('%d/%m/%Y')%> à <%= event.heure.strftime('%H:%M') %></p>
-            <p class="card-text acc"><%= link_to event.lieu, 'https://www.google.fr/maps/search/' +  event.lieu + '+' + event.num_rue.to_s + '+' + event.rue + '+' + event.code_postal.to_s + '+' +  event.ville , target: "_blank", :class => "link"%> à <%= event.ville %></p> 
+            <p class="card-text acc"><%= link_to event.lieu, 'https://www.google.fr/maps/search/' +  event.ville %></p> 
             </div>
 
               <div>
@@ -54,7 +58,12 @@
                 <%= link_to 'Participer', event, :class => "btn btn-primary-act btn-sm" %>
                 <%= link_to 'Modifier', edit_event_path(event), :class => "btn btn-primary-act btn-sm" %>
                 <% end %> 
+
+                <% if user_signed_in? && event.user_id != current_user.id %>
+                <%= link_to 'Participer', event, :class => "btn btn-primary btn-sm" %>
+                <% end %> 
               </div>
+              
         </div>
         <% end %>
       <% end %>
