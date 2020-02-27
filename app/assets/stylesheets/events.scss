@@ -137,3 +137,23 @@ html {
   display:none;
 }
 
+// NEW EVENT
+
+.underlineTextEVENT{
+  width: 17vw;
+  margin: 0 3vw 7vh 53vw;
+  height: 5px;
+  background-color: pink;
+}
+
+.allFormEvent{
+  display: flex;
+  justify-content: space-between;
+}
+
+.add_event{
+  background-color: aliceblue;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  margin: 40px;
+}

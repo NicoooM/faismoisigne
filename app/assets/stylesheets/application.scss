@@ -196,10 +196,6 @@ nav {
 
 .card.col-3 {
 	max-width: 22%;
-	height: 360px;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
 }
 
 .card.col-3.first-card {
@@ -215,7 +211,7 @@ nav {
 	font-weight: bold;
 }
 
-.card-body {
+.card-body.first-card {
 	flex: 0;
 }
 
@@ -237,6 +233,7 @@ nav {
 .card-text.acc, .card-title.acc {
 	margin-bottom: 0.3rem;
 }
+
 
 
 // CONTACT
@@ -368,12 +365,10 @@ label {
 
 .add_event form{
 	height: auto;
-	padding-bottom: 60px;
 	margin-bottom : 60px;
 }
 
 form{
-	max-width: 40%;
 	margin: auto;
 	height: 100vh
 }
@@ -458,26 +453,6 @@ form{
 
 .btn-primary:hover, .btn-primary:not(:disabled):not(.disabled):active {
 	width : 100%;
-	color : #291F71;
-	background-color: transparent;
-    border-color: #291F71;
-    border: 0.5px solid;
-    text-transform : uppercase;
-   	cursor: pointer;
-}
-
-.btn-primary-act {
-	width : 49%;
-	color : #FAFAFA;
-	background-color: #291F71;
-    border-color: #291F71;
-    text-transform : uppercase;
-    cursor: pointer;
-    margin-top: 1%;
-}
-
-.btn-primary-act:hover, .btn-primary-act:not(:disabled):not(.disabled):active {
-	width : 49%;
 	color : #291F71;
 	background-color: transparent;
     border-color: #291F71;
