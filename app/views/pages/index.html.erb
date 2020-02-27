@@ -25,8 +25,7 @@
 	                </div>
                 </div>
 
-	                <% @events.sort_by{ |t| t.date }.each do |event| %>
-		                <%if event.date > Date.today %>
+	                <% @events.sort_by{ |t| t.date }.first(7).each do |event| %>
 			               	<div class="card col-3">
 				                <%= image_tag 'imgv0.jpg', class: "card-img-top" %>
 				                <div class="card-body acc">
@@ -37,7 +36,6 @@
 				                	<%= link_to 'Participer', event, :class => "btn btn-primary btn-sm"%>
 				                </div>
 		                	</div>
-		                <% end %> 
 	      			<% end %>
                 
 				</div>
