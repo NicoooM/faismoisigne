@@ -2,7 +2,7 @@
 :root {
   --space-root: 1rem;
   --space-xs: calc(var(--space-root) / 2);
-  --space-s: calc(var(--space-root) / 1.5);
+  --space-s: calc(var(--space-root) / 1);
   --space-m: var(--space-root);
   --space-l: calc(var(--space-root) * 1.5);
   --space-xl: calc(var(--space-root) * 2);
@@ -87,7 +87,6 @@ h2 {
 }
 
 .form-inner {
-    padding: 0 30% 0 30%;
   background-color: white;
   z-index: 1;
 }
@@ -163,7 +162,6 @@ label {
 input {
   -webkit-box-flex: 1;
           flex: 1 1 0;
-  width: 100%;
   outline: none;
   padding: var(--space-m);
   font-size: var(--font-size);
@@ -182,12 +180,14 @@ input:focus {
           align-items: center;
   -webkit-box-pack: justify;
           justify-content: space-between;
+          width: 100%;
 }
 .btn-group > * + * {
   margin-left: var(--space-s);
 }
 
 .btn {
+  width: 50%;
   position: relative;
   overflow: hidden;
   display: -webkit-box;
@@ -217,11 +217,12 @@ input:focus {
   border-color: var(--color-secondary);
 }
 
+
 .btn--text {
   font-size: calc(var(--font-size) / 1.5);
   padding: 0;
 }
 
-.DroiteIlluConnexion{
-  width: 25%;
+#login-username, #login-password{
+  width: inherit;
 }
