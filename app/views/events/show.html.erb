@@ -1,53 +1,57 @@
 
-<div class="add_event">
-    <div class="content">
-      <div class=" colonne">
+             <div class='main_contain'>
 
+              <div class='highlight-window' id='product-img'>
+              <div class='highlight-overlay' id='highlight-overlay'></div></div>
+               <div class='window'>
+              <div class='main-content'>
+              <h2 class="orga"><strong>Organisateur </strong> <br>
+              <%= mail_to @event.user_contact, @event.user_contact, :class => "link"%></h2>
 
-          <div class="">     
-          <%= image_tag 'meet.png', class: "img2", :width => "23%"; %>
+                      
+                <h1 class="event-title">
+                <%= @event.nom %>
+                <hr>
+              </h1>
 
-          </div>
-
-          <div class="">     
-          <%= image_tag 'LSFMOT.png', class: "img3", :width => "18%"; %>
-          </div>
-
-          <h1 class="aff-title">
-            <%= @event.nom %>
-            <hr/>
-          </h1>
-
-          <div class="elements">
-
-            <p><strong>Organisateur </strong> <br>
-            <%= mail_to @event.user_contact, @event.user_contact, :class => "link"%></p>
-              
-            <p><strong>Date  </strong> <br>
-            <%= @event.date.strftime('%d/%m/%Y')%> à <%= @event.heure.strftime('%H:%M') %></p>
-              
-            <p><strong>Description </strong> <br>
-            <%= @event.description %></p>
+              <div class="event-infos">
+                  <h3 class="event-place"><strong>Lieu  </strong> <br>
+                  <%= link_to @event.lieu, 'https://www.google.fr/maps/search/' +  @event.lieu + '+' + @event.num_rue.to_s + '+' + @event.rue + '+' + @event.code_postal.to_s + '+' +  @event.ville , target: "_blank", :class => "link"%> à <%= @event.ville %></h3>    
+                  <%= @event.num_rue %> <%= @event.rue %> <br>
+                  <%= @event.code_postal %> <%= @event.ville %> </h3>  
                   
-            <p><strong>Lieu  </strong> <br>
-            <%= link_to @event.lieu, 'https://www.google.fr/maps/search/' +  @event.lieu + '+' + @event.num_rue.to_s + '+' + @event.rue + '+' + @event.code_postal.to_s + '+' +  @event.ville , target: "_blank", :class => "link"%> à <%= @event.ville %></p>    
-                
-            <p><strong>Adresse  </strong> <br>
-            <%= @event.num_rue %> <%= @event.rue %> <br>
-            <%= @event.code_postal %> <%= @event.ville %> </p>
-        
-          <div class="button-cards">
+                    
+                <h3 class="event-date"><strong>Date  </strong> <br>
+                <%= @event.date.strftime('%d/%m/%Y')%> à <%= @event.heure.strftime('%H:%M') %></h3>
+              </div>
+
+              
+            
+            <div class='description' id='description'>
+            <p><Description<br>
+            <%= @event.description %></p>
+             </div>
+                <div class='highlight-window  mobile' id='product-img'><div class='highlight-overlay' id='highlight-overlay-mobile'></div></div>
+            
+                      <div class='divider'></div>
+          
+                      <center><button class="participe">PARTICIPER</button>
+
+                      <div class="button-cards">
           <% if user_signed_in? && @event.user_id == current_user.id %>
           <%= link_to 'Modifier', edit_event_path(@event), class: 'btn btn-outline-danger' %>
           <% end %>
-          <%= link_to 'Retour', events_path, class: 'btn btn-outline-secondary' %>
+          <%= link_to 'Retour', events_path, class: 'btn btn-primary' %>
           </div>
+              </div>
+              </div>
+            </div>
+          </div>
+        
+          
 
              </div>
           </div>
         </div>
-    </div>
-    </div>
- </div>
  
 
