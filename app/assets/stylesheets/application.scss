@@ -461,6 +461,24 @@ form{
    	cursor: pointer;
 }
 
+.btn-primary-act {
+	width : 49%;
+	color : #FAFAFA;
+	background-color: #291F71;
+    border-color: #291F71;
+    text-transform : uppercase;
+    cursor: pointer;
+}
+
+.btn-primary-act:hover, .btn-primary-act:not(:disabled):not(.disabled):active {
+	color : #291F71;
+	background-color: transparent;
+    border-color: #291F71;
+    border: 0.5px solid;
+    text-transform : uppercase;
+   	cursor: pointer;
+}
+
 .link{
 	color: #243c83;
 }
