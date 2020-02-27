@@ -3,8 +3,7 @@
 	<div class="home">
 
 
-		<div class="bg" style="height: 90%"></div>
-		<div class="bg-gris" style="height: 100%"></div>
+		<div class="bg" style="height: 80%"></div>
 
 		<div class="row">
 			<div class="col-lg-2"></div>
@@ -19,17 +18,17 @@
 			<div class="container">
 				<div class="row">
 
-				<div class="card col-3">
+				<div class="card col-3 first-card">
 	                <%= image_tag 'gauche.png', class: "card-img-top" %>
-	                <div class="card-body">
-	                  <h5 class="card-title">inscrivez vous</h5>
+	                <div class="card-body first-card">
+	                  <h5 class="card-title first-card">inscrivez vous</h5>
 	                </div>
                 </div>
 
 	                <% @events.sort_by{ |t| t.date }.first(7).each do |event| %>
 		                <%if event.date > Date.today %>
-			                <div class="card col-3">
-				                <%= image_tag 'theatre.png', class: "card-img-top" %>
+			               	<div class="card col-3">
+				                <%= image_tag 'imgv0.jpg', class: "card-img-top" %>
 				                <div class="card-body acc">
 				                	<p class="card-text acc">Type</p>
 				                	<h5 class="card-title acc"><%= event.nom %></h5>
@@ -37,11 +36,16 @@
 				                	<p class="card-text acc"><%= link_to event.lieu, 'https://www.google.fr/maps/search/' +  event.lieu + '+' + event.num_rue.to_s + '+' + event.rue + '+' + event.code_postal.to_s + '+' +  event.ville , target: "_blank", :class => "link"%> à <%= event.ville %></p> 
 				                	<%= link_to 'Participer', event, :class => "btn btn-primary btn-sm"%>
 				                </div>
-		                </div>
+		                	</div>
 		                <% end %> 
 	      			<% end %>
                 
 				</div>
+
+				<div class="row">
+					<%= link_to 'Organiser un événement', new_event_path(@events), :class => "btn btn-primary btn-sm"%>
+				</div>
+
 			</div>
 		</div>
 
@@ -61,7 +65,7 @@
 			<div class="contact-part">
 				<h1 class="contact-titre">Comment s'inscrire ?</h1>
 				<div class="underlineText"></div>
-				<div class="font-italic font-weight-light contact-desc">Pour faire parti de la famille <b>Fais-Moi Signe</b>, il suffit de renseigner ses coordonnées dans le formulaire d’inscription.</div>
+				<div class="font-italic font-weight-light contact-desc">Pour faire partie de la famille <b>Fais-Moi Signe</b>, il suffit de renseigner ses coordonnées dans le formulaire d’inscription.</div>
 				<button class="font-weight-bold btn btn-sm btn-secondary">S'INSCRIRE</button>
 			</div>
 		</div>

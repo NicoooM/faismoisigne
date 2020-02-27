@@ -159,7 +159,8 @@ nav {
 }
 
 .home{
-	height: 100vh;
+	height: auto;
+	background-color: #F1F0F0;
 }
 
 .bg {
@@ -173,22 +174,29 @@ nav {
 	background-color: #291F71;
 }
 
-.bg-gris {
-	height: 100%;
-	width: 100%;
-	top: 100vh;
-	position: absolute;
-	background-color: #F1F0F0;
-}
-
 .evenements {
-	background-color: #FAFAFA;
 	width: 100%;
 	height: 100%;
 }
 
 .card.col-3 {
 	max-width: 22%;
+}
+
+.card.col-3.first-card {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.card-title.first-card {
+	text-transform: uppercase;
+	text-align: center;
+	font-weight: bold;
+}
+
+.card-body.first-card {
+	flex: 0;
 }
 
 .card-body.acc {
@@ -209,36 +217,39 @@ nav {
 	padding: 5%;
 	color: #FAFAFA;
 	position: relative;
+	height: 50%;
+	max-height: 580px;
 }
 
 .contact-part {
-	width: 27vw;
+	width: 22vw;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: space-between;
+	height: 100%;
 }
 
 .contact-center {
-	margin: 0 50px;
+	margin: 0 5vw;
 }
 
 .contact-titre {
-	font-size: 45px;
+	font-size: 2rem;
 	text-align: center;
-	margin-bottom: 15px;
+	margin-bottom: 2vh;
 }
 
 .underlineText {
 	width: 17vw;
-	margin: 0 3vw 40px 10vw;
+	margin: 0 3vw 2vh 10vw;
 	height: 5px;
 	background-color: pink;
 }
 
 .contact-desc {
-	font-size: 23px;
-	margin-bottom: 30px;
+	font-size: 1rem;
+	margin-bottom: 2vh;
 }
 
 .btn-secondary {
@@ -254,6 +265,7 @@ nav {
 	color: #FAFAFA;
 	border-color: #FAFAFA;
 	border: 0.5px solid;
+	cursor: pointer;
 }
 
 .text-accueil {
@@ -284,103 +296,6 @@ nav {
 	width: 85vw;
 }
 
-// PROFIL
-
-.container{
-	z-index: 20;
-}
-
-.profile-top-bg {
-	background-color: #291F71;
-	height: 250px;
-	width: 600px;
-	flex: 0 0 130%;
-	max-width: 130%;
-	border-radius: 6px;
-	margin-left: 22%;
-}
-
-.bg.profile-bg {
-	background-image: url(logoclair.png);
-	background-color: #F1F0F0;
-	margin-top: -1200px;
-	z-index: -20;
-}
-
-.row.profile-content {
-	margin: -26% 0 0 0;
-}
-
-.profile-content.row h1 {
-	color: #FAFAFA;
-}
-
-.row.near-events {
-	display: flex;
-    flex-direction: column;
-}
-
-.near-events h2, .passed-events h2, .your-events h2 {
-	font-size: 1.5rem;
-}
-
-.near-events h2 {
-	color: #FAFAFA;
-}
-
-.passed-events h2, .your-events h2 {
-	color: #243c83;
-}
-
-.near-events-cards, .passed-events-cards, .your-events-cards {
-	display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-}
-
-
-//Login/out
-
-form{
-	max-width: 60%;
-	margin: auto;
-}
-
-
-.button-login{
-	text-align:center;
-}
-
-.links{
-	margin: 15px 400px;
-}
-
-.form-control{
-	box-shadow: none !important;
-}
-
-.form-control:focus{
-	border-color: #14024F !important;
-}
-
-.insc{
-	text-align: center;
-	padding-top: 20px;
-}
-
-.linklog{
-	color: #243c83;
-}
-.linklog:hover{
-	color: #FFCAE7;
-}
-
-.insc1{
-	text-align: center;
-	padding: 30px;
-}
-
 
 // EVENTS
 
@@ -404,6 +319,7 @@ form{
 	margin: 30px;
 	color: #243c83;
 	font-weight: bold;
+	font-size: 3rem;
 }
 
 .add_event .content{
@@ -503,6 +419,7 @@ form{
 	background-color: #291F71;
     border-color: #291F71;
     text-transform : uppercase;
+    cursor: pointer;
 }
 
 .btn-primary:hover, .btn-primary:not(:disabled):not(.disabled):active {
@@ -512,6 +429,7 @@ form{
     border-color: #291F71;
     border: 0.5px solid;
     text-transform : uppercase;
+   	cursor: pointer;
 }
 
 .link{
@@ -620,6 +538,7 @@ hr {
 	left: 60px;
 }
 
+
 // Découvrir
 
 .discover .row{
@@ -654,6 +573,14 @@ hr {
 
 .rs:hover {
 	color: #FFCAE7;
+}
+
+// Titres evenements
+
+.dated-events {
+  color: #243c83;
+  font-size: 2rem;
+  padding: 2vh 0;
 }
 
 
