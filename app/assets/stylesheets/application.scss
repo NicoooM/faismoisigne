@@ -50,8 +50,6 @@ p {
 	font-weight: 400;
 }
 
-
-
 // NAVBAR
 
 .img-fluid{
@@ -174,7 +172,7 @@ nav {
 }
 
 .bg {
-	background-image: url("logo.png");
+	background-image: url("images/logo.png");
 	height: 100%;
 	width: 100%;
 	position: absolute;
@@ -352,9 +350,6 @@ nav {
 
 // CREER UN NOUVEL EVENEMENT
 
-label {
-	color: #243c83;
-}
 
 .add_event form{
 	height: auto;
@@ -711,6 +706,13 @@ hr {
     max-width: 80%;
 }
 
+}
+label{
+	color: #291F71;
+}
+
+label::placeholder{
+	color: #291F71;
 }
 
 
