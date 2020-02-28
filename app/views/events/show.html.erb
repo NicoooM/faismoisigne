@@ -1,5 +1,6 @@
 <div class='container event'>
   <h1><%= @event %></h1>
+  <%= image_tag "categories/#{@event.category}.jpg", class: 'img-fluid' %>
   <h2>
     <strong>Organisateur </strong><br>
     <%= mail_to @event.user, @event.user.email %>

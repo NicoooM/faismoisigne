@@ -18,6 +18,7 @@ gem 'bootstrap'
 gem 'font-awesome-rails'
 gem 'mail_form'
 gem 'simple_form'
+gem 'enum_help'
 gem 'bootsnap', '>= 1.1.0', require: false
 
 group :development, :test do

@@ -6,6 +6,16 @@ class Event < ActiveRecord::Base
   scope :past, -> { where('start_at < ?', DateTime.now)}
   default_scope { order(start_at: :desc) }
 
+  enum category: {
+    bar: 0,
+    cafe: 10,
+    bibliotheque: 20,
+    parc: 30,
+    theatre: 40,
+    sport: 50,
+    restaurant: 60
+  }
+
   def to_s
     "#{nom}"
   end
