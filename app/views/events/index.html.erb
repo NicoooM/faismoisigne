@@ -7,7 +7,7 @@
     <div class="row index-events">
       <% @events.sort_by{ |t| t.date }.each do |event| %>
         <%if event.date > Date.today %>
-          <div class="card col-3">
+          <div class="card col-3 shadow">
             <%= image_tag 'imgv0.jpg', class: "card-img-top" %>
             <div class="card-body acc">
               <p class="card-text acc">Type</p>
@@ -40,7 +40,7 @@
     <div class="row index-events">
       <% @events.sort_by{ |t| t.date }.reverse.each do |event| %>
         <%if event.date < Date.today %>
-          <div class="card col-3">
+          <div class="card col-3 shadow">
           <%= image_tag 'imgv0.jpg', class: "card-img-top" %>
           <div class="card-body acc">
             <p class="card-text acc">Type</p>

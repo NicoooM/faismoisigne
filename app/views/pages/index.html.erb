@@ -18,7 +18,7 @@
 			<div class="container">
 				<div class="row">
 
-					<div class="card col-3 first-card">
+					<div class="card col-3 shadow first-card">
 		                <%= image_tag 'gauche.png', class: "card-img-top" %>
 		                <div class="card-body first-card">
 		                  <h5 class="card-title first-card">inscrivez vous</h5>
@@ -27,7 +27,7 @@
 
 	                <% @events.sort_by{ |t| t.date }.each do |event| %>
 		                <%if event.date > Date.today %>
-			               	<div class="card col-3">
+			               	<div class="card shadow col-3">
 				                <%= image_tag 'imgv0.jpg', class: "card-img-top" %>
 				                <div class="card-body acc">
 				                	<p class="card-text acc">Type</p>
@@ -40,7 +40,7 @@
 		                <% end %> 
 	      			<% end %>
 
-		      		<div class="card col-3 first-card">
+		      		<div class="card col-3 shadow first-card">
 		                <%= link_to events_path, class: "link-first-card" do %>
 				                <%= image_tag 'agenda.png', class: "card-img-top first-card" %>
 				                <div class="card-body first-card">
@@ -50,7 +50,7 @@
 	                </div>
 
 	                
-	                <div class="card col-3 first-card">
+	                <div class="card col-3 shadow first-card">
 	                	<%= link_to new_event_path(@events), class: "link-first-card" do %>
 			                <%= image_tag 'plus.png', class: "card-img-top first-card"%>
 			                <div class="card-body first-card">
