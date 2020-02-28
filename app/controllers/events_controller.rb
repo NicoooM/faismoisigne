@@ -4,7 +4,8 @@ class EventsController < ApplicationController
   # GET /events
   # GET /events.json
   def index
-    @events = Event.all
+    @future_events = Event.future
+    @past_events = Event.past
   end
 
   # GET /events/1
@@ -16,14 +17,16 @@ class EventsController < ApplicationController
   def new
     if user_signed_in?
       @event = Event.new
-    else redirect_to new_user_session_path
+    else
+      redirect_to new_user_session_path
     end
   end
 
   # GET /events/1/edit
   def edit
     if current_user.id == @event.user_id
-    else redirect_to events_path
+    else
+      redirect_to events_path
     end
   end
 
@@ -31,8 +34,7 @@ class EventsController < ApplicationController
   # POST /events.json
   def create
     @event = Event.new(event_params)
-    @event.user_id = current_user.id
-    @event.user_contact = current_user.prenom+" "+current_user.nom
+    @event.user = current_user
     respond_to do |format|
       if @event.save
         format.html { redirect_to @event, notice: 'Votre événement a été créé avec succès.' }
@@ -78,6 +80,6 @@ class EventsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def event_params
-      params.require(:event).permit(:nom, :date, :heure, :user_id, :lieu, :description, :num_rue, :rue, :code_postal, :ville)
+      params.require(:event).permit(:nom, :start_at, :lieu, :description, :ville)
     end
 end

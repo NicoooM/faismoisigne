@@ -1,57 +1,23 @@
-
-             <div class='main_contain'>
-
-              <div class='highlight-window' id='product-img'>
-              <div class='highlight-overlay' id='highlight-overlay'></div></div>
-               <div class='window'>
-              <div class='main-content'>
-              <h2 class="orga"><strong>Organisateur </strong> <br>
-              <%= mail_to @event.user_contact, @event.user_contact, :class => "link"%></h2>
-
-                      
-                <h1 class="event-title">
-                <%= @event.nom %>
-                <hr>
-              </h1>
-
-              <div class="event-infos">
-                  <h3 class="event-place"><strong>Lieu  </strong> <br>
-                  <%= link_to @event.lieu, 'https://www.google.fr/maps/search/' +  @event.lieu + '+' + @event.num_rue.to_s + '+' + @event.rue + '+' + @event.code_postal.to_s + '+' +  @event.ville , target: "_blank", :class => "link"%> à <%= @event.ville %></h3>    
-                  <%= @event.num_rue %> <%= @event.rue %> <br>
-                  <%= @event.code_postal %> <%= @event.ville %> </h3>  
-                  
-                    
-                <h3 class="event-date"><strong>Date  </strong> <br>
-                <%= @event.date.strftime('%d/%m/%Y')%> à <%= @event.heure.strftime('%H:%M') %></h3>
-              </div>
-
-              
-            
-            <div class='description' id='description'>
-            <p><Description<br>
-            <%= @event.description %></p>
-             </div>
-                <div class='highlight-window  mobile' id='product-img'><div class='highlight-overlay' id='highlight-overlay-mobile'></div></div>
-            
-                      <div class='divider'></div>
-          
-                      <center><button class="participe">PARTICIPER</button>
-
-                      <div class="button-cards">
-          <% if user_signed_in? && @event.user_id == current_user.id %>
-          <%= link_to 'Modifier', edit_event_path(@event), class: 'btn btn-outline-danger' %>
-          <% end %>
-          <%= link_to 'Retour', events_path, class: 'btn btn-primary' %>
-          </div>
-              </div>
-              </div>
-            </div>
-          </div>
-        
-          
-
-             </div>
-          </div>
-        </div>
- 
-
+<div class='container event'>
+  <h1><%= @event %></h1>
+  <h2>
+    <strong>Organisateur </strong><br>
+    <%= mail_to @event.user, @event.user.email %>
+  </h2>
+  <div class="event__infos">
+    <h3>
+      <strong>Lieu </strong><br>
+      <%= link_to @event.lieu, 'https://www.google.fr/maps/search/' +  @event.lieu +  @event.ville , target: "_blank", :class => "link"%> à <%= @event.ville %>
+    </h3>
+    <h3>
+      <strong>Date</strong><br>
+      <%= @event.start_at.strftime('%d/%m/%Y à %H:%M')%>
+    </h3>
+  </div>
+  <div class='event__description'>
+    <%= simple_format @event.description %>
+  </div>
+  <% if user_signed_in? && @event.user_id == current_user.id %>
+    <%= link_to 'Modifier', edit_event_path(@event), class: 'btn btn-primary' %>
+  <% end %>
+</div>

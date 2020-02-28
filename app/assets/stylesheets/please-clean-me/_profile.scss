@@ -1,0 +1,147 @@
+// PROFIL
+.profile-top-bg {
+	background-color: #291F71;
+	height: 250px;
+	width: 600px;
+	flex: 0 0 130%;
+	max-width: 130%;
+	border-radius: 6px;
+	margin-left: 22%;
+}
+
+.bg.profile-bg {
+	background-image: url(logoclair.png);
+	background-color: #F1F0F0;
+	margin-top: -1200px;
+	z-index: -20;
+}
+
+.row.profile-content {
+	margin: -26% 0 0 0;
+}
+
+.profile-content.row h1 {
+	color: #FAFAFA;
+}
+
+.row.near-events {
+	display: flex;
+    flex-direction: column;
+}
+
+
+//LOG IN OUT
+
+form{
+	max-width: 60%;
+	margin: auto;
+}
+
+
+.button-login{
+	text-align:center;
+}
+
+.links{
+	margin: 15px 400px;
+}
+
+.form-control{
+	box-shadow: none !important;
+}
+
+.form-control:focus{
+	border-color: #14024F !important;
+}
+
+.insc{
+	text-align: center;
+	padding-top: 20px;
+}
+
+.linklog{
+	color: #243c83;
+}
+.linklog:hover{
+	color: #FFCAE7;
+}
+
+.insc1{
+	text-align: center;
+	padding: 30px;
+}
+
+.row.near-events {
+	display: flex;
+    flex-direction: column;
+}
+
+.near-events h2, .passed-events h2, .your-events h2 {
+	font-size: 1.5rem;
+}
+
+.near-events h2 {
+	color: #FAFAFA;
+}
+
+.passed-events h2, .your-events h2 {
+	color: #243c83;
+}
+
+.near-events-cards, .passed-events-cards, .your-events-cards {
+	display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+//USERS
+
+.users {
+	max-width: 80%;
+	margin: auto;
+}
+
+.users .row{
+	padding: 0;
+}
+
+.users .card{
+	margin: 10px 10px !important;
+}
+
+
+@media screen and (max-width: 640px) {
+  .banniere1{
+		display: none;
+	}
+
+	.home .row {
+		padding-bottom: 10px;
+    padding-top: 40px;
+	}
+
+	form{
+		max-width: 80%;
+	}
+
+	.img{
+        display: none;
+	}
+
+	.img1{
+		display: none;
+	}
+	.img2{
+		display: none;
+	}
+
+	.img3{
+		display: none;
+	}
+	.content {
+		margin-top: 20px;
+    max-width: 80%;
+}
+
+}

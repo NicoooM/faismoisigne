@@ -1,0 +1,17 @@
+<div class="container">
+  <h1>La Communauté</h1>
+  <div class="users">
+  <% @users.each do |user| %>
+  <div class="card col-sm-4">
+  <div class="row">
+  <div class="card-body">
+    <%= user.prenom %> <%= user.nom%><br>
+    <%= user.description %><br>
+    <%= link_to 'Voir le profil', user %>
+  </div>
+  </div>
+
+  </div>
+  <% end %>
+  </div>
+</div>

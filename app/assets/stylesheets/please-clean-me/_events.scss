@@ -1,0 +1,146 @@
+.event-title,
+.orga,
+.event-place {
+  margin: 0;
+  font-size: 20px;
+}
+
+.event-title{
+    text-align: center;
+}
+
+.main_contain {
+    padding: 5%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.window {
+  background: #fff;
+  width: 470px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 450px;
+  position: relative;
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2);
+}
+.main-content {
+  padding:50px 46px 25px 20px;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  color: #222;
+  width: 100%;
+  height: 100%;
+  -webkit-flex-flow: column;
+      -ms-flex-flow: column;
+          flex-flow: column;
+}
+
+.event-title {
+  letter-spacing: 0px;
+  letter-spacing: .02rem;
+  font-size: 48px;
+  font-size: 3rem;
+}
+
+.event-place {
+  color: #666;
+  font-size: 19px;
+  font-size: 1.2rem;
+}
+
+.description {
+  margin-top: 20px;
+  width: 100%;
+}
+
+.row.index-events {
+  background-color: #F1F0F0;
+}
+
+.highlight-window {
+  height: 550px;
+  width: 400px;
+  background: #ccc;
+  background: url('https://images.unsplash.com/photo-1558521558-037f1cb027c5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80');
+  background-size: cover;
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+  position:relative;
+  background-position:center top;
+}
+
+.event-date, .event-place{
+    font-size: 15px;
+}
+.participe {
+  background:#333;
+  border:none;
+  font-weight:400;
+  height:40px;
+  width: 50%;
+  box-sizing:border-box;
+  color:#fff;
+  cursor:pointer;
+  -webkit-transition:all .3s ease;
+          transition:all .3s ease;
+}
+.participe:hover {
+  background: #FFCAE7;
+  color: #111;
+  -webkit-transition:all .3s ease;
+          transition:all .3s ease;
+}
+.divider {
+  width:80%;
+  height:1px;
+  background:#ddd;
+  margin-top:20px;
+  margin-bottom:20px;
+  margin-left:auto;
+  margin-right:auto;
+}
+.align-right {
+  -webkit-align-self:flex-end;
+      -ms-flex-item-align:end;
+          align-self:flex-end;
+}
+.highlight-window.mobile {
+  display:none;
+}
+
+// NEW EVENT
+
+.underlineTextEVENT{
+  width: 17vw;
+  margin: 0 3vw 7vh 53vw;
+  height: 5px;
+  background-color: pink;
+}
+
+.allFormEvent{
+  display: flex;
+  justify-content: space-between;
+}
+
+.add_event{
+  background-color: aliceblue;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  margin: 40px;
+}

@@ -1,4 +1,12 @@
 class Event < ActiveRecord::Base
-    belongs_to :orgaization, :class_name => 'events', :foreign_key => 'event_id'
-    CLASS_LIST = ["Bar", "Café", "Parc", "Restaurant","Sport","Théâtre"]
+  belongs_to :user
+  validates_presence_of :nom, :start_at, :lieu
+
+  scope :future, -> { where('start_at >= ?', DateTime.now)}
+  scope :past, -> { where('start_at < ?', DateTime.now)}
+  default_scope { order(start_at: :desc) }
+
+  def to_s
+    "#{nom}"
+  end
 end

@@ -1,0 +1,16 @@
+<div class="container">
+  <h1>Bonjour <%= @user %></h1>
+
+  <%= @user.lieu %>
+  <%= mail_to @user.email, @user.email%>
+
+  <%= @user.description %>
+  <%= @user.bio %>
+
+  <h2>Evénements que vous avez organisés</h2>
+  <div class="row">
+    <% @user.events.each do |event| %>
+      <%= render event %>
+    <% end %>
+  </div>
+</div>

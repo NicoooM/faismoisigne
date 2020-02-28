@@ -1,4 +1,11 @@
 class PagesController < ApplicationController
-	def discover
-	end
+  def index
+    @events = Event.future
+  end
+
+  def discover
+  end
+
+  def about
+  end
 end

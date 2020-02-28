@@ -1,73 +1,18 @@
-  <div class="events">
-
-    <h2 class="title">Rencontres</h2>
-    <div class="container">
-
-    <h2 class="dated-events">Événements à venir</h2>
-    <div class="row index-events">
-      <% @events.sort_by{ |t| t.date }.each do |event| %>
-        <%if event.date > Date.today %>
-          <div class="card col-3 shadow">
-            <%= image_tag 'imgv0.jpg', class: "card-img-top" %>
-            <div class="card-body acc">
-              <p class="card-text acc">Type</p>
-              <h5 class="card-title acc"><%= event.nom %></h5>
-              <p class="card-text acc">Le <%= event.date.strftime('%d/%m/%Y')%> à <%= event.heure.strftime('%H:%M') %></p>
-              <p class="card-text acc"><%= link_to event.ville, 'https://www.google.fr/maps/search/' +  event.ville %></p> 
-              </div>
-
-              <div>
-                <% if !user_signed_in? %>
-                  <%= link_to 'Participer', event, :class => "btn btn-primary btn-sm"%>
-                <% end %> 
-                
-                <% if user_signed_in? && event.user_id == current_user.id %>
-                <%= link_to 'Participer', event, :class => "btn btn-primary-act btn-sm" %>
-                <%= link_to 'Modifier', edit_event_path(event), :class => "btn btn-primary-act btn-sm" %>
-                <% end %> 
-
-                <% if user_signed_in? && event.user_id != current_user.id %>
-                <%= link_to 'Participer', event, :class => "btn btn-primary btn-sm" %>
-                <% end %> 
-              </div>
-
-          </div>
+  <div class="container">
+    <h1>Evènements</h1>
+    <% if @future_events.any? %>
+      <h2 class="mt-5">Événements à venir</h2>
+      <div class="row">
+        <% @future_events.each do |event| %>
+          <%= render event %>
         <% end %>
+      </div>
+    <% end %>
+    <h2 class="mt-5">Événements passés</h2>
+    <div class="row">
+      <% @past_events.each do |event| %>
+        <%= render event %>
       <% end %>
     </div>
-
-    <h2 class="dated-events">Événements passés</h2>
-    <div class="row index-events">
-      <% @events.sort_by{ |t| t.date }.reverse.each do |event| %>
-        <%if event.date < Date.today %>
-          <div class="card col-3 shadow">
-          <%= image_tag 'imgv0.jpg', class: "card-img-top" %>
-          <div class="card-body acc">
-            <p class="card-text acc">Type</p>
-            <h5 class="card-title acc"><%= event.nom %></h5>
-            <p class="card-text acc">Le <%= event.date.strftime('%d/%m/%Y')%> à <%= event.heure.strftime('%H:%M') %></p>
-            <p class="card-text acc"><%= link_to event.ville, 'https://www.google.fr/maps/search/' +  event.ville %></p> 
-            </div>
-
-              <div>
-                <% if !user_signed_in? %>
-                  <%= link_to 'Participer', event, :class => "btn btn-primary btn-sm"%>
-                <% end %> 
-                
-                <% if user_signed_in? && event.user_id == current_user.id %>
-                <%= link_to 'Participer', event, :class => "btn btn-primary-act btn-sm" %>
-                <%= link_to 'Modifier', edit_event_path(event), :class => "btn btn-primary-act btn-sm" %>
-                <% end %> 
-
-                <% if user_signed_in? && event.user_id != current_user.id %>
-                <%= link_to 'Participer', event, :class => "btn btn-primary btn-sm" %>
-                <% end %> 
-              </div>
-
-        </div>
-        <% end %>
-      <% end %>
-    </div>
-
   </div>
 </div>

@@ -1,0 +1,25 @@
+<div class="col-md-3">
+  <%= link_to event do %>
+    <div class="card">
+      <%= image_tag 'imgv0.jpg', class: "card-img-top" %>
+      <div class="card-body">
+        <h5 class="card-title"><%= event.nom %></h5>
+        <span class="badge badge-light">Type</span>
+        <p class="card-text">Le <%= event.start_at.strftime('%d/%m/%Y à %H:%M')%></p>
+        <p class="card-text"><%= link_to event.ville, 'https://www.google.fr/maps/search/' +  event.ville %></p>
+      </div>
+      <div class="card-footer">
+        <% if !user_signed_in? %>
+          <%= link_to 'Participer', event, :class => "btn btn-primary btn-sm"%>
+        <% end %>
+        <% if user_signed_in? && event.user_id == current_user.id %>
+          <%= link_to 'Participer', event, class: "btn btn-primary btn-sm" %>
+          <%= link_to 'Modifier', edit_event_path(event), class: "btn btn-primary btn-sm" %>
+        <% end %>
+        <% if user_signed_in? && event.user_id != current_user.id %>
+          <%= link_to 'Participer', event, :class => "btn btn-primary btn-sm" %>
+        <% end %>
+      </div>
+    </div>
+  <% end %>
+</div>
