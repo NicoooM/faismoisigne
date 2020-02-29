@@ -1,7 +1,8 @@
 <div class="home">
   <div class="jumbotron home__header text-center text-white">
     <div class="container">
-      <h1>Un site, un signe, une rencontre</h1>
+      <h1> Fais Moi Signe</h1>
+      <h2>Un site, un signe, une rencontre</h2>
       <p>Trouvez un évènement près de chez vous !</p>
     </div>
   </div>
@@ -22,7 +23,7 @@
         <div class="col-md-3">
           <%= link_to events_path do %>
             <div class="card">
-              <%= image_tag 'agenda.png', class: 'card-img-top' %>
+              <%= image_tag 'icons/agenda.png', class: 'card-img-top' %>
               <div class="card-body">
                 <h5 class="card-title">Tout l'agenda</h5>
               </div>
@@ -32,7 +33,7 @@
         <div class="col-md-3">
         	<%= link_to new_event_path(@events) do %>
             <div class="card">
-              <%= image_tag 'plus.png', class: "card-img-top"%>
+              <%= image_tag 'icons/plus.png', class: "card-img-top"%>
               <div class="card-body first-card">
                 <h5 class="card-title first-card">créez votre événement</h5>
               </div>
@@ -67,16 +68,19 @@
 	<div class="home__sponsors pt-5 pb-5">
     <div class="container">
       <h2 class="text-center">Ils nous soutiennent</h2>
-      <div class="row">
+      <div class="row justify-content-center">
         <div class="col-md-2">
-          <%= image_tag 'lsf.png', class: "img-fluid" %>
+          <%= image_tag 'sponsors/visuallsf.png', class: "img-fluid" %>
         </div>
         <div class="col-md-2">
-          <%= image_tag 'universite.png', class: "img-fluid" %>
+          <%= image_tag 'sponsors/universite.png', class: "img-fluid" %>
         </div>
-  			<%= image_tag 'logo1.png', class: "logoHP" %>
-  			<%= image_tag 'bxi.png', class: "logoHP" %>
-  		</div>
+        <div class="col-md-2">
+          <%= image_tag 'sponsors/mmi.png', class: "img-fluid" %>
+        </div>
+        <div class="col-md-2">
+          <%= image_tag 'sponsors/bxi.png', class: "img-fluid" %>
+        </div>
     </div>
 	</div>
 </div>

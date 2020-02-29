@@ -6,9 +6,9 @@
     <title>Fais-moi signe</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-    <%= favicon_link_tag asset_path('logo.png') %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= favicon_link_tag asset_path('logo.ico') %>
   </head>
   <body>
     <nav class="navbar navbar-expand-md navbar-light bg-light">
@@ -48,7 +48,27 @@
     <main>
       <%= yield %>
     </main>
-
-    <%= render 'footer' %>
+    <footer class="page-footer font-small p-4">
+      <div class="container-fluid">
+        <div class="row text-center">
+          <div class="col-md-4">
+            <div class="">© 2020 Copyright:
+        <a href="http://www.faismoisigne.org/"> faismoisigne.org</a>
+      </div>
+          </div>
+          <div class="col-md-4">
+            <a class="" href="http://www.faismoisigne.org"> Mentions légales</a> -
+                    <a class="" href="http://www.faismoisigne.org"> CGU </a> -
+                    <a class="" href="http://www.faismoisigne.org"> Contact</a>
+    
+          </div>
+          <div class="col-md-4">
+            <%= link_to 'https://www.facebook.com/faismoisigne.org/', :class => 'lien m-4' do %> <%= fa_icon "facebook" %> <% end %>
+            <%= link_to 'https://twitter.com/Faismoisigneorg', :class => 'lien m-4' do %> <%= fa_icon "twitter" %><% end %>
+            <%= link_to 'https://www.instagram.com/faismoisigneorg', :class => 'lien m-4' do %> <%= fa_icon "instagram" %><% end %>
+          </div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
