@@ -9,13 +9,15 @@
   <div class="home__events">
     <div class="container">
   		<div class="row">
-  			<div class="col-md-3">
-          <div class="card">
-            <%= image_tag 'gauche.png', class: "card-img-top" %>
-            <div class="card-body first-card">
-              <h5 class="card-title first-card">inscrivez vous</h5>
+        <div class="col-md-3">
+          <%= link_to new_user_session_path do %>
+            <div class="card">
+              <%= image_tag 'gauche.png', class: "card-img-top" %>
+              <div class="card-body first-card">
+                  <h5 class="card-title first-card">Inscrivez vous</h5>
+              </div>
             </div>
-          </div>
+          <% end %>
         </div>
         <% @events.each do |event| %>
           <%= render event %>
@@ -35,7 +37,7 @@
             <div class="card">
               <%= image_tag 'icons/plus.png', class: "card-img-top"%>
               <div class="card-body first-card">
-                <h5 class="card-title first-card">créez votre événement</h5>
+                <h5 class="card-title first-card">Créez votre événement</h5>
               </div>
             </div>
           <% end %>
