@@ -20,6 +20,10 @@ gem 'mail_form'
 gem 'simple_form'
 gem 'enum_help'
 gem 'bootsnap', '>= 1.1.0', require: false
+gem 'activeadmin'
+gem 'cancancan'
+gem 'draper'
+gem 'pundit'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
