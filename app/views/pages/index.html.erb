@@ -19,7 +19,7 @@
             </div>
           <% end %>
         </div>
-        <% @events.each do |event| %>
+        <% @events.sort_by{ |t| t.date }.reverse.each do |event| %>
           <%= render event %>
         <% end %>
         <div class="col-md-3">
