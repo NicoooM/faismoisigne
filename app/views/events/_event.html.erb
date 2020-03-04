@@ -9,14 +9,16 @@
         <p class="card-text"><%= link_to event.ville, 'https://www.google.fr/maps/search/' +  event.ville %></p>
       </div>
       <div class="card-footer">
-        <% if !user_signed_in? %>
+      <% if can? :participate, Event %>
           <%= link_to 'Participer', event, :class => "btn btn-primary btn-sm"%>
         <% end %>
-        <% if user_signed_in? && event.user_id == current_user.id %>
+        <% if can? :participate, Event %>
           <%= link_to 'Participer', event, class: "btn btn-primary btn-sm" %>
+          <% if can? :update, Event %>
           <%= link_to 'Modifier', edit_event_path(event), class: "btn btn-primary btn-sm" %>
+          <% end %>
         <% end %>
-        <% if user_signed_in? && event.user_id != current_user.id %>
+        <% if can? :participate, Event %>
           <%= link_to 'Participer', event, :class => "btn btn-primary btn-sm" %>
         <% end %>
       </div>
