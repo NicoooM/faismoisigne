@@ -1,5 +1,5 @@
 class EventsController < ApplicationController
-  before_action :set_event, only: [:show, :edit, :update, :destroy]
+  load_and_authorize_resource
 
   # GET /events
   # GET /events.json
@@ -15,25 +15,15 @@ class EventsController < ApplicationController
 
   # GET /events/new
   def new
-    if user_signed_in?
-      @event = Event.new
-    else
-      redirect_to new_user_session_path
-    end
   end
 
   # GET /events/1/edit
   def edit
-    if current_user.id == @event.user_id
-    else
-      redirect_to events_path
-    end
   end
 
   # POST /events
   # POST /events.json
   def create
-    @event = Event.new(event_params)
     @event.user = current_user
     respond_to do |format|
       if @event.save
@@ -49,7 +39,6 @@ class EventsController < ApplicationController
   # PATCH/PUT /events/1
   # PATCH/PUT /events/1.json
   def update
-    if current_user.id == @event.user_id
     respond_to do |format|
       if @event.update(event_params)
         format.html { redirect_to @event, notice: 'Votre événement a été modifié avec succès.' }
@@ -58,7 +47,6 @@ class EventsController < ApplicationController
         format.html { render :edit }
         format.json { render json: @event.errors, status: :unprocessable_entity }
       end
-    end
     end
   end
 

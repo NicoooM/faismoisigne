@@ -17,6 +17,11 @@ class Ability
         end
       end
     end
+    def ensure_admin!
+      raise CanCan::AccessDenied unless current_user.admin?
+    end
+  
+    config.before_action :ensure_admin!
   end
 end
 
