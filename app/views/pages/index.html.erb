@@ -15,7 +15,7 @@
   		<div class="row">
         <div class="col-md-3">
           <%= link_to new_user_session_path do %>
-            <div class="card">
+            <div class="card shadow">
               <%= image_tag 'gauche.png', class: "card-img-top" %>
               <div class="card-body first-card">
                   <h5 class="card-title first-card">Inscrivez vous</h5>
@@ -23,12 +23,9 @@
             </div>
           <% end %>
         </div>
-        <% @events.each do |event| %>
-          <%= render event %>
-        <% end %>
         <div class="col-md-3">
           <%= link_to events_path do %>
-            <div class="card">
+            <div class="card shadow">
               <%= image_tag 'icons/agenda.png', class: 'card-img-top' %>
               <div class="card-body">
                 <h5 class="card-title">Tout l'agenda</h5>
@@ -38,7 +35,7 @@
         </div>
         <div class="col-md-3">
         	<%= link_to new_event_path(@events) do %>
-            <div class="card">
+            <div class="card shadow">
               <%= image_tag 'icons/plus.png', class: "card-img-top"%>
               <div class="card-body first-card">
                 <h5 class="card-title first-card">Créez votre événement</h5>
@@ -46,6 +43,9 @@
             </div>
           <% end %>
         </div>
+        <% @events.each do |event| %>
+          <%= render event %>
+        <% end %>
       </div>
     </div>
   </div>
