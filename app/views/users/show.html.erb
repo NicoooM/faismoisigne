@@ -1,12 +1,14 @@
 <div class="container">
-  <h1>Bonjour <%= @user %></h1>
+  <h1>Bonjour <%= @user %> 👋</h1>
 
-  <%= @user.lieu %>
-  <%= mail_to @user.email, @user.email%>
+  <div class="row d-flex flex-column pl-3 mb-3">
+    <%= @user.lieu %>
+    <%= mail_to @user.email, @user.email%>
 
-  <%= @user.description %>
-  <%= @user.bio %>
-
+    <%= @user.description %>
+    <%= @user.bio %>
+  </div>
+  
   <h2>Evénements que vous avez organisés</h2>
   <div class="row">
     <% @user.events.each do |event| %>
