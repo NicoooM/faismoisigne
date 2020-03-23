@@ -5,7 +5,7 @@ class EventsController < ApplicationController
   # GET /events.json
   def index
     @future_events = Event.future
-    @past_events = Event.past
+    @past_events = Event.past.pastorder
   end
 
   # GET /events/1
