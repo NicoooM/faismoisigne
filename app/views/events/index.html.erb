@@ -1,12 +1,10 @@
   <div class="container">
     <h1>Événements</h1>
-    
-    <h1>Découvrez tous nos événements</h1>
     <div class="d-flex justify-content-center mb-4">
       <%= link_to '+ Créer un évènement', new_event_path(@events), class: 'btn btn-primary' %>
     </div>
-    <div  class="alert alert-danger" role="alert">
-    <h4 style="text-align: center;"> En raison de l'actualité, il se peut que certains événements soient perturbés. <br> Contactez l'organisateur pour en savoir plus.</h4>
+    <div  class="alert alert-danger text-center" role="alert">
+    <h4> En raison de l'actualité, il se peut que certains événements soient perturbés. <br> Contactez l'organisateur pour en savoir plus.</h4>
     <a href="https://www.gouvernement.fr/"> Consultez les dernières informations sur l’épidémie de Covid-19 en France</a>
   </div> 
     <% if @future_events.any? %>
