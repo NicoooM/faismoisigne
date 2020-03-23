@@ -1,9 +1,9 @@
   <div class="container">
     <h1>Événements</h1>
-    <div class="news_corona">
-    <h4 style="text-align: center; color:red;" > En raison de l'actualité, il se peut que certains événements soient perturbés. <br> Contactez l'organisateur pour en savoir plus.</h4>
-    <center><a href="https://www.gouvernement.fr/" style="color:red;"> Consultez les dernières informations sur l’épidémie de Covid-19 en France</a>
-  </div> 
+    <div  class="alert alert-danger" role="alert">
+  <h4 style="text-align: center;"> En raison de l'actualité, il se peut que certains événements soient perturbés. <br> Contactez l'organisateur pour en savoir plus.</h4>
+  <a href="https://www.gouvernement.fr/"> Consultez les dernières informations sur l’épidémie de Covid-19 en France</a>
+</div> 
     <% if @future_events.any? %>
       <h2 class="mt-5">Événements à venir</h2>
       <div class="row">
