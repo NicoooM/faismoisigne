@@ -1,18 +1,9 @@
 <div class='container event'>
   <h1><%= @event %></h1>
-<<<<<<< HEAD
   <div  class="alert alert-danger" role="alert">
   <h4 style="text-align: center;"> En raison de l'actualité, il se peut que certains événements soient perturbés. <br> Contactez l'organisateur pour en savoir plus.</h4>
   <a href="https://www.gouvernement.fr/"> Consultez les dernières informations sur l’épidémie de Covid-19 en France</a>
 </div> 
-=======
-  <div class="news_corona mb-5">
-    <h4 style="text-align: center; color:red;" > En raison de l'actualité, il se peut que certains événements soient perturbés. <br> Contactez l'organisateur pour en savoir plus.</h4>
-   <center><a href="https://www.gouvernement.fr/" style="text-align:center; color:red;"> Consultez les dernières informations sur l’épidémie de Covid-19 en France</a>
-  </div> 
-
-  <div class="event__show d-flex">
->>>>>>> 64aa38d0a541489c0d334dd6d1f7594878e1f67f
     <%= image_tag "categories/#{@event.category}.jpg", class: 'img-fluid' if @event.category %>
   
     <div class="d-flex flex-column ml-5">
