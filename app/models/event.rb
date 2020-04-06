@@ -14,7 +14,8 @@ class Event < ActiveRecord::Base
     parc: 30,
     theatre: 40,
     sport: 50,
-    restaurant: 60
+    restaurant: 60,
+    jeux: 70
   }
 
   def to_s
