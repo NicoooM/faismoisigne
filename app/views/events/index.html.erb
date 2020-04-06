@@ -9,6 +9,7 @@
     </div> 
     <% if @future_events.any? %>
       <h2 class="mt-5">Événements à venir</h2>
+      
       <div class="row">
         <% @future_events.each do |event| %>
           <%= render event %>
