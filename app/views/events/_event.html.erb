@@ -1,6 +1,6 @@
 <div class="col-md-3">
   <%= link_to event do %>
-    <div class="card shadow">
+    <div class="card card-events shadow">
       <%= image_tag "categories/#{event.category}.jpg", class: 'card-img-top' if event.category %>
       <div class="card-body">
         <h5 class="card-title"><%= event.nom %></h5>
