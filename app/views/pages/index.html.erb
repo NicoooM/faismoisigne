@@ -54,18 +54,18 @@
       <h2 class="d-none">Contacts</h2>
       <div class="row">
         <div class="col-md-4 mb-5">
-          <h3>Qui sommes-nous?</h3>
+          <h3>Qui sommes-nous ?</h3>
           <p>Les petites mains de <b>Fais-Moi Signe</b> c’est une équipe de bénévoles. Nous avons créé cette plateforme pour multiplier les échanges autour de la Langue des Signes française.</p>
           <%= link_to 'En savoir plus', about_path, class: "btn btn-sm btn-light" %>
         </div>
         <div class="col-md-4 mb-5">
-          <h3>Comment participer?</h3>
+          <h3>Comment participer ?</h3>
           <p>Pour participer à des événements, il suffit de se connecter à son compte <b>Fais-Moi Signe</b> ou de s’inscrire, de choisir un événement parmi ceux créés ou d’en créer un!</p>
           <%= link_to 'En savoir plus', events_path, class: "btn btn-sm btn-light" %>
         </div>
         <div class="col-md-4 mb-5">
-          <h3>Comment s'inscrire?</h3>
-          <p> faire partie de la famille <b>Fais-Moi Signe</b>, il suffit de renseigner ses coordonnées dans le formulaire d’inscription.</p>
+          <h3>Comment s'inscrire ?</h3>
+          <p> Pour faire partie de la famille <b>Fais-Moi Signe</b>, il suffit de renseigner ses coordonnées dans le formulaire d’inscription.</p>
           <%= link_to 'En savoir plus', new_user_session_path, class: "btn btn-sm btn-light" %>
         </div>
       </div>
@@ -76,16 +76,24 @@
       <h2 class="text-center">Ils nous soutiennent</h2>
       <div class="row justify-content-center">
         <div class="col-md-2">
+          <a href="http://www.visuel-lsf.org/" target="_blank">
           <%= image_tag 'sponsors/visuallsf.png', class: "img-fluid" %>
+          </a>
         </div>
         <div class="col-md-2">
+          <a href="https://www.u-bordeaux-montaigne.fr/fr/index.html" target="_blank">
           <%= image_tag 'sponsors/universite.png', class: "img-fluid" %>
+          </a>
         </div>
-        <div class="col-md-2">
+        <div class="col-md-2"> 
+          <a href="https://www.mmibordeaux.com/" target="_blank">
           <%= image_tag 'sponsors/mmi.png', class: "img-fluid" %>
+          </a>
         </div>
         <div class="col-md-2">
+          <a href="http://www.bordeaux-impressions.fr/" target="_blank">
           <%= image_tag 'sponsors/bxi.png', class: "img-fluid" %>
+          </a>
         </div>
     </div>
 	</div>
