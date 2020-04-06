@@ -33,9 +33,19 @@
           <li class="nav-item">
             <%= link_to "Accueil", root_path, class: "nav-link" %></%>
           </li>
-          <li class="nav-item">
-            <%= link_to "Événements", events_path, class: "nav-link" %></%>
-          </li>
+
+          <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Evénements
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item"><%= link_to "Événements", events_path, class: "nav-link" %></%></a>
+          <a class="dropdown-item"><%= link_to "Événements online", onlineevent_path, class: "nav-link" %></%></a>
+        </div>
+      </li>
+
+         
+
           <li class="nav-item">
             <%= link_to "À propos", about_path, class: "nav-link" %></%>
           </li>
