@@ -11,4 +11,7 @@ class PagesController < ApplicationController
 
   def onlineevent
   end
+
+  def chasseauxoeufs
+  end
 end
