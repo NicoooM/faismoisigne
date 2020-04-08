@@ -14,4 +14,7 @@ class PagesController < ApplicationController
 
   def chasseauxoeufs
   end
+
+  def supports
+  end
 end
