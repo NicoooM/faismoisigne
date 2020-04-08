@@ -5,14 +5,10 @@ class EventsController < ApplicationController
   # GET /events.json
   def index
     @categories = Event.categories
-    @past_events = Event.past.pastorder
-
-    if params[:event]
-      @future_events = Event.future.by_category
-    else
-      @future_events = Event.future
-    end 
-
+    @events = Event.all
+    @events = @events.send(params[:category]) if params.has_key? :category
+    @past_events = @events.past.pastorder
+    @future_events = @events.future
   end
 
   # GET /events/1
@@ -22,19 +18,13 @@ class EventsController < ApplicationController
 
   # GET /events/new
   def new
-    if user_signed_in?
-      @event = Event.new
-    else
-      redirect_to new_user_session_path
-    end
+    user_signed_in? ? @event = Event.new
+                    : redirect_to(new_user_session_path)
   end
 
   # GET /events/1/edit
   def edit
-    if current_user.id == @event.user_id
-    else
-      redirect_to events_path
-    end
+    redirect_to events_path if current_user != @event.user
   end
 
   # POST /events
