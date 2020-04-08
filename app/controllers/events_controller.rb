@@ -4,8 +4,15 @@ class EventsController < ApplicationController
   # GET /events
   # GET /events.json
   def index
-    @future_events = Event.future
+    @categories = Event.categories
     @past_events = Event.past.pastorder
+
+    if params[:event]
+      @future_events = Event.future.by_category
+    else
+      @future_events = Event.future
+    end 
+
   end
 
   # GET /events/1

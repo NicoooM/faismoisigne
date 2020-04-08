@@ -18,6 +18,8 @@ class Event < ActiveRecord::Base
     jeux: 70
   }
 
+  scope :by_category, -> { where('category = ?', 60 )}
+
   def to_s
     "#{nom}"
   end
