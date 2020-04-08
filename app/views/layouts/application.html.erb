@@ -29,33 +29,27 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div id="navbarNavDropdown" class="collapse navbar-collapse" >
-        <ul class="navbar-nav ml-auto" >
+        <ul class="navbar-nav ml-auto d-flex align-items-center" >
           <li class="nav-item">
             <%= link_to "Accueil", root_path, class: "nav-link" %></%>
           </li>
 
           <li class="nav-item ">
-          <span class="badge badge-pill badge-warning"><%= link_to "Chasse aux oeufs", chasseauxoeufs_path, class: "nav-link" %></%></span>
-            
+            <span class="badge badge-pill badge-warning"><%= link_to "Chasse aux oeufs", chasseauxoeufs_path, class: "nav-link" %></%></span>
           </li>
 
-          <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Evénements
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item"><%= link_to "Événements", events_path, class: "nav-link" %></%></a>
-          <button type="button" class="btn btn-info">
-          <%= link_to "Événements en ligne", onlineevent_path, class: "nav-link" %></%><span class="badge badge-light">New</span>
-          </button>
-        </div>
-      </li>
+          <li class="nav-item ">
+            <%= link_to "Événements", events_path, class: "nav-link" %></%>
+          </li>
 
-         
+          <li class="nav-item ">
+            <span class="badge badge-pill badge-info"><%= link_to "Événements en ligne", onlineevent_path, class: "nav-link" %></%></span>
+          </li>
 
           <li class="nav-item">
             <%= link_to "À propos", about_path, class: "nav-link" %></%>
           </li>
+
           <% if user_signed_in?%>
             <li class="nav-item">
               <%= link_to "Mon compte", current_user, class: "nav-link" %></%>
