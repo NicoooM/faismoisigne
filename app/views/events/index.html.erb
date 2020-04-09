@@ -1,15 +1,19 @@
   <div class="container">
     <h1>Événements</h1>
     <div class="d-flex justify-content-center">
-      <ul class="list-inline">
-        <li class="list-inline-item"><%= link_to 'Tous', events_path %></li>
-        <% Event.categories.each do |key, value| %>
-          <li class="list-inline-item">
+      <ul class="list-group list-group-horizontal-sm">
+      <li class="list-inline-item btn btn-light"><%= link_to 'Tous', events_path %></li>
+      <div class="btn-group" role="group" aria-label="Basic example">
+      
+      <% Event.categories.each do |key, value| %>
+          <li class="btn btn-light ml-2">
             <%= link_to t("enums.event.category.#{key}"), category_of_events_path(category: key) %>
           </li>
         <% end %>
+      </div>
       </ul>
     </div>
+    <br>
     <div class="d-flex justify-content-center mb-4">
       <%= link_to '+ Créer un évènement', new_event_path, class: 'btn btn-primary' %>
     </div>
