@@ -1,34 +1,28 @@
 <% content_for :title, 'Fais-Moi Signe part en live !' %>
 <% content_for :jumbotron_background, 'https://creativepool.com/files/candidate/portfolio/full/927632.gif' %>
+<% content_for :jumbotron do %>
+  <p>Malgré cette situation inédite, Fais-Moi Signe débarque en ligne ! Nous vous proposons des événements en ligne afin de se rencontrer après le confinement.</p>
+  <p>L'équipe Fais-Moi Signe.</p>
+<% end %>
 
 <div class="onlineevent container">
+  <div class="d-md-flex flex-md-equal w-100">
 
-<div class="overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light onlineevent__jumbotron">
-  <div class="col-md-5 mx-auto my-5">
-    <h1 class="display-4">Fais-Moi Signe part en live !</h1>
-    <p class="lead font-weight-normal">Malgré cette situation inédite, Fais-Moi Signe débarque en ligne ! Nous vous proposons des événements en ligne afin de se rencontrer après le confinement. </p><p> Ces événements prendront la forme de jeu en ligne.</p>
-    <footer class="blockquote-footer">L'équipe<cite title="Source Title"> Fais-Moi Signe</cite></footer>
-  </div>
-  <div class="product-device shadow-sm d-none d-md-block"></div>
-  <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
-</div>
-
-<div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
-
-    <div class="bg-dark mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden onlineevent__twitch" style="width: 50%;">
-      <a href="https://www.twitch.tv/faismoisigne" text-center text-white overflow-hidden>
+      <div class="bg-dark mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden onlineevent__twitch" style="width: 50%;">
+        <a href="https://www.twitch.tv/faismoisigne" text-center text-white overflow-hidden>
+          <div class="">
+            <h2 class="display-5">Lives twitch</h2>
+            <p class="lead">Rendez-vous tous les jours du 6 au 10 avril sur notre plateforme Twitch </p>
+            <a href="https://www.twitch.tv/faismoisigne" text-center text-white overflow-hidden> Cliquez ici</a>
+          </div>
+      </div>
+      <div class="bg-dark mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden onlineevent__easter" style="width: 50%;">
+      <a href="" text-center text-white overflow-hidden>
         <div class="">
-          <h2 class="display-5">Lives twitch</h2>
-          <p class="lead">Rendez-vous tous les jours du 6 au 10 avril sur notre plateforme Twitch </p>
-          <a href="https://www.twitch.tv/faismoisigne" text-center text-white overflow-hidden> Cliquez ici</a>
+          <h2 class="display-5">La chasse aux oeufs est ouverte !</h2>
+          <p class="lead">Venez découvrir la chasse aux oeufs spécial Fais-Moi Signe !</p>
+          <%= link_to "Cliquez ici", chasseauxoeufs_path, class: "nav-link" %></%>
         </div>
     </div>
-    <div class="bg-dark mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden onlineevent__easter" style="width: 50%;">
-    <a href="" text-center text-white overflow-hidden>
-      <div class="">
-        <h2 class="display-5">La chasse aux oeufs est ouverte !</h2>
-        <p class="lead">Venez découvrir la chasse aux oeufs spécial Fais-Moi Signe !</p>
-        <%= link_to "Cliquez ici", chasseauxoeufs_path, class: "nav-link" %></%>
-      </div>
   </div>
 </div>
