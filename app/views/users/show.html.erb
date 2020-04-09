@@ -10,13 +10,13 @@
   </div>
   
   <h2>Evénements que vous avez organisés</h2>
-  <div class="row pl-3">
+  <div class="row">
     <% if @user.events.any? %>
       <% @user.events.each do |event| %>
         <%= render event %>
       <% end %>
     <% else %>
-      <p>Vous n'avez organisé aucun événement... <%= link_to 'Commencez maintenant !', new_event_path %></p>
+      <p class="pl-3">Vous n'avez organisé aucun événement... <%= link_to 'Commencez maintenant !', new_event_path %></p>
     <% end %>
   </div>
 </div>
