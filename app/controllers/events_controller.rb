@@ -6,8 +6,11 @@ class EventsController < ApplicationController
   # GET /events
   # GET /events.json
   def index
-    @future_events = Event.future
-    @past_events = Event.past
+    @categories = Event.categories
+    @events = Event.all
+    @events = @events.send(params[:category]) if params.has_key? :category
+    @past_events = @events.past.pastorder
+    @future_events = @events.future
   end
 
   # GET /events/1

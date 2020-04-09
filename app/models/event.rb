@@ -4,7 +4,8 @@ class Event < ActiveRecord::Base
 
   scope :future, -> { where('start_at >= ?', DateTime.now)}
   scope :past, -> { where('start_at < ?', DateTime.now)}
-  default_scope { order(start_at: :desc) }
+  default_scope { order(:start_at)}
+  scope :pastorder, -> { reorder(start_at: :desc) }
 
   enum category: {
     bar: 0,
@@ -13,7 +14,8 @@ class Event < ActiveRecord::Base
     parc: 30,
     theatre: 40,
     sport: 50,
-    restaurant: 60
+    restaurant: 60,
+    jeux: 70
   }
 
   def to_s

@@ -1,16 +1,27 @@
+<% content_for :title, 'Bonjour '+ ' 👋' %>
+
 <div class="container">
-  <h1>Bonjour <%= @user %></h1>
 
-  <%= @user.lieu %>
-  <%= mail_to @user.email, @user.email%>
+  <div class="row d-flex flex-column pl-3 mb-3">
+    <%= @user.lieu %>
+    <%= mail_to @user.email, @user.email%>
 
-  <%= @user.description %>
-  <%= @user.bio %>
+    <%= @user.description %>
+    <%= @user.bio %>
+  </div>
+
+  <% if @user == current_user %>
+    <%= link_to "Déconnexion", destroy_user_session_path, method: 'delete', class: 'btn btn-danger' %>
+  <% end %>
 
   <h2>Evénements que vous avez organisés</h2>
   <div class="row">
-    <% @user.events.each do |event| %>
-      <%= render event %>
+    <% if @user.events.any? %>
+      <% @user.events.each do |event| %>
+        <%= render event %>
+      <% end %>
+    <% else %>
+      <p class="pl-3">Vous n'avez organisé aucun événement... <%= link_to 'Commencez maintenant !', new_event_path %></p>
     <% end %>
   </div>
 </div>

@@ -1,27 +1,35 @@
+<% content_for :title, @event %>
+
+<%= render 'warning' %>
+
 <div class='container event'>
-  <h1><%= @event %></h1>
-  <%= image_tag "categories/#{@event.category}.jpg", class: 'img-fluid' if @event.category %>
-  <h2>
-    <strong>Organisateur </strong><br>
-    <%= mail_to @event.user, @event.user.email %>
-  </h2>
-  <div class="event__infos">
-    <h3>
-      <strong>Lieu </strong><br>
-      <%= link_to @event.lieu, 'https://www.google.fr/maps/search/' +  @event.lieu +  @event.ville , target: "_blank", :class => "link"%> à <%= @event.ville %>
-    </h3>
-    <h3>
-      <strong>Date</strong><br>
-      <%= @event.start_at.strftime('%d/%m/%Y à %H:%M')%>
-    </h3>
+  <div class="card mb-3" style="max-width: 100%;">
+    <div class="row no-gutters">
+      <div class="col-md-4">
+      <%= image_tag "categories/#{@event.category}.jpg", class: 'img-fluid' if @event.category %>
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">
+          <strong>Organisé par</strong> <%= @event.user %><br>
+          <%= mail_to @event.user, @event.user.email %></h5>
+          <h6 class="event__infos"><strong>Lieu </strong> <br>
+          <%= link_to @event.lieu, 'https://www.google.fr/maps/search/' +  @event.lieu +  @event.ville , target: "_blank", :class => "link"%> à <%= @event.ville %>
+          </h6>
+          <h6 class="event__infos"><strong>Date</strong> <br>  <%= @event.start_at.strftime('%d/%m/%Y à %H:%M')%>
+          </h6>
+
+          <div class='event__description'>
+          <%= simple_format @event.description %>
+          </div>
+            <% if can? :update, @event %>
+              <%= link_to 'Modifier', edit_event_path(@event), class: 'btn btn-primary' %>
+            <% end %>
+            <% if can? :destroy, @event %>
+              <%= link_to 'Supprimer', event_path(@event), method: :delete, data: { confirm: "Are you sure?" }, class: 'btn btn-primary' %>
+            <% end %>
+        </div>
+      </div>
+    </div>
   </div>
-  <div class='event__description'>
-    <%= simple_format @event.description %>
-  </div>
-  <% if can? :update, @event %>
-    <%= link_to 'Modifier', edit_event_path(@event), class: 'btn btn-primary' %>
-  <% end %>
-  <% if can? :destroy, @event %>
-    <%= link_to 'Supprimer', event_path(@event), method: :delete, data: { confirm: "Are you sure?" }, class: 'btn btn-primary' %>
-  <% end %>
 </div>

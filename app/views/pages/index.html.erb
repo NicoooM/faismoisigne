@@ -1,32 +1,28 @@
+<% content_for :title, 'Fais-Moi Signe' %>
+<% content_for :jumbotron do %>
+  <h2>Un site, un signe, une rencontre</h2>
+  <p>Trouvez un évènement près de chez vous !</p>
+<% end %>
+
 <div class="home">
-  <div class="jumbotron home__header text-center text-white">
-    <div class="container">
-      <h1> Fais-Moi Signe</h1>
-      <h2>Un site, un signe, une rencontre</h2>
-      <p>Trouvez un évènement près de chez vous !</p>
-    </div>
-  </div>
   <div class="home__events">
-    <div class="container">
-  		<div class="row">
+    <div class="container" style="z-index: 100">
+      <div class="row">
         <div class="col-md-3">
           <%= link_to new_user_session_path do %>
-            <div class="card">
+            <div class="card shadow align-items-center justify-content-center">
               <%= image_tag 'gauche.png', class: "card-img-top" %>
               <div class="card-body first-card">
-                  <h5 class="card-title first-card">Inscrivez vous</h5>
+                  <h5 class="card-title">Inscrivez vous</h5>
               </div>
             </div>
           <% end %>
         </div>
-        <% @events.each do |event| %>
-          <%= render event %>
-        <% end %>
         <div class="col-md-3">
           <%= link_to events_path do %>
-            <div class="card">
+            <div class="card shadow align-items-center justify-content-center">
               <%= image_tag 'icons/agenda.png', class: 'card-img-top' %>
-              <div class="card-body">
+              <div class="card-body first-card">
                 <h5 class="card-title">Tout l'agenda</h5>
               </div>
             </div>
@@ -34,14 +30,17 @@
         </div>
         <div class="col-md-3">
         	<%= link_to new_event_path(@events) do %>
-            <div class="card">
+            <div class="card shadow align-items-center justify-content-center">
               <%= image_tag 'icons/plus.png', class: "card-img-top"%>
               <div class="card-body first-card">
-                <h5 class="card-title first-card">Créez votre événement</h5>
+                <h5 class="card-title">Créez votre événement</h5>
               </div>
             </div>
           <% end %>
         </div>
+        <% @events.each do |event| %>
+          <%= render event %>
+        <% end %>
       </div>
     </div>
   </div>
@@ -50,18 +49,18 @@
       <h2 class="d-none">Contacts</h2>
       <div class="row">
         <div class="col-md-4 mb-5">
-          <h3>Qui sommes-nous?</h3>
+          <h3>Qui sommes-nous ?</h3>
           <p>Les petites mains de <b>Fais-Moi Signe</b> c’est une équipe de bénévoles. Nous avons créé cette plateforme pour multiplier les échanges autour de la Langue des Signes française.</p>
           <%= link_to 'En savoir plus', about_path, class: "btn btn-sm btn-light" %>
         </div>
         <div class="col-md-4 mb-5">
-          <h3>Comment participer?</h3>
-          <p>Pour participer à des événements, il suffit de se connecter à son compte <b>Fais-Moi Signe</b> ou de s’inscrire, de choisir un événement parmi ceux créés ou d’en créer un!</p>
+          <h3>Comment participer ?</h3>
+          <p>Pour participer à des événements, il suffit de se connecter à son compte <b>Fais-Moi Signe</b> ou de s’inscrire, de choisir un événement parmi ceux créés ou d’en créer un !</p>
           <%= link_to 'En savoir plus', events_path, class: "btn btn-sm btn-light" %>
         </div>
         <div class="col-md-4 mb-5">
-          <h3>Comment s'inscrire?</h3>
-          <p> faire partie de la famille <b>Fais-Moi Signe</b>, il suffit de renseigner ses coordonnées dans le formulaire d’inscription.</p>
+          <h3>Comment s'inscrire ?</h3>
+          <p> Pour faire partie de la famille <b>Fais-Moi Signe</b>, il suffit de renseigner ses coordonnées dans le formulaire d’inscription.</p>
           <%= link_to 'En savoir plus', new_user_session_path, class: "btn btn-sm btn-light" %>
         </div>
       </div>
@@ -72,17 +71,36 @@
       <h2 class="text-center">Ils nous soutiennent</h2>
       <div class="row justify-content-center">
         <div class="col-md-2">
+          <a href="http://www.visuel-lsf.org/" target="_blank">
           <%= image_tag 'sponsors/visuallsf.png', class: "img-fluid" %>
+          </a>
         </div>
         <div class="col-md-2">
+          <a href="https://www.u-bordeaux-montaigne.fr/fr/index.html" target="_blank">
           <%= image_tag 'sponsors/universite.png', class: "img-fluid" %>
+          </a>
+        </div>
+        <div class="col-md-2 d-flex align-items-center justify-content-center">
+          <a href="https://www.difizi.com/" target="_blank" class="w-50">
+          <%= image_tag 'sponsors/difizi.jpg', class: "img-fluid" %>
+          </a>
         </div>
         <div class="col-md-2">
+          <a href="https://www.mmibordeaux.com/" target="_blank">
           <%= image_tag 'sponsors/mmi.png', class: "img-fluid" %>
+          </a>
         </div>
         <div class="col-md-2">
+          <a href="http://www.bordeaux-impressions.fr/" target="_blank">
           <%= image_tag 'sponsors/bxi.png', class: "img-fluid" %>
+          </a>
         </div>
     </div>
 	</div>
+</div>
+
+<div class="myAlert-bottom alert alert-info">
+<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+<p> En cliquant sur "ok" vous acceptez nos <a href="">CGU</a> et notre <a href="">gestion des données</a></p>
+<button type="button" class="btn btn-outline-info" data-dismiss="alert"aria-label="close">Ok !</button>
 </div>

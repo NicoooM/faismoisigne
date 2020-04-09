@@ -8,4 +8,13 @@ class PagesController < ApplicationController
 
   def about
   end
+
+  def onlineevent
+  end
+
+  def chasseauxoeufs
+  end
+
+  def supports
+  end
 end

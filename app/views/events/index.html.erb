@@ -1,18 +1,39 @@
-  <div class="container">
-    <h1>Evènements</h1>
-    <% if @future_events.any? %>
-      <h2 class="mt-5">Événements à venir</h2>
-      <div class="row">
-        <% @future_events.each do |event| %>
-          <%= render event %>
-        <% end %>
-      </div>
-    <% end %>
-    <h2 class="mt-5">Événements passés</h2>
+<% content_for :title, 'Événements' %>
+
+<%= render 'warning' %>
+
+<div class="container">
+  <div class="d-flex justify-content-center">
+    <ul class="list-group list-group-horizontal-sm">
+    <li class="list-inline-item btn btn-light"><%= link_to 'Tous', events_path %></li>
+    <div class="btn-group" role="group" aria-label="Basic example">
+
+    <% Event.categories.each do |key, value| %>
+        <li class="btn btn-light ml-2">
+          <%= link_to t("enums.event.category.#{key}"), category_of_events_path(category: key)%>
+        </li>
+      <% end %>
+    </div>
+    </ul>
+  </div>
+  <br>
+  <div class="d-flex justify-content-center mb-4">
+    <%= link_to '+ Créer un évènement', new_event_path, class: 'btn btn-primary' %>
+  </div>
+
+  <% if @future_events.any? %>
+    <h2 class="mt-5">Événements à venir</h2>
+
     <div class="row">
-      <% @past_events.each do |event| %>
+      <% @future_events.each do |event| %>
         <%= render event %>
       <% end %>
     </div>
+  <% end %>
+  <h2 class="mt-5">Événements passés</h2>
+  <div class="row">
+    <% @past_events.each do |event| %>
+      <%= render event %>
+    <% end %>
   </div>
 </div>
