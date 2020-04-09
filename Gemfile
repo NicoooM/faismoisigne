@@ -20,6 +20,7 @@ gem 'mail_form'
 gem 'simple_form'
 gem 'enum_help'
 gem 'bootsnap', '>= 1.1.0', require: false
+gem 'rails-i18n'
 gem 'activeadmin'
 gem 'cancancan'
 gem 'draper'
