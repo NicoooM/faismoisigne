@@ -2,7 +2,7 @@
 url = asset_path 'background/animation.gif'
 url = yield :jumbotron_background if yield(:jumbotron_background).present?
 %>
-<div  class="jumbotron home__header text-center text-white"
+<div  class="jumbotron home__header text-center text-black"
       style="background-image: url('<%= url %>')">
   <div class="container">
     <h1><%= yield(:title).presence || 'Fais-moi signe' %></h1>
