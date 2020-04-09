@@ -10,14 +10,14 @@
       </div>
       <div class="card-footer d-flex justify-content-center">
         <% if !user_signed_in? %>
-          <%= link_to 'Participer', event, :class => "btn btn-primary btn-sm"%>
+          <%= link_to 'En voir plus', event, :class => "btn btn-primary btn-sm"%>
         <% end %>
         <% if user_signed_in? && event.user_id == current_user.id %>
           <%= link_to 'Voir', event, class: "btn btn-primary btn-sm mr-1" %>
           <%= link_to 'Modifier', edit_event_path(event), class: "btn btn-primary btn-sm " %>
         <% end %>
         <% if user_signed_in? && event.user_id != current_user.id %>
-          <%= link_to 'Participer', event, :class => "btn btn-primary btn-sm" %>
+          <%= link_to 'En voir plus', event, :class => "btn btn-primary btn-sm" %>
         <% end %>
       </div>
     </div>
