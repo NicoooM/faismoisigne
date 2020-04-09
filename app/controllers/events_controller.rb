@@ -24,7 +24,7 @@ class EventsController < ApplicationController
 
   # GET /events/1/edit
   def edit
-    redirect_to events_path if current_user != @event.user
+
   end
 
   # POST /events
@@ -46,7 +46,7 @@ class EventsController < ApplicationController
   # PATCH/PUT /events/1
   # PATCH/PUT /events/1.json
   def update
-    if current_user.id == @event.user_id
+
     respond_to do |format|
       if @event.update(event_params)
         format.html { redirect_to @event, notice: 'Votre événement a été modifié avec succès.' }
@@ -55,7 +55,7 @@ class EventsController < ApplicationController
         format.html { render :edit }
         format.json { render json: @event.errors, status: :unprocessable_entity }
       end
-    end
+
     end
   end
 
