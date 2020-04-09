@@ -8,7 +8,11 @@
     <%= @user.description %>
     <%= @user.bio %>
   </div>
-  
+
+  <% if @user == current_user %>
+    <%= link_to "Déconnexion", destroy_user_session_path, method: 'delete', class: 'btn btn-danger' %>
+  <% end %>
+
   <h2>Evénements que vous avez organisés</h2>
   <div class="row">
     <% if @user.events.any? %>

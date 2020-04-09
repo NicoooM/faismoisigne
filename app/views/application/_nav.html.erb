@@ -1,0 +1,44 @@
+
+<nav class="navbar navbar-expand-md navbar-dark bg-transparent">
+  <%= link_to root_path, class: "navbar-brand" do %>
+    <%= image_tag'logo.png', class: "img-fluid" %>
+  <% end %>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div id="navbarNavDropdown" class="collapse navbar-collapse" >
+    <ul class="navbar-nav ml-auto" >
+      <li class="nav-item">
+        <%= link_to "Accueil",
+                    root_path,
+                    class: "nav-link badge badge-pill p-2 badge-dark" %></%>
+      </li>
+      <li class="nav-item">
+        <%= link_to "Chasse aux oeufs",
+                    chasseauxoeufs_path,
+                    class: "nav-link badge badge-pill p-2 badge-warning ml-2" %>
+      </li>
+      <li class="nav-item ">
+        <%= link_to "Événements",
+                    events_path,
+                    class: "nav-link badge badge-pill p-2 badge-dark ml-2" %>
+      </li>
+      <li class="nav-item ">
+        <%= link_to "Événements en ligne",
+                    onlineevent_path,
+                    class: "nav-link badge badge-pill p-2 badge-dark ml-2" %>
+      </li>
+      <li class="nav-item ">
+        <%= link_to "FMS Family",
+                    supports_path,
+                    class: "nav-link badge badge-pill p-2 badge-dark ml-2" %>
+      </li>
+      <li class="nav-item ">
+        <%= link_to user_signed_in? ? current_user : new_user_session_path,
+                    class: "nav-link badge badge-pill p-2 badge-dark ml-2" do %>
+          <%= fa_icon 'user' %>
+        <% end %>
+      </li>
+    </ul>
+  </div>
+</nav>

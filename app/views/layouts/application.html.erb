@@ -13,7 +13,7 @@
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Fais-moi signe</title>
+    <title><%= yield(:title).presence || 'Fais-moi signe' %></title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -21,88 +21,9 @@
     <%= favicon_link_tag asset_path('logo.ico') %>
   </head>
   <body>
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-transparent">
-      <%= link_to root_path, class: "navbar-brand" do %>
-        <%= image_tag'logo.png', class: "img-fluid" %>
-      <% end %>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div id="navbarNavDropdown" class="collapse navbar-collapse" >
-        <ul class="navbar-nav ml-auto d-flex align-items-center" >
-          <li class="nav-item">
-            <%= link_to "Accueil", root_path, class: "nav-link" %></%>
-          </li>
-
-          <li class="nav-item ">
-            <span class="badge badge-pill badge-warning"><%= link_to "Chasse aux oeufs", chasseauxoeufs_path, class: "nav-link" %></%></span>
-          </li>
-
-          <li class="nav-item ">
-            <%= link_to "Événements", events_path, class: "nav-link" %></%>
-          </li>
-
-          <li class="nav-item ">
-            <span class="badge badge-pill badge-info"><%= link_to "Événements en ligne", onlineevent_path, class: "nav-link" %></%></span>
-          </li>
-
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">A propos</a>
-            <div class="dropdown-menu">
-              <%= link_to "L'Association", about_path, class: "nav-link" %></%>
-              <%= link_to "FMS Family", supports_path, class: "nav-link" %></%>
-            </div>
-          </li>
-
-          <% if user_signed_in?%>
-            <li class="nav-item">
-              <%= link_to "Mon compte", current_user, class: "nav-link" %></%>
-            </li>
-            <li class="nav-item">
-              <%= link_to "Déconnexion", destroy_user_session_path, method: 'delete', class: 'nav-link'%>
-            </li>
-          <% else %>
-            <li class="nav-item">
-              <%= link_to "Mon compte", new_user_session_path, class: "nav-link" %></%>
-            </li>
-          <%end%>
-        </ul>
-      </div>
-    </nav>
-
-    <main>
-      <%= yield %>
-    </main>
-
-    <div class="container mt-5 mb-5">
-      <div class="alert alert-danger small text-muted" role="alert">
-          En raison de l'actualité, il se peut que certains événements soient perturbés.
-          Contactez l'organisateur pour en savoir plus.
-          <a href="https://www.gouvernement.fr/">Consultez les dernières informations sur l’épidémie de Covid-19 en France</a>
-      </div>
-    </div>
-
-    <footer class="page-footer font-small p-4">
-      <div class="container-fluid">
-        <div class="row text-center">
-          <div class="col-md-4">
-            <div class="">© 2020 Copyright
-        <a href="http://www.faismoisigne.org/"> faismoisigne.org</a>
-      </div>
-          </div>
-          <div class="col-md-4">
-            <a class="" href="https://drive.google.com/open?id=1IN8qu5Y1jATysH9uEOxKCelR-DlyMQ2U"> Mentions légales</a> -
-                    <a class="" href="http://www.faismoisigne.org"> CGU </a> -
-                    <a class="" href="http://www.faismoisigne.org"> Contact</a>
-
-          </div>
-          <div class="col-md-4">
-            <%= link_to 'https://www.facebook.com/faismoisigne.org/', :class => 'lien m-4' do %> <%= fa_icon "facebook" %> <% end %>
-            <%= link_to 'https://twitter.com/Faismoisigneorg', :class => 'lien m-4' do %> <%= fa_icon "twitter" %><% end %>
-            <%= link_to 'https://www.instagram.com/faismoisigneorg', :class => 'lien m-4' do %> <%= fa_icon "instagram" %><% end %>
-          </div>
-        </div>
-      </div>
-    </footer>
+    <%= render 'nav' %>
+    <%= render 'jumbotron' %>
+    <main><%= yield %></main>
+    <%= render 'footer' %>
   </body>
 </html>

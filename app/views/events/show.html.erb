@@ -1,36 +1,32 @@
-<div class='container event'>
-  <h1><%= @event %></h1>
-  <div class="alert alert-danger" role="alert">
-      <h4> En raison de l'actualité, il se peut que certains événements soient perturbés. <br> Contactez l'organisateur pour en savoir plus.</h4>
-      <a href="https://www.gouvernement.fr/"> Consultez les dernières informations sur l’épidémie de Covid-19 en France</a>
-  </div> 
+<% content_for :title, @event %>
 
-<div class="card mb-3" style="max-width: 100%;">
-  <div class="row no-gutters">
-    <div class="col-md-4">
-    <%= image_tag "categories/#{@event.category}.jpg", class: 'img-fluid' if @event.category %>
-    </div>
-    <div class="col-md-8">
-      <div class="card-body">
-        <h5 class="card-title">
-        <strong>Organisé par</strong> <%= @event.user %><br>
-        <%= mail_to @event.user, @event.user.email %></h5>
-        <h6 class="event__infos"><strong>Lieu </strong> <br>
-        <%= link_to @event.lieu, 'https://www.google.fr/maps/search/' +  @event.lieu +  @event.ville , target: "_blank", :class => "link"%> à <%= @event.ville %>
-        </h6>
-        <h6 class="event__infos"><strong>Date</strong> <br>  <%= @event.start_at.strftime('%d/%m/%Y à %H:%M')%>
-        </h6>
-        <p class="event__description"><%= simple_format @event.description %></p>
-        <% if user_signed_in? && @event.user_id == current_user.id %>
-        <div class="d-flex">
-          <%= link_to 'Modifier', edit_event_path(@event), class: 'btn btn-primary' %>
-          <%= link_to 'Supprimer', @event, :class => "btn btn-primary", method: :delete, data: { confirm: 'Voulez vous vraiment supprimer cet événement ?' } %>
+<%= render 'warning' %>
+
+<div class='container event'>
+  <div class="card mb-3" style="max-width: 100%;">
+    <div class="row no-gutters">
+      <div class="col-md-4">
+      <%= image_tag "categories/#{@event.category}.jpg", class: 'img-fluid' if @event.category %>
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">
+          <strong>Organisé par</strong> <%= @event.user %><br>
+          <%= mail_to @event.user, @event.user.email %></h5>
+          <h6 class="event__infos"><strong>Lieu </strong> <br>
+          <%= link_to @event.lieu, 'https://www.google.fr/maps/search/' +  @event.lieu +  @event.ville , target: "_blank", :class => "link"%> à <%= @event.ville %>
+          </h6>
+          <h6 class="event__infos"><strong>Date</strong> <br>  <%= @event.start_at.strftime('%d/%m/%Y à %H:%M')%>
+          </h6>
+          <p class="event__description"><%= simple_format @event.description %></p>
+          <% if user_signed_in? && @event.user_id == current_user.id %>
+          <div class="d-flex">
+            <%= link_to 'Modifier', edit_event_path(@event), class: 'btn btn-primary' %>
+            <%= link_to 'Supprimer', @event, :class => "btn btn-primary", method: :delete, data: { confirm: 'Voulez vous vraiment supprimer cet événement ?' } %>
+          </div>
+        <% end %>
         </div>
-      <% end %>
       </div>
     </div>
   </div>
 </div>
-</div>
-       
-
