@@ -1,19 +1,14 @@
 <div class="home">
   <div class="jumbotron home__header text-center text-white">
     <div class="container">
-      <h1> Fais-Moi Signe</h1>
+      <h1>Fais-Moi Signe</h1>
       <h2>Un site, un signe, une rencontre</h2>
       <p>Trouvez un évènement près de chez vous !</p>
-      <div class="alert alert-danger" role="alert">
-      <h4> En raison de l'actualité, il se peut que certains événements soient perturbés. <br> Contactez l'organisateur pour en savoir plus.</h4>
-      <a href="https://www.gouvernement.fr/"> Consultez les dernières informations sur l’épidémie de Covid-19 en France</a>
-    </div> 
     </div>
   </div>
-  
   <div class="home__events">
     <div class="container">
-  		<div class="row">
+      <div class="row">
         <div class="col-md-3">
           <%= link_to new_user_session_path do %>
             <div class="card shadow align-items-center justify-content-center">
@@ -91,7 +86,7 @@
           <%= image_tag 'sponsors/difizi.jpg', class: "img-fluid" %>
           </a>
         </div>
-        <div class="col-md-2"> 
+        <div class="col-md-2">
           <a href="https://www.mmibordeaux.com/" target="_blank">
           <%= image_tag 'sponsors/mmi.png', class: "img-fluid" %>
           </a>
