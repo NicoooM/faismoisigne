@@ -1,9 +1,7 @@
 <% content_for :title, 'Événements' %>
 
-<%= render 'warning' %>
-
 <div class="container">
-  <div class="d-flex justify-content-center">
+<div class="d-flex justify-content-center">
     <ul class="list-group list-group-horizontal-sm">
     <li class="list-inline-item btn btn-light"><%= link_to 'Tous', events_path %></li>
     <div class="btn-group" role="group" aria-label="Basic example">
@@ -20,7 +18,11 @@
   <div class="d-flex justify-content-center mb-4">
     <%= link_to '+ Créer un évènement', new_event_path, class: 'btn btn-primary' %>
   </div>
+</div>
 
+<%= render 'warning' %>
+
+<div class="container">
   <% if @future_events.any? %>
     <h2 class="mt-5">Événements à venir</h2>
 
