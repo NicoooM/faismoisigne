@@ -6,14 +6,14 @@
 
     <div class="form-registrations">
       <div class="form-inputs">
-      <%= f.input :nom,
-                    required: true,
-                    autofocus: true,
-                    input_html: { autocomplete: "nom" }%>
         <%= f.input :prenom,
                     required: true,
                     autofocus: true,
                     input_html: { autocomplete: "prénom" }%>
+        <%= f.input :nom,
+                    required: true,
+                    autofocus: true,
+                    input_html: { autocomplete: "nom" }%>
         <%= f.input :lieu,
                     required: true,
                     autofocus: true,
