@@ -1,41 +1,48 @@
 <% content_for :title, @event %>
 
+<main>
+<%= yield(:title).presence %>
+
+<div class="container">
+  <div class="alert alert-danger mt-5 text-center border border-danger rounded">
+    En raison de l'actualité, il se peut que certains événements soient perturbés. Contactez l'organisateur pour en savoir plus.<br>
+    <a href="https://www.gouvernement.fr/">Consultez les dernières informations sur l'épidémie de Covid-19 en France.</a>
+  </div>
+</div>
+
 <div class='container event'>
   <div class="mb-3" style="max-width: 100%;">
-    <div class="row no-gutters">
+    <div class="row">
       <div class="col-md-4">
-      <%= image_tag "categories/#{@event.category}.jpg", class: 'img-fluid rounded' if @event.category %>
+      <%= image_tag "categories/#{@event.category}.jpg", class: 'img-fluid rounded align-middle' if @event.category %>
       </div>
       <div class="col-md-8">
-        <div class="card-body">
-            <h2 class="card-title mb-4">
-              <strong>Organisé par</strong> <%= @event.user %>
-            </h2>
-            <p><%= mail_to @event.user, @event.user.email %></p>
-            <h2 class="event__infos">
-              <strong>Lieu </strong>
-            </h2>
-            <div class="d-flex justify-content-between">
-              <p><%= link_to @event.lieu, 'https://www.google.fr/maps/search/' +  @event.lieu +  @event.ville , target: "_blank", :class => "link"%> à <%= @event.ville %></p>
-              <button  class='btn btn-primary'>
-              <%= link_to 'Voir itinéraire', 'https://www.google.fr/maps/search/' +  @event.lieu +  @event.ville , target: "_blank", :class => "link text-white"%>
-              </button>
-            </div>
-            <h2 class="event__infos">
-              <strong>Date</strong>
-            </h2>
-            <%= @event.start_at.strftime('%d/%m/%Y à %H:%M')%>
-          <div class='event__description'>
-          <%= simple_format @event.description %>
-          </div>
-          <% if can? :update, @event %>
-              <%= link_to 'Modifier', edit_event_path(@event), class: 'btn btn-primary' %>
-            <% end %>
-            <% if can? :destroy, @event %>
-              <%= link_to 'Supprimer', event_path(@event), method: :delete, data: { confirm: "Are you sure?" }, class: 'btn btn-primary' %>
-            <% end %>
+        <h2 class="card-title mb-1 h3 mt-3 mt-md-0">
+          <strong>Organisé par</strong> <%= @event.user %>
+        </h2>
+        <%= mail_to @event.user, @event.user.email, class: 'mb-3 d-block' %>
+        <h2 class="mb-0 h3">
+          <strong>Lieu </strong>
+        </h2>
+        <div class="d-flex justify-content-between">
+          <p class="my-auto"><%= link_to @event.lieu, 'https://www.google.fr/maps/search/' +  @event.lieu +  @event.ville , target: "_blank", :class => "link"%> à <%= @event.ville %></p>
+          <button  class='btn btn-primary'>
+          <%= link_to 'Voir itinéraire', 'https://www.google.fr/maps/search/' +  @event.lieu +  @event.ville , target: "_blank", :class => "link text-white"%>
+          </button>
         </div>
+        <h2 class="event__infos h3">
+          <strong>Date</strong>
+        </h2>
+        <%= @event.start_at.strftime('%d/%m/%Y à %H:%M')%>
+        <%= simple_format @event.description, class: 'mt-3' %>
+        <% if can? :update, @event %>
+          <%= link_to 'Modifier', edit_event_path(@event), class: 'btn btn-primary' %>
+        <% end %>
+        <% if can? :destroy, @event %>
+          <%= link_to 'Supprimer', event_path(@event), method: :delete, data: { confirm: "Are you sure?" }, class: 'btn btn-primary' %>
+        <% end %>
       </div>
     </div>
   </div>
 </div>
+</main>
