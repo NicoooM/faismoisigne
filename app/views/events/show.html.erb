@@ -1,7 +1,5 @@
 <% content_for :title, @event %>
 
-<%= render 'warning' %>
-
 <div class='container event'>
   <div class="card mb-3" style="max-width: 100%;">
     <div class="row no-gutters">
@@ -20,8 +18,8 @@
               <%= link_to @event.lieu, 'https://www.google.fr/maps/search/' +  @event.lieu +  @event.ville , target: "_blank", :class => "link"%> à <%= @event.ville %>
             </h6>
             <h6 class="event__infos">
-              <strong>Date</strong> 
-              <br>  
+              <strong>Date</strong>
+              <br>
               <%= @event.start_at.strftime('%d/%m/%Y à %H:%M')%>
             </h6>
           <div class='event__description'>
@@ -29,7 +27,7 @@
           </div>
           <button  class='btn btn-primary'>
             <%= link_to 'Voir itinéraire', 'https://www.google.fr/maps/search/' +  @event.lieu +  @event.ville , target: "_blank", :class => "link text-white"%>
-          </button> 
+          </button>
           <% if can? :update, @event %>
               <%= link_to 'Modifier', edit_event_path(@event), class: 'btn btn-primary' %>
             <% end %>
