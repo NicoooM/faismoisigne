@@ -1,10 +1,24 @@
 <% content_for :title, 'A propos A propos de Fais Moi Signe' %>
 <% content_for :jumbotron_background, '' %>
 <div class="container about__cards">
-
-<div class="accordion">
-  <div class="card">
-    <div class="card-header" id="headingOne">
+  <div class="container">
+    <div class="row mb-5 mt-5">
+      <div class="col-md-6">
+        <h3 class=" mb-5 mt-5">Qui sommes-nous ?</h3>
+        <p> Les petites mains de Fais-Moi Signe c’est une équipe de bénévoles. 
+        <br>Nous avons créé cette plateforme pour multiplier les échanges autour de la Langue des Signes Française. Créé en 2019 par un groupe d’étudiants, Fais-Moi Signe devient une association en 2020.
+        <p>Nous croyons qu’il est nécessaire de répondre au besoin de ceux qui utilisent cette langue pour s’exprimer.</p>
+        <p>Nous croyons qu’il est nécessaire de briser la barrière de la communication entre tous les individus. </p>
+        <strong><p>Nous croyons que Fais-Moi Signe sera notre solution.</p></strong>
+      </div>
+      <div class="col-md-6" >
+        <%= image_tag 'allteam.png', class: "img-fluid" %>
+        </div>
+    </div>
+  </div>
+  <div class="accordion">
+    <div class="card">
+      <div class="card-header" id="headingOne">
       <h5 class="mb-0">
         <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
           ☝️ Pourquoi avoir créé la plateforme Fais-Moi Signe ?
@@ -12,7 +26,7 @@
       </h5>
     </div>
 
-    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
       <div class="card-body">
         Nous avons créé Fais-Moi Signe  pour mettre en relation des personnes pratiquant la Langue des Signes Française et des personnes souhaitant l’apprendre afin de développer la LSF. 
       </div>
@@ -96,19 +110,3 @@
   </div>
 </div>
 
-
-<div class="container">
-	<div class="row mb-5 mt-5">
-		<div class="col-md-6">
-			<h3 class=" mb-5 mt-5">Qui sommes-nous ?</h3>
-			<p> Les petites mains de Fais-Moi Signe c’est une équipe de bénévoles. 
-			<br>Nous avons créé cette plateforme pour multiplier les échanges autour de la Langue des Signes Française. Créé en 2019 par un groupe d’étudiants, Fais-Moi Signe devient une association en 2020.
-			<p>Nous croyons qu’il est nécessaire de répondre au besoin de ceux qui utilisent cette langue pour s’exprimer.</p>
-			<p>Nous croyons qu’il est nécessaire de briser la barrière de la communication entre tous les individus. </p>
-			<strong><p>Nous croyons que Fais-Moi Signe sera notre solution.</p></strong>
-		</div>
-		<div class="col-md-6" >
-			<%= image_tag 'allteam.png', class: "img-fluid" %>
-	  	</div>
-	</div>
-</div>
