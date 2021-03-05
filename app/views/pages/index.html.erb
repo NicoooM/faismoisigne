@@ -29,10 +29,10 @@
   </div>
 </div>
 
-<div class="row p-md-2"></div>
+<div class="row p-md-1"></div>
 
 <h2 class="mt-md-5 mb-md-4">Evenements à venir</h2>
-<!--<div class="row mb-md-5">
+<div class="row mb-md-5">
   <div class="col-md-4 mb-3">
     <div class="card">
       <%= image_tag 'categories/bar.jpg', class: 'img-fluid' %>
@@ -45,13 +45,40 @@
         </div>
       </div>
     </div>
-  </div>-->
-  <% @events.each do |event| %>
-  <%= render event %>
+  </div>
+  <div class="col-md-4 mb-3">
+    <div class="card">
+      <%= image_tag 'categories/bar.jpg', class: 'img-fluid' %>
+      <div class="card-body">
+        <h5 class="card-title">Atelier dessin/ peinture dans la nature</h5>
+        <p class="card-text">Le 04/03/2021 à 10:00</p>
+        <p class="card-text">Brétigny-sur-Orge</p>
+        <div class="text-right">
+          <a href="#" class="btn btn-primary">En savoir plus</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4 mb-3">
+    <div class="card">
+      <%= image_tag 'categories/bar.jpg', class: 'img-fluid' %>
+      <div class="card-body">
+        <h5 class="card-title">Atelier dessin/ peinture dans la nature</h5>
+        <p class="card-text">Le 04/03/2021 à 10:00</p>
+        <p class="card-text">Brétigny-sur-Orge</p>
+        <div class="text-right">
+          <a href="#" class="btn btn-primary">En savoir plus</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  <!--<% @events.each do |event| %>
+  <%=render event%>
   <% end %>
   <% @events.each do |event| %>
   <%= render event %>
-  <% end %>
+  <% end %>-->
 
 <div class="row p-2"></div>
 
@@ -67,19 +94,19 @@
   </div>
   <div class="row flex-sm-row align-items-start justify-content-center mb-md-5">
     <div class="col-md-1 px-0">
-        <%= image_tag 'icons/creer.png', class: "img-fluid border border-primary rounded-circle p-2 my-border" %>
+        <%= image_tag 'icons/creer.png', class: "img-fluid border border-primary rounded-circle p-2 my-border bg-white" %>
       </div>
       <div class="col-md-3">
         <p class="text-break">Crée ou participe à des événements !</p>
       </div>
       <div class="col-md-1 px-0">
-        <%= image_tag 'icons/calendrier.png', class: "img-fluid border border-primary rounded-circle p-2 my-border" %>
+        <%= image_tag 'icons/calendrier.png', class: "img-fluid border border-primary rounded-circle p-2 my-border bg-white" %>
       </div>
       <div class="col-md-3">
         <p class="text-break">Rencontre des signants et des non-signants !</p>
       </div>
       <div class="col-md-1 px-0">
-        <%= image_tag 'icons/communaute.png', class: "img-fluid border border-primary rounded-circle p-2 my-border" %>
+        <%= image_tag 'icons/communaute.png', class: "img-fluid border border-primary rounded-circle p-2 my-border bg-white" %>
       </div>
       <div class="col-md-3">
         <p class="text-break">Parle avec des gens de la communauté LSF et fais de super rencontres !</p>

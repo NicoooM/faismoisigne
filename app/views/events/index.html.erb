@@ -2,16 +2,19 @@
 
 <h1 class="text-center my-5 text-primary"><%= yield(:title).presence %></h1>
 
-<ul class="list-group list-group-horizontal-sm">
-  <li class="list-inline-item btn btn-light shadow-sm p-1"><%= link_to 'Tous', events_path, class: 'text-dark' %></li>
-  <% Event.categories.each do |key, value| %>
-    <li class="btn btn-light ml-2 shadow-sm">
-      <%= link_to t("enums.event.category.#{key}"), category_of_events_path(category: key), class: 'text-dark'%>
-    </li>
-  <% end %>
-</ul>
-
-<%= link_to '+ Créer un évènement', new_event_path, class: 'btn btn-primary my-3' %>
+<div class="container">
+  <ul class="list-group list-group-horizontal-sm d-flex flex-row justify-content-center">
+    <li class="list-inline-item btn btn-light shadow-sm p-1"><%= link_to 'Tous', events_path, class: 'text-dark' %></li>
+    <% Event.categories.each do |key, value| %>
+      <li class="btn btn-light ml-2 shadow-sm">
+        <%= link_to t("enums.event.category.#{key}"), category_of_events_path(category: key), class: 'text-dark'%>
+      </li>
+    <% end %>
+  </ul>
+  <div class="mx-auto" style="width: 300px;">
+    <%= link_to '+ Créer un évènement', new_event_path, class: 'btn btn-primary my-3' %>
+  </div>
+</div>
 
 <% if @future_events.any? %>
   <h2 class="mt-5">Événements à venir</h2>

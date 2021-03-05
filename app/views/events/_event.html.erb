@@ -29,7 +29,7 @@
         <h5 class="card-title"><%= event.nom %></h5>
         <span class="badge badge-light"><%= event.category %></span>
         <p class="card-text">Le <%= event.start_at.strftime('%d/%m/%Y à %H:%M') if event.start_at%></p>
-        <p class="card-text">Brétigny-sur-Orge</p>
+        <p class="card-text"><%= link_to event.ville, 'https://www.google.fr/maps/search/' +  event.ville %></p>
         <div class="text-right">
           <a href="#" class="btn btn-primary">En savoir plus</a>
         </div>
