@@ -3,7 +3,7 @@
 <h1 class="text-center primary"><%= yield(:title).presence %></h1>
 
 <div class="container">
-  <div class="alert alert-danger mt-5 text-center border border-danger rounded">
+  <div class="alert alert-danger mt-5 mb-5 text-center border border-danger rounded">
     En raison de l'actualité, il se peut que certains événements soient perturbés. Contactez l'organisateur pour en savoir plus.<br>
     <a href="https://www.gouvernement.fr/">Consultez les dernières informations sur l'épidémie de Covid-19 en France.</a>
   </div>
@@ -33,7 +33,7 @@
           <strong>Date</strong>
         </h2>
         <%= @event.start_at.strftime('%d/%m/%Y à %H:%M')%>
-        <%= simple_format @event.description, class: 'mt-3' %>
+        <%= simple_format @event.description, class: 'mt-3 text-break' %>
         <% if can? :update, @event %>
           <%= link_to 'Modifier', edit_event_path(@event), class: 'btn btn-primary' %>
         <% end %>
