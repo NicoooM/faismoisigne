@@ -7,10 +7,12 @@
       </div>
       <div class="col-md-2">
         <ul class="list-unstyled small">
-          <li><%= link_to "L'association", about_path, class: 'text-white' %></li>
-          <li><%= link_to "FMS Family", supports_path, class: 'text-white' %></li>
-          <li><a href="https://drive.google.com/open?id=1IN8qu5Y1jATysH9uEOxKCelR-DlyMQ2U" class="text-white">Mentions légales</a></li>
-          <li><a href="https://drive.google.com/file/d/10fKNMhBXdMAeXjh6YrMVKooBVIXEoKbd/view?usp=sharing" class="text-white">CGU</a></li>
+          <li><%= link_to "Accueil", root_path, class: "text-white" %></li>
+          <li><%= link_to "Événements", events_path, class: 'text-white' %></li>
+          <li><%= link_to "A propos", about_path, class: 'text-white' %></li>
+          <li><%= link_to "Notre famille", supports_path, class: 'text-white' %></li>
+          <li><%= link_to 'Se connecter', new_user_session_path, class: 'text-white' %></li>
+          <li><%= link_to 'S\'inscrire', new_user_registration_path, class: 'text-white' %></li>
           <li><a href="mailto:faismoisigne@outlook.fr" class="text-white">Contact</a></li>
         </ul>
       </div>
@@ -26,8 +28,13 @@
             <a href="https://www.instagram.com/faismoisigneorg">
               <%= fa_icon "instagram", class: 'text-white' %></a></li>
         </ul>
+        <ul class="list-unstyled small">
+
+        <li><a href="https://drive.google.com/open?id=1IN8qu5Y1jATysH9uEOxKCelR-DlyMQ2U" class="text-white">Mentions légales</a></li>
+        <li><a href="https://drive.google.com/file/d/10fKNMhBXdMAeXjh6YrMVKooBVIXEoKbd/view?usp=sharing" class="text-white">CGU</a></li>
+      </ul>
       </div>
     </div>
-    <p class="small text-muted mt-5">© Copyright 2020</p>
+    <p class="small text-muted mt-5">© Copyright 2021 Fais-Moi Signe. Tous les droits réservés</p>
   </div>
 </footer>
