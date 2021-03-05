@@ -1,11 +1,11 @@
 <% content_for :title, @event %>
 
-<h1 class="text-center primary"><%= yield(:title).presence %></h1>
+<h1 class="text-center text-primary"><%= yield(:title).presence %></h1>
 
 <div class="container">
-  <div class="alert alert-danger my-5 text-center border border-danger rounded">
+  <div class="alert alert-danger my-5 text-center border border-danger rounded text-dark">
     En raison de l'actualité, il se peut que certains événements soient perturbés. Contactez l'organisateur pour en savoir plus.<br>
-    <a href="https://www.gouvernement.fr/">Consultez les dernières informations sur l'épidémie de Covid-19 en France.</a>
+    <a href="https://www.gouvernement.fr/" class="text-decoration-none border-bottom text-dark border-dark">Consultez les dernières informations sur l'épidémie de Covid-19 en France.</a>
   </div>
 </div>
 
