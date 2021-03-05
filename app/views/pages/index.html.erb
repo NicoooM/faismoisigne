@@ -2,10 +2,18 @@
   h2{
     font-family: 'Roboto', sans-serif;
   }
+  h4{
+    font-family: 'Roboto', sans-serif;
+  }
+  h3{
+    font-family: 'Roboto', sans-serif;
+  }
 </style>
 <% content_for :title, 'Fais-Moi Signe' %>
 
-<div class="row mb-md-5">
+<div class="row p-md-4"></div>
+
+<div class="row mb-md-5 mt-4">
   <div class="col-md-6 d-flex align-items-start">
     <div>
       <h2 class="h1">
@@ -21,8 +29,10 @@
   </div>
 </div>
 
+<div class="row p-md-2"></div>
+
 <h2 class="mt-md-5 mb-md-4">Evenements à venir</h2>
-<div class="row mb-md-5">
+<!--<div class="row mb-md-5">
   <div class="col-md-4 mb-3">
     <div class="card">
       <%= image_tag 'categories/bar.jpg', class: 'img-fluid' %>
@@ -35,45 +45,27 @@
         </div>
       </div>
     </div>
-  </div>
-  <div class="col-md-4">
-    <div class="card">
-      <%= image_tag 'categories/bar.jpg', class: 'img-fluid' %>
-      <div class="card-body">
-        <h5 class="card-title">Atelier dessin/ peinture dans la nature</h5>
-        <p class="card-text">Le 04/03/2021 à 10:00</p>
-        <p class="card-text">Brétigny-sur-Orge</p>
-        <div class="text-right">
-          <a href="#" class="btn btn-primary">En savoir plus</a>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="col-md-4">
-    <div class="card">
-      <%= image_tag 'categories/bar.jpg', class: 'img-fluid' %>
-      <div class="card-body">
-        <h5 class="card-title">Atelier dessin/ peinture dans la nature</h5>
-        <p class="card-text">Le 04/03/2021 à 10:00</p>
-        <p class="card-text">Brétigny-sur-Orge</p>
-        <div class="text-right">
-          <a href="#" class="btn btn-primary">En savoir plus</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+  </div>-->
+  <% @events.each do |event| %>
+  <%= render event %>
+  <% end %>
+  <% @events.each do |event| %>
+  <%= render event %>
+  <% end %>
+
+<div class="row p-2"></div>
 
 <style>
   .border{
     border-width: 4px !important;
   }
 </style>
+
 <div class="container mb-md-5 p-5" style="background-color: #FFF2F9;">
   <div class="row mb-md-5">
     <h2>Comment ça marche ?</h2>
   </div>
-  <div class="row flex-row align-items-start mb-md-5">
+  <div class="row flex-sm-row align-items-start justify-content-center mb-md-5">
     <div class="col-md-1 px-0">
         <%= image_tag 'icons/creer.png', class: "img-fluid border border-primary rounded-circle p-2 my-border" %>
       </div>
@@ -95,31 +87,46 @@
   </div>
 </div>
 
+<div class="row p-4"></div>
+
 <div class="container mb-md-5">
   <div class="row">
     <div class="col-md-4 pl-0 pr-3">
       <div class="d-flex flex-column justify-content-between">
         <h4>Qui sommes-nous ?</h4>
         <p>Fais-Moi Signe, c’est une plateforme qui permet d’organiser et de participer à des évènements entre signants et non-signants, pour partager la culture de la Langue des Signes Française. </p>
-        <a href="#" class="btn btn-primary align-self-start">En savoir plus</a>
       </div>
     </div>
     <div class="col-md-4 pl-0 pr-3">
       <div class="d-flex flex-column justify-content-between">
         <h4>Participer à un événement</h4>
         <p>Pour participer à des événements, il suffit d’aller sur la section “événements”, et de se rendre sur le lieu affiché le jour J !</p>
-          <a href="#" class="btn btn-primary align-self-start">En savoir plus</a>
       </div>
     </div>
     <div class="col-md-4 pl-0 pr-3">
       <div class="d-flex flex-column">
         <h4>Rejoindre la communauté</h4>
         <p>Tu peux nous suivre sur les réseaux sociaux pour être prévenus des activités créées par l’association. Si tu veux organiser toi-même un event, tu peux toujours t’inscrire !</p>
-          <a href="#" class="btn btn-primary align-self-start">En savoir plus</a>
       </div>
     </div>
   </div>
+  <div class="row">
+    <div class="col-md-2 px-0">
+      <a href="#" class="btn btn-primary align-self-start">En savoir plus</a>
+    </div>
+    <div class="offset-md-2"></div>
+    <div class="col-md-2 px-0">
+      <a href="#" class="btn btn-primary align-self-start">Les événements</a>
+    </div>
+    <div class="offset-md-2"></div>
+    <div class="col-md-2 px-0">
+      <a href="#" class="btn btn-primary align-self-start">S'inscrire</a>
+    </div>
+  </div>
 </div>
+
+<div class="row p-4"></div>
+<div class="row p-4"></div>
 
 <div class="container">
   <div class="row">
