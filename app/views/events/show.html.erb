@@ -1,7 +1,6 @@
 <% content_for :title, @event %>
 
-<main>
-<%= yield(:title).presence %>
+<h1 class="text-center primary"><%= yield(:title).presence %></h1>
 
 <div class="container">
   <div class="alert alert-danger mt-5 text-center border border-danger rounded">
@@ -11,7 +10,7 @@
 </div>
 
 <div class='container event'>
-  <div class="mb-3" style="max-width: 100%;">
+  <div class="mb-4" style="max-width: 100%;">
     <div class="row">
       <div class="col-md-4">
       <%= image_tag "categories/#{@event.category}.jpg", class: 'img-fluid rounded align-middle' if @event.category %>
@@ -20,11 +19,11 @@
         <h2 class="card-title mb-1 h3 mt-3 mt-md-0">
           <strong>Organisé par</strong> <%= @event.user %>
         </h2>
-        <%= mail_to @event.user, @event.user.email, class: 'mb-3 d-block' %>
+        <%= mail_to @event.user, @event.user.email, class: 'mb-4 d-block' %>
         <h2 class="mb-0 h3">
           <strong>Lieu </strong>
         </h2>
-        <div class="d-flex justify-content-between">
+        <div class="d-flex justify-content-between mb-4">
           <p class="my-auto"><%= link_to @event.lieu, 'https://www.google.fr/maps/search/' +  @event.lieu +  @event.ville , target: "_blank", :class => "link"%> à <%= @event.ville %></p>
           <button  class='btn btn-primary'>
           <%= link_to 'Voir itinéraire', 'https://www.google.fr/maps/search/' +  @event.lieu +  @event.ville , target: "_blank", :class => "link text-white"%>
@@ -45,4 +44,3 @@
     </div>
   </div>
 </div>
-</main>
