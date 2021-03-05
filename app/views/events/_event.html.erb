@@ -1,4 +1,4 @@
-<div class="col-md-3">
+<!--<div class="col-md-3">
   <%= link_to event do %>
     <div class="card card-events shadow">
       <%= image_tag "categories/#{event.category}.jpg", class: 'card-img-top' if event.category %>
@@ -19,3 +19,28 @@
     </div>
   <% end %>
 </div>
+-->
+
+<div class="row mb-md-5">
+  <div class="col-md-4 mb-3">
+    <div class="card">
+      <%= image_tag "categories/#{event.category}.jpg", class: 'img-fluid' if event.category%>
+      <div class="card-body">
+        <h5 class="card-title"><%= event.nom %></h5>
+        <span class="badge badge-light"><%= event.category %></span>
+        <p class="card-text">Le <%= event.start_at.strftime('%d/%m/%Y à %H:%M') if event.start_at%></p>
+        <p class="card-text">Brétigny-sur-Orge</p>
+        <div class="text-right">
+          <a href="#" class="btn btn-primary">En savoir plus</a>
+        </div>
+        <div class="card-footer bg-white mt-2 p-0 pt-2">
+          <% if can? :participate, event %>
+          <%= link_to 'Participer', event, :class => "btn btn-primary btn-sm"%>
+          <% end %>
+          <% if can? :update, event %>
+          <%= link_to 'Modifier', edit_event_path(event), class: "btn btn-primary btn-sm" %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
